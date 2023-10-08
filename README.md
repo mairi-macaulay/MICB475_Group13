@@ -29,7 +29,7 @@ title Group 13 Project 2 Timeline
 section Week 6[Oct.9-Oct.13]
 Update Project Proposal on Github                               :done,          first_1,    2023-10-02, 2023-10-10
 Write title,introduction,research objectives,experimental aims  :active,        first_2,    2023-10-08, 2023-10-10
-Weekly Question Agenda: Proposed Approach/Overview              :active,        first_3,    2023-10-08, 2023-10-10
+Weekly Question Agenda on Proposed Approach/Overview            :active,        first_3,    2023-10-08, 2023-10-10
 Meeting with Evelyn/Chris                                       :milestone,     m1,         2023-10-11,1d
 
 section Week 7[Oct.16-Oct.20]
