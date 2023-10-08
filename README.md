@@ -35,7 +35,7 @@ Second Question Analysis                :active         first_4,    2023-10-20, 
 
 section Week 7[Oct.16-Oct.20]
 Meeting with Evelyn/Chris               : milestone,    initial,    2023-10-18,1d
-Project Proposal due                    : milestone,    initial,    2023-10-22
+Project Proposal due                    : milestone,    initial,    2023-10-22,1d
 First Question Analysis                 :active         first_3,    2023-10-15, 7d
 
 section Week 8[Oct.23-Oct.27]
@@ -67,13 +67,13 @@ First Question Analysis                 :active         first_3,    2023-10-15, 
 
 
 section Week 14[Dec.4-Dec.8]
-Oral Presentations                   : milestone,    initial,    2023-12-4
-Draft Manuscript due                    : milestone,    initial,    2023-12-10
+Oral Presentations                   : milestone,    initial,    2023-12-4,1d
+Draft Manuscript due                    : milestone,    initial,    2023-12-10,1d
 First Question Analysis                 :active         first_3,    2023-10-15, 7d
 
 
 section Week 15[Dec.11-Dec.15]
-Final Manuscript & Lab Notebook due                   : milestone,    initial,    2023-12-17
+Final Manuscript & Lab Notebook due                   : milestone,    initial,    2023-12-17,1d
 First Question Analysis                 :active         first_3,    2023-10-15, 7d
 
 ```
