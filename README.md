@@ -1,6 +1,7 @@
 # MICB475_Group13
 ### authors: Juliet Malkowski, Lina Anwari, Abigail Cho
 
-Made changes using RStudio
+# Project Proposal
 
-#hello 
+## Timeline
+enter r code here
