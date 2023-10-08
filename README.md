@@ -26,11 +26,45 @@ gantt
 dateFormat  YYYY-MM-DD
 title Group 13 Project 2 Timeline
 
-section Tasks
+section Week 6[Oct.9-Oct.13]
+Meeting with Evelyn/Chris               : milestone,    initial,    2023-10-11
 Update Project Proposal on Github       :done,          first_1,    2023-10-02, 2023-10-10
 Start Filtering Metadata                :active,        first_2,    2023-10-08, 7d
 First Question Analysis                 :active         first_3,    2023-10-15, 7d
 Second Question Analysis                :active         first_4,    2023-10-20, 7d
+
+section Week 7[Oct.16-Oct.20]
+Meeting with Evelyn/Chris               : milestone,    initial,    2023-10-18
+Project Proposal due                    : milestone,    initial,    2023-10-22
+
+section Week 8[Oct.23-Oct.27]
+Meeting with Evelyn/Chris               : milestone,    initial,    2023-10-25
+
+section Week 9[Oct.30-Nov.3]
+Meeting with Evelyn/Chris               : milestone,    initial,    2023-11-1
+
+section Week 10[Nov.6-Nov.10]
+Meeting with Evelyn/Chris               : milestone,    initial,    2023-11-8
+
+section Week 11[Nov.13-Nov.17]
+Midterm Break                           :done,          break,    2023-11-13, 2023-11-17
+
+section Week 12[Nov.20-Nov.24]
+Meeting with Evelyn/Chris               : milestone,    initial,    2023-11-22
+
+section Week 13[Nov.27-Dec.1]
+Meeting with Evelyn/Chris               : milestone,    initial,    2023-11-29
+
+section Week 14[Dec.4-Dec.8]
+Oral Presentations                   : milestone,    initial,    2023-12-4
+Draft Manuscript due                    : milestone,    initial,    2023-12-10
+
+section Week 15[Dec.11-Dec.15]
+Final Manuscript & Lab Notebook due                   : milestone,    initial,    2023-12-17
+
+
+
+
 ```
 
 ### Dataset Overview: 
@@ -41,3 +75,5 @@ Second Question Analysis                :active         first_4,    2023-10-20, 
 
 ### References:
 -follow ASM referencing guidelinesLinks to an external site.
+
+1- mermaid r diagram to use for weekly timeline: https://mermaid.js.org/ 
