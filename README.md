@@ -30,43 +30,48 @@ section Week 6[Oct.9-Oct.13]
 Update Project Proposal on Github                               :done,          first_1,    2023-10-02, 2023-10-10
 Write title,introduction,research objectives,experimental aims  :active,        first_2,    2023-10-08, 2023-10-10
 Weekly Question Agenda: Proposed Approach/Overview              :active,        first_3,    2023-10-08, 2023-10-10
-Meeting with Evelyn/Chris                                       :milestone,     m1,    2023-10-11,1d
+Meeting with Evelyn/Chris                                       :milestone,     m1,         2023-10-11,1d
 
 section Week 7[Oct.16-Oct.20]
 Do processing steps in QIIME2 and flowchart overview            :active,        first_4,    2023-10-11, 2023-10-17
-Weekly Question Agenda: Questions on QIIME2 processing          :active,        first_5,    2023-10-16, 2023-10-18
-Meeting with Evelyn/Chris                                       : milestone,    initial,    2023-10-18,1d
-Project Proposal due                                            : milestone,    initial,    2023-10-22,1d
+Weekly Question Agenda on QIIME2 processing                     :active,        first_5,    2023-10-16, 2023-10-18
+Meeting with Evelyn/Chris                                       :milestone,     initial,    2023-10-18,1d
+Project Proposal due                                            :milestone,     initial,    2023-10-22,1d
 
 section Week 8[Oct.23-Oct.27]
-Meeting with Evelyn/Chris                                       : milestone,    initial,    2023-10-25,1d
+Weekly Question Agenda on                                       :active,        first_6,    2023-10-19, 2023-10-25
+Meeting with Evelyn/Chris                                       :milestone,     initial,    2023-10-25,1d
 
 section Week 9[Oct.30-Nov.3]
-Meeting with Evelyn/Chris                                       : milestone,    initial,    2023-11-1,1d
+Weekly Question Agenda on                                       :active,        first_7,    2023-10-26, 2023-11-01
+Meeting with Evelyn/Chris                                       :milestone,     initial,    2023-11-01,1d
 
 
 section Week 10[Nov.6-Nov.10]
-Meeting with Evelyn/Chris                                       : milestone,    initial,    2023-11-8,1d
+Weekly Question Agenda on                                       :active,        first_8,    2023-11-02, 2023-11-08
+Meeting with Evelyn/Chris                                       :milestone,     initial,    2023-11-08,1d
 
 
 section Week 11[Nov.13-Nov.17]
 Midterm Break                                                   :done,          break,    2023-11-13, 2023-11-17
 
 section Week 12[Nov.20-Nov.24]
-Meeting with Evelyn/Chris                                       : milestone,    initial,    2023-11-22,1d
+Weekly Question Agenda on                                       :active,        first_9,    2023-11-14, 2023-11-22
+Meeting with Evelyn/Chris                                       :milestone,     initial,    2023-11-22,1d
 
 
 section Week 13[Nov.27-Dec.1]
-Meeting with Evelyn/Chris                                       : milestone,    initial,    2023-11-29,1d
+Weekly Question Agenda on                                       :active,        first_10,    2023-11-23, 2023-11-29
+Meeting with Evelyn/Chris                                       :milestone,     initial,    2023-11-29,1d
 
 
 section Week 14[Dec.4-Dec.8]
-Oral Presentations                                              : milestone,    initial,    2023-12-4,1d
-Draft Manuscript due                                            : milestone,    initial,    2023-12-10,1d
+Oral Presentations                                              :milestone,    initial,    2023-12-04,1d
+Draft Manuscript due                                            :milestone,    initial,    2023-12-10,1d
 
 
 section Week 15[Dec.11-Dec.15]
-Final Manuscript & Lab Notebook due                             : milestone,    initial,    2023-12-17,1d
+Final Manuscript & Lab Notebook due                             :milestone,    initial,    2023-12-17,1d
 
 ```
 
