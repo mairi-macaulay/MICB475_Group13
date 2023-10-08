@@ -33,51 +33,52 @@ Start Filtering Metadata                :active,        first_2,    2023-10-08, 
 First Question Analysis                 :active         first_3,    2023-10-15, 7d
 Second Question Analysis                :active         first_4,    2023-10-20, 7d
 
-section Week 7[Oct.16-Oct.20]
-Meeting with Evelyn/Chris               : milestone,    initial,    2023-10-18
-Project Proposal due                    : milestone,    initial,    2023-10-22
-First Question Analysis                 :active         first_3,    2023-10-15, 7d
-
-section Week 8[Oct.23-Oct.27]
-Meeting with Evelyn/Chris               : milestone,    initial,    2023-10-25
-First Question Analysis                 :active         first_3,    2023-10-15, 7d
-
-
-section Week 9[Oct.30-Nov.3]
-Meeting with Evelyn/Chris               : milestone,    initial,    2023-11-1
-First Question Analysis                 :active         first_3,    2023-10-15, 7d
-
-
-section Week 10[Nov.6-Nov.10]
-Meeting with Evelyn/Chris               : milestone,    initial,    2023-11-8
-First Question Analysis                 :active         first_3,    2023-10-15, 7d
-
-
-section Week 11[Nov.13-Nov.17]
-Midterm Break                           :done,          break,    2023-11-13, 2023-11-17
-
-section Week 12[Nov.20-Nov.24]
-Meeting with Evelyn/Chris               : milestone,    initial,    2023-11-22
-First Question Analysis                 :active         first_3,    2023-10-15, 7d
-
-
-section Week 13[Nov.27-Dec.1]
-Meeting with Evelyn/Chris               : milestone,    initial,    2023-11-29
-First Question Analysis                 :active         first_3,    2023-10-15, 7d
-
-
-section Week 14[Dec.4-Dec.8]
-Oral Presentations                   : milestone,    initial,    2023-12-4
-Draft Manuscript due                    : milestone,    initial,    2023-12-10
-First Question Analysis                 :active         first_3,    2023-10-15, 7d
-
-
-section Week 15[Dec.11-Dec.15]
-Final Manuscript & Lab Notebook due                   : milestone,    initial,    2023-12-17
-First Question Analysis                 :active         first_3,    2023-10-15, 7d
-
-
 ```
+
+# section Week 7[Oct.16-Oct.20]
+# Meeting with Evelyn/Chris               : milestone,    initial,    2023-10-18
+# Project Proposal due                    : milestone,    initial,    2023-10-22
+# First Question Analysis                 :active         first_3,    2023-10-15, 7d
+# 
+# section Week 8[Oct.23-Oct.27]
+# Meeting with Evelyn/Chris               : milestone,    initial,    2023-10-25
+# First Question Analysis                 :active         first_3,    2023-10-15, 7d
+# 
+# 
+# section Week 9[Oct.30-Nov.3]
+# Meeting with Evelyn/Chris               : milestone,    initial,    2023-11-1
+# First Question Analysis                 :active         first_3,    2023-10-15, 7d
+# 
+# 
+# section Week 10[Nov.6-Nov.10]
+# Meeting with Evelyn/Chris               : milestone,    initial,    2023-11-8
+# First Question Analysis                 :active         first_3,    2023-10-15, 7d
+# 
+# 
+# section Week 11[Nov.13-Nov.17]
+# Midterm Break                           :done,          break,    2023-11-13, 2023-11-17
+# 
+# section Week 12[Nov.20-Nov.24]
+# Meeting with Evelyn/Chris               : milestone,    initial,    2023-11-22
+# First Question Analysis                 :active         first_3,    2023-10-15, 7d
+# 
+# 
+# section Week 13[Nov.27-Dec.1]
+# Meeting with Evelyn/Chris               : milestone,    initial,    2023-11-29
+# First Question Analysis                 :active         first_3,    2023-10-15, 7d
+# 
+# 
+# section Week 14[Dec.4-Dec.8]
+# Oral Presentations                   : milestone,    initial,    2023-12-4
+# Draft Manuscript due                    : milestone,    initial,    2023-12-10
+# First Question Analysis                 :active         first_3,    2023-10-15, 7d
+# 
+# 
+# section Week 15[Dec.11-Dec.15]
+# Final Manuscript & Lab Notebook due                   : milestone,    initial,    2023-12-17
+# First Question Analysis                 :active         first_3,    2023-10-15, 7d
+# 
+
 
 ### Dataset Overview: 
 -In order to complete this section, you will need to complete the processing steps in QIIME2 (up until the rarefaction curve) to extract the following information and describe your dataset. Please use this checklist Download checklistto ensure you describe these elements within your proposal and include the summary table and 2 figures listed in the checklist. 
