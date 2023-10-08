@@ -27,54 +27,46 @@ dateFormat  YYYY-MM-DD
 title Group 13 Project 2 Timeline
 
 section Week 6[Oct.9-Oct.13]
-Meeting with Evelyn/Chris               :milestone,     m1,    2023-10-11,1d
-Update Project Proposal on Github       :done,          first_1,    2023-10-02, 2023-10-10
-Start Filtering Metadata                :active,        first_2,    2023-10-08, 7d
-First Question Analysis                 :active         first_3,    2023-10-15, 7d
-Second Question Analysis                :active         first_4,    2023-10-20, 7d
+Update Project Proposal on Github                               :done,          first_1,    2023-10-02, 2023-10-10
+Write title,introduction,research objectives,experimental aims  :active,        first_2,    2023-10-08, 2023-10-10
+Weekly Question Agenda: Proposed Approach/Overview              :active,        first_3,    2023-10-08, 2023-10-10
+Meeting with Evelyn/Chris                                       :milestone,     m1,    2023-10-11,1d
 
 section Week 7[Oct.16-Oct.20]
-Meeting with Evelyn/Chris               : milestone,    initial,    2023-10-18,1d
-Project Proposal due                    : milestone,    initial,    2023-10-22,1d
-First Question Analysis                 :active         first_3,    2023-10-15, 7d
+Do processing steps in QIIME2 and flowchart overview            :active,        first_4,    2023-10-11, 2023-10-17
+Weekly Question Agenda: Questions on QIIME2 processing          :active,        first_5,    2023-10-16, 2023-10-18
+Meeting with Evelyn/Chris                                       : milestone,    initial,    2023-10-18,1d
+Project Proposal due                                            : milestone,    initial,    2023-10-22,1d
 
 section Week 8[Oct.23-Oct.27]
-Meeting with Evelyn/Chris               : milestone,    initial,    2023-10-25,1d
-First Question Analysis                 :active         first_3,    2023-10-15, 7d
-
+Meeting with Evelyn/Chris                                       : milestone,    initial,    2023-10-25,1d
 
 section Week 9[Oct.30-Nov.3]
-Meeting with Evelyn/Chris               : milestone,    initial,    2023-11-1,1d
-First Question Analysis                 :active         first_3,    2023-10-15, 7d
+Meeting with Evelyn/Chris                                       : milestone,    initial,    2023-11-1,1d
 
 
 section Week 10[Nov.6-Nov.10]
-Meeting with Evelyn/Chris               : milestone,    initial,    2023-11-8,1d
-First Question Analysis                 :active         first_3,    2023-10-15, 7d
+Meeting with Evelyn/Chris                                       : milestone,    initial,    2023-11-8,1d
 
 
 section Week 11[Nov.13-Nov.17]
-Midterm Break                           :done,          break,    2023-11-13, 2023-11-17
+Midterm Break                                                   :done,          break,    2023-11-13, 2023-11-17
 
 section Week 12[Nov.20-Nov.24]
-Meeting with Evelyn/Chris               : milestone,    initial,    2023-11-22,1d
-First Question Analysis                 :active         first_3,    2023-10-15, 7d
+Meeting with Evelyn/Chris                                       : milestone,    initial,    2023-11-22,1d
 
 
 section Week 13[Nov.27-Dec.1]
-Meeting with Evelyn/Chris               : milestone,    initial,    2023-11-29,1d
-First Question Analysis                 :active         first_3,    2023-10-15, 7d
+Meeting with Evelyn/Chris                                       : milestone,    initial,    2023-11-29,1d
 
 
 section Week 14[Dec.4-Dec.8]
-Oral Presentations                   : milestone,    initial,    2023-12-4,1d
-Draft Manuscript due                    : milestone,    initial,    2023-12-10,1d
-First Question Analysis                 :active         first_3,    2023-10-15, 7d
+Oral Presentations                                              : milestone,    initial,    2023-12-4,1d
+Draft Manuscript due                                            : milestone,    initial,    2023-12-10,1d
 
 
 section Week 15[Dec.11-Dec.15]
-Final Manuscript & Lab Notebook due                   : milestone,    initial,    2023-12-17,1d
-First Question Analysis                 :active         first_3,    2023-10-15, 7d
+Final Manuscript & Lab Notebook due                             : milestone,    initial,    2023-12-17,1d
 
 ```
 
@@ -83,6 +75,7 @@ First Question Analysis                 :active         first_3,    2023-10-15, 
 
 ### Participation Report:
 -A breakdown of each team member’s contribution to preparing the proposal
+Juliet: coded weekly timeframe
 
 ### References:
 -follow ASM referencing guidelinesLinks to an external site.
