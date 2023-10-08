@@ -9,7 +9,7 @@ library(DiagrammeR)
 mermaid("
 gantt
 dateFormat  YYYY-MM-DD
-title A Very Nice Gantt Diagram
+title Group 13 Project 2 Timeline
 
 section Basic Tasks
 This is completed             :done,          first_1,    2014-01-06, 2014-01-08
@@ -28,3 +28,8 @@ First extras                  :active,        extras_1,   after import_4,  3d
 Second helping                :               extras_2,   after extras_1, 20h
 More of the extras            :               extras_3,   after extras_1, 48h
 ")
+
+
+
+
+
