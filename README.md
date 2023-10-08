@@ -27,7 +27,6 @@ dateFormat  YYYY-MM-DD
 title Group 13 Project 2 Timeline
 
 section Week 6[Oct.9-Oct.13]
-Meeting with Evelyn/Chris               :milestone,     m1,    2023-10-11
 Update Project Proposal on Github       :done,          first_1,    2023-10-02, 2023-10-10
 Start Filtering Metadata                :active,        first_2,    2023-10-08, 7d
 First Question Analysis                 :active         first_3,    2023-10-15, 7d
