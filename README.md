@@ -1,5 +1,5 @@
 # MICB475_Group13
-### authors: Juliet Malkowski, Lina Anwari, Abigail Cho, Màiri MacAulay
+### authors: Juliet Malkowski, Lina Anwari, Abigail Cho, Màiri MacAulay, Betty Hong
 
 # Project Proposal
 ### Proposed title: 
