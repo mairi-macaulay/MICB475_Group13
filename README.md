@@ -98,11 +98,11 @@ Final Manuscript & Lab Notebook due                             :milestone,    i
 ### Participation Report:
 - A breakdown of each team member’s contribution to preparing the proposal
 
- Juliet: Coded weekly timeframe, Introduction and Background
- Lina: Research Objectives
- Abigail: Experimental Aims and Rationale
- Mairi: Proposed Approach, Overview Flowchart
- Betty: Dataset Overview
+Juliet: Coded weekly timeframe, Introduction and Background  
+Lina: Research Objectives  
+Abigail: Experimental Aims and Rationale  
+Mairi: Proposed Approach, Overview Flowchart  
+Betty: Dataset Overview  
 
 ### References:
 -follow ASM referencing guidelinesLinks to an external site.
