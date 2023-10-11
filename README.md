@@ -17,6 +17,11 @@
 ### Proposed Approach: 
 -tabular summary of the purpose and proposed approach for each experimental aim
 
+| AIM 1A: Does sheet washing frequency impact skin microbial composition? | AIM 1B: Does shower recency impact skin microbial composition? | AIM 2: Do gender differences in hygiene practices impact skin microbial composition? | AIM 3:  |
+|---|---|---|---|
+|1A-1: Edit metadata document to divide sheet washing frequency into high/low|1B-1: Edit metadata document to divide last shower day into recent/not recent|2-1: Import and demultiplex raw sequence reads|3-1: Edit metadata document to divide hours outside into high/low 
+|1A-2: Import and demultiplex raw sequence reads (demux.qza)|1B-2: Import and demultiplex raw sequence reads|2-2: Perform sequence quality control and generate a feature table (table.qza)|3-2: Import and demultiplex raw sequence reads|
+
 ### Overview Flowchart: 
 -visual representation of research objectives or questions, corresponding experimental aims, and corresponding analysis/approach.
 
