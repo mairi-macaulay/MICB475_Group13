@@ -31,7 +31,8 @@
 ||||3-10: Export data and perform statistical analysis on alpha and/or beta diversity metrics and/or differential abundance testing for taxonomic metrics using R|
 
 - I'll put in the names of the actual columns/groups we make
-- and I can make what alpha/beta diversity metrics we choose more specific
+- I'll make what alpha/beta diversity metrics we choose more specific
+- I'll add making a PCOA plot and Deseq2 (plot as a bar plot)
 
 ### Overview Flowchart: 
 -visual representation of research objectives or questions, corresponding experimental aims, and corresponding analysis/approach.
