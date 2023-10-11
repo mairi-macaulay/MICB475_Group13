@@ -1,5 +1,5 @@
 # MICB475_Group13
-### authors: Juliet Malkowski, Lina Anwari, Abigail Cho, Màiri MacAulay, Betty Hong
+### Authors: Juliet Malkowski, Lina Anwari, Abigail Cho, Màiri MacAulay, Betty Hong
 
 # Project Proposal
 ### Proposed title: 
@@ -19,7 +19,7 @@
 
 | AIM 1A: Does sheet washing frequency impact skin microbial composition? | AIM 1B: Does shower recency impact skin microbial composition? | AIM 2: Do gender differences in hygiene practices impact skin microbial composition? | AIM 3: Does time spent outside impact skin microbial composition in conjunction with hygiene practices?|
 |---|---|---|---|
-|1A-1: Edit metadata document to divide sheet washing frequency into high/low|1B-1: Edit metadata document to divide last shower day into recent/not recent|2-1: Import and demultiplex raw sequence reads|3-1: Edit metadata document to divide hours outside into high/low 
+|1A-1: Edit metadata document to add column that bins sheet washing frequency into high/low|1B-1: Edit metadata document to add column that bins last shower day into recent/not recent|2-1: Import and demultiplex raw sequence reads|3-1: Edit metadata document to add column that bins hours outside into high/low 
 |1A-2: Import and demultiplex raw sequence reads (demux.qza)|1B-2: Import and demultiplex raw sequence reads|2-2: Perform sequence quality control and generate a feature table (table.qza)|3-2: Import and demultiplex raw sequence reads|
 |1A-3: Perform sequence quality control and generate a feature table (table.qza)|1B-3: Perform sequence quality control and generate a feature table (table.qza)|2-3: Filter metadata by gender|3-3: Perform sequence quality control and generate a feature table (table.qza)|
 |1A-4: Filter metadata for only samples that contain a value for sheet washing frequency|1B-4: Filter metadata for only samples that contain a value for shower recency|2-4: Filter metadata for samples that contain a value for either sheet washing frequency or shower recency|3-4: Filter metadata for samples that have a value for time outside|
