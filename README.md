@@ -93,18 +93,18 @@ Final Manuscript & Lab Notebook due                             :milestone,    i
 ```
 
 ### Dataset Overview: 
--In order to complete this section, you will need to complete the processing steps in QIIME2 (up until the rarefaction curve) to extract the following information and describe your dataset. Please use this checklist Download checklistto ensure you describe these elements within your proposal and include the summary table and 2 figures listed in the checklist. 
+- In order to complete this section, you will need to complete the processing steps in QIIME2 (up until the rarefaction curve) to extract the following information and describe your dataset. Please use this checklist Download checklistto ensure you describe these elements within your proposal and include the summary table and 2 figures listed in the checklist. 
 
 ### Participation Report:
-- A breakdown of each team member’s contribution to preparing the proposal
+A breakdown of each team member’s contribution to preparing the proposal
 
-Juliet: Coded weekly timeframe, Introduction and Background  
-Lina: Research Objectives  
-Abigail: Experimental Aims and Rationale  
-Mairi: Proposed Approach, Overview Flowchart  
-Betty: Dataset Overview  
+- Juliet: Coded weekly timeframe, Introduction and Background  
+- Lina: Research Objectives  
+- Abigail: Experimental Aims and Rationale  
+- Mairi: Proposed Approach, Overview Flowchart  
+- Betty: Dataset Overview  
 
 ### References:
--follow ASM referencing guidelinesLinks to an external site.
+- follow ASM referencing guidelinesLinks to an external site.
 
 1- mermaid r diagram to use for weekly timeline: https://mermaid.js.org/ 
