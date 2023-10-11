@@ -3,19 +3,19 @@
 
 # Project Proposal
 ### Proposed title: 
--often reflects the overarching goal of your project
+- often reflects the overarching goal of your project
 
 ### Introduction and Background: 
--provides the premise for why/how your dataset was collected in addition to an overview of the studies that have already been conducted on your dataset or relevant to your dataset (consider what you presented for your P2 review oral presentation)
+- provides the premise for why/how your dataset was collected in addition to an overview of the studies that have already been conducted on your dataset or relevant to your dataset (consider what you presented for your P2 review oral presentation)
 
 ### Research Objectives: 
--explains the areas of interest that you wish to pursue including specific research questions and corresponding hypotheses
+- explains the areas of interest that you wish to pursue including specific research questions and corresponding hypotheses
 
 ### Experimental Aims and Rationale: 
--list of aims that your team hopes to achieve in order to address your research objectives and briefly describes how each aim will help achieve the research objectives
+- list of aims that your team hopes to achieve in order to address your research objectives and briefly describes how each aim will help achieve the research objectives
 
 ### Proposed Approach: 
--tabular summary of the purpose and proposed approach for each experimental aim
+- tabular summary of the purpose and proposed approach for each experimental aim
 
 | AIM 1A: Does sheet washing frequency impact skin microbial composition? | AIM 1B: Does shower recency impact skin microbial composition? | AIM 2: Do gender differences in hygiene practices impact skin microbial composition? | AIM 3: Does time spent outside impact skin microbial composition in conjunction with hygiene practices?|
 |---|---|---|---|
@@ -35,7 +35,7 @@
 - I'll add making a PCOA plot and Deseq2 (plot as a bar plot)
 
 ### Overview Flowchart: 
--visual representation of research objectives or questions, corresponding experimental aims, and corresponding analysis/approach.
+- visual representation of research objectives or questions, corresponding experimental aims, and corresponding analysis/approach.
 
 ### Weekly Timeframe:
 ```mermaid
@@ -96,13 +96,13 @@ Final Manuscript & Lab Notebook due                             :milestone,    i
 -In order to complete this section, you will need to complete the processing steps in QIIME2 (up until the rarefaction curve) to extract the following information and describe your dataset. Please use this checklist Download checklistto ensure you describe these elements within your proposal and include the summary table and 2 figures listed in the checklist. 
 
 ### Participation Report:
--A breakdown of each team member’s contribution to preparing the proposal
+- A breakdown of each team member’s contribution to preparing the proposal
 
-Juliet: Coded weekly timeframe, Introduction and Background
-Lina: Research Objectives
-Abigail: Experimental Aims and Rationale
-Mairi: Proposed Approach, Overview Flowchart
-Betty: Dataset Overview
+ Juliet: Coded weekly timeframe, Introduction and Background
+ Lina: Research Objectives
+ Abigail: Experimental Aims and Rationale
+ Mairi: Proposed Approach, Overview Flowchart
+ Betty: Dataset Overview
 
 ### References:
 -follow ASM referencing guidelinesLinks to an external site.
