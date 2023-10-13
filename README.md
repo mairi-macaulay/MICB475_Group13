@@ -30,7 +30,7 @@
 |1A-9: Export data and perform statistical analysis on alpha and/or beta diversity metrics and/or differential abundance testing for taxonomic metrics using R|1B-9: Export data and perform statistical analysis on alpha and/or beta diversity metrics and/or differential abundance testing for taxonomic metrics using R|2-9: Export data and perform statistical analysis on alpha and/or beta diversity metrics and/or differential abundance testing for taxonomic metrics using R|3-9: Filter to remove unwanted ASVs|
 ||||3-10: Export data and perform statistical analysis on alpha and/or beta diversity metrics and/or differential abundance testing for taxonomic metrics using R|
 
-- I'll put in the names of the actual columns/groups we make, including where we are splitting the bins
+- I'll put in the where we will split hours outside
 - I'll make what alpha/beta diversity metrics we choose more specific
 - I'll add making a PCOA plot and Deseq2 (plot as a bar plot)
 
