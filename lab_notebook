@@ -1,1 +1,51 @@
-#This is our BASH code
+#Initial data processing with QIIME2
+
+#scp updated metadata to the server (in the data folder)
+scp /Users/bettyh/Documents/dorms_metadata_updated.txt root@10.19.139.159:/data/project2_dorms
+
+#server
+root@10.19.139.159
+Biome349
+
+#Create directory for project_2 and navigate it
+mkdir /data/project2_dorms
+cd /data/project2_dorms
+
+#Importing and demultiplexing 
+qiime tools import \
+  --type "SampleData[SequencesWithQuality]" \
+  --input-format SingleEndFastqManifestPhred33V2 \
+  --input-path /mnt/datasets/project_2/dorms/dorms_manifest.txt \
+  --output-path ./dorms_demux.qza
+
+#Create visualization of demultiplexed samples (.qza --> .qzv)
+qiime demux summarize \
+  --i-data dorms_demux.qza \
+  --o-visualization dorms_demux.qzv
+
+#Copy file to local computer (Done in local terminal!)
+scp root@10.19.139.159:/data/project2_dorms/dorms_demux.qzv .
+
+#Denoising
+qiime dada2 denoise-single \
+  --i-demultiplexed-seqs dorms_demux.qza \
+  --p-trim-left 0 \
+  --p-trunc-len 150 \
+  --o-representative-sequences dorms_rep-seqs.qza \
+  --o-table dorms_table.qza \
+  --o-denoising-stats dorms_stats.qza
+  
+#Visualize rep-seqs and table
+qiime feature-table summarize \
+  --i-table dorms_table.qza \
+  --o-visualization dorms_table.qzv \
+  --m-sample-metadata-file /data/project2_dorms/dorms_metadata_updated.txt
+
+qiime feature-table tabulate-seqs \
+  --i-data dorms_rep-seqs.qza \
+  --o-visualization dorms_rep-seqs.qzv
+
+#scp to my local computer
+scp root@10.19.139.159:/data/project2_dorms/dorms_table.qzv .
+
+scp root@10.19.139.159:/data/project2_dorms/dorms_rep-seqs.qzv .
