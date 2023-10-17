@@ -1,5 +1,8 @@
 #Initial data processing with QIIME2
 
+#MICB 475 
+#CHANGE THE METADATA BEFORE START! ---> scp file to server 
+
 #scp updated metadata to the server (in the data folder)
 scp /Users/bettyh/Documents/dorms_metadata_updated.txt root@10.19.139.159:/data/project2_dorms
 
@@ -18,15 +21,15 @@ qiime tools import \
   --input-path /mnt/datasets/project_2/dorms/dorms_manifest.txt \
   --output-path ./dorms_demux.qza
 
-#Create visualization of demultiplexed samples (.qza --> .qzv)
+# Create visualization of demultiplexed samples (.qza --> .qzv)
 qiime demux summarize \
   --i-data dorms_demux.qza \
   --o-visualization dorms_demux.qzv
 
-#Copy file to local computer (Done in local terminal!)
+# Copy file to local computer (Done in local terminal)
 scp root@10.19.139.159:/data/project2_dorms/dorms_demux.qzv .
 
-#Denoising
+# Denoising
 qiime dada2 denoise-single \
   --i-demultiplexed-seqs dorms_demux.qza \
   --p-trim-left 0 \
@@ -35,7 +38,7 @@ qiime dada2 denoise-single \
   --o-table dorms_table.qza \
   --o-denoising-stats dorms_stats.qza
   
-#Visualize rep-seqs and table
+# Visualize rep-seqs and table
 qiime feature-table summarize \
   --i-table dorms_table.qza \
   --o-visualization dorms_table.qzv \
@@ -47,7 +50,9 @@ qiime feature-table tabulate-seqs \
 
 #scp to my local computer
 scp root@10.19.139.159:/data/project2_dorms/dorms_table.qzv .
+
 scp root@10.19.139.159:/data/project2_dorms/dorms_rep-seqs.qzv .
+
 
 ##Training classifiers
 
@@ -68,6 +73,7 @@ qiime feature-classifier fit-classifier-naive-bayes \
   --i-reference-taxonomy /mnt/datasets/silva_ref_files/silva-138-99-tax.qza \
   --o-classifier classifier.qza
 
+
 # Use the trained classifier to assign taxonomy to your reads (rep-seqs.qza) --> may take long time, use separate screen
 qiime feature-classifier classify-sklearn \
   --i-classifier classifier.qza \
@@ -85,12 +91,38 @@ qiime taxa barplot \
   --m-metadata-file /data/project2_dorms/dorms_metadata_updated.txt \
   --o-visualization dorms_taxa-bar-plots.qzv
 
+#move to local computer
+scp root@10.19.139.159:/data/project2_dorms/dorms_taxonomy.qzv .
+
+scp root@10.19.139.159:/data/project2_dorms/dorms_taxa-bar-plots.qzv .
+
 #Removing mitochondria and chloroplast sequences
-  qiime taxa filter-table \
+qiime taxa filter-table \
   --i-table dorms_table.qza \
   --i-taxonomy dorms_taxonomy.qza \
   --p-exclude mitochondria,chloroplast \
   --o-filtered-table dorms_table-no-mito-no-chloro.qza
+
+qiime feature-table summarize \
+  --i-table dorms_table-no-mito-no-chloro.qza \
+  --o-visualization dorms_table-no-mito-no-chloro.qzv \
+  --m-sample-metadata-file /data/project2_dorms/dorms_metadata_updated.txt
+
+scp root@10.19.139.159:/data/project2_dorms/dorms_table-no-mito-no-chloro.qzv .
+
+#FILTERING SKIN SAMPLES
+qiime feature-table filter-samples \
+  --i-table dorms_table-no-mito-no-chloro.qza \
+  --m-metadata-file /data/project2_dorms/dorms_metadata_updated.txt \
+  --p-where "[sample_type] IN ('skin')" \
+  --o-filtered-table dorms_skin-filtered-table.qza
+
+qiime feature-table summarize \
+  --i-table dorms_skin-filtered-table.qza \
+  --o-visualization dorms_skin-filtered-table.qzv \
+  --m-sample-metadata-file /data/project2_dorms/dorms_metadata_updated.txt
+
+scp root@10.19.139.159:/data/project2_dorms/dorms_skin-filtered-table.qzv .
 
 #Generate a tree for phylogenetic diversity analysis
 qiime phylogeny align-to-tree-mafft-fasttree \
@@ -100,43 +132,22 @@ qiime phylogeny align-to-tree-mafft-fasttree \
   --o-tree dorms_unrooted-tree.qza \
   --o-rooted-tree dorms_rooted-tree.qza 
 
-#export to human-readable format
-
-#In data/, make folder dorms_export 
-mkdir dorms_export #(DONE)
-cd dorms_export
-
-#table.qza export (.biome to .txt)
-qiime tools export \
---input-path ../project2_dorms/dorms_table-no-mito-no-chlor.qza \
---output-path dorms_table_export
-
-cd dorms_table_export
-biom convert -i feature-table.biom --to-tsv -o feature-table.txt
-
-#taxonomy.qza export
-qiime tools export \
---input-path ../project2_dorms/dorms_taxonomy.qza \
---output-path dorms_taxonomy_export
-
-#taxonomy.qza export
-qiime tools export \
---input-path ../project2_dorms/dorms_rooted-tree.qza \
---output-path dorms_tree_export
-
-#scp whole directory into local computer
-scp -r root$10.19.139.159:~/data/dorms_export .
-
 
 #Alpha-rarefaction
-#using table with no mitochondria and chloroplast
+#using table with filtered skin samples
+#MAX FREQ = 65078.0 --> so depth as 64000
+#PICK a metadata category you are interested in
+# 3 is enough to do statistical analysis
+#increase sampling depth all of them is at least 3
+
+#1st step
 qiime diversity alpha-rarefaction \
-  --i-table dorms_table-no-mito-no-chloro.qza \
+  --i-table dorms_skin-filtered-table.qza \
   --i-phylogeny dorms_rooted-tree.qza \
-  --p-max-depth XXXX \
+  --p-max-depth 64000 \
   --m-metadata-file /data/project2_dorms/dorms_metadata_updated.txt \
   --o-visualization dorms_alpha-rarefaction.qzv
 
-## XXXXX --> max as possible
-#Decide on sampling depth by alpha rarefaction curve + table
+scp root@10.19.139.159:/data/project2_dorms/dorms_alpha-rarefaction.qzv .
+
 
