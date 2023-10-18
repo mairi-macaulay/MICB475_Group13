@@ -150,6 +150,14 @@ qiime diversity alpha-rarefaction \
 
 scp root@10.19.139.159:/data/project2_dorms/dorms_alpha-rarefaction.qzv .
 
+#2nd time with different depth
+qiime diversity alpha-rarefaction \
+  --i-table dorms_skin-filtered-table.qza \
+  --i-phylogeny dorms_rooted-tree.qza \
+  --p-max-depth 20000 \
+  --m-metadata-file /data/project2_dorms/dorms_metadata_updated.txt \
+  --o-visualization dorms_alpha-rarefaction_2.qzv
+
 #export to human-readable format
 #In data/, make folder dorms_export 
 mkdir dorms_export #(DONE)
