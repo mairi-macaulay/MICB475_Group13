@@ -5,16 +5,16 @@ library(tidyverse)
 library(vegan)
 
 ## Load data
-metafp <- "dorms_export/dorms_metadata_updated.txt"
+metafp <- "metadata/dorms_metadata_updated.txt"
 meta <- read_delim(metafp, delim="\t")
 
-otufp <- "dorms_export/dorms_feature-table.txt"
+otufp <- "QIIME/Project_2_dorms/dorms_export/dorms_table_export/dorms_feature-table.txt"
 otu <- read_delim(file = otufp, delim="\t", skip=1)
 
-taxfp <- "dorms_export/taxonomy.tsv"
+taxfp <- "QIIME/Project_2_dorms/dorms_export/dorms_taxonomy_export/taxonomy.tsv"
 tax <- read_delim(taxfp, delim="\t")
 
-phylotreefp <- "dorms_export/tree.nwk"
+phylotreefp <- "QIIME/Project_2_dorms/dorms_export/dorms_tree_export/tree.nwk"
 phylotree <- read.tree(phylotreefp)
 
 ## Format OTU table
@@ -52,7 +52,6 @@ class(TAX)
 # Merge all into a phyloseq object
 dorms <- phyloseq(OTU, SAMP, TAX, phylotree)
 
-##Do we need these steps??
 # Remove non-bacterial sequences, if any
 dorms_filt <- subset_taxa(dorms,  Domain == "d__Bacteria" & Class!="c__Chloroplast" & Family !="f__Mitochondria")
 # Remove ASVs that have less than 5 counts total
