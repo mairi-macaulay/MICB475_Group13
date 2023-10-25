@@ -52,14 +52,16 @@ class(TAX)
 # Merge all into a phyloseq object
 dorms <- phyloseq(OTU, SAMP, TAX, phylotree)
 
+
+####Filter for sheet washing frequency analysis####
 # Remove non-bacterial sequences, if any
 dorms_filt <- subset_taxa(dorms,  Domain == "d__Bacteria" & Class!="c__Chloroplast" & Family !="f__Mitochondria")
 # Remove ASVs that have less than 5 counts total
-dorms_filt_nolow <- filter_taxa(dorms_filt, function(x) sum(x)>5, prune = TRUE)
+#dorms_filt_nolow <- filter_taxa(dorms_filt, function(x) sum(x)>5, prune = TRUE)
 # Remove samples with less than 100 reads
-dorms_filt_nolow_samps <- prune_samples(sample_sums(dorms_filt_nolow)>100, dorms_filt_nolow)
-# Remove samples where month is na
-dorms_final <- subset_samples(dorms_filt_nolow_samps, !is.na(sheetwashfreq_binned))
+dorms_filt_samps <- prune_samples(sample_sums(dorms_filt)>100, dorms_filt)
+# Remove samples where sheet washing frequency is na
+dorms_final <- subset_samples(dorms_filt_samps, !is.na(sheetwashfreq_binned))
 
 
 # Rarefy samples
@@ -67,5 +69,6 @@ rarecurve(t(as.data.frame(otu_table(dorms_final))), cex=0.1)
 dorms_rare <- rarefy_even_depth(dorms_final, rngseed = 1, sample.size = 6223)
 
 ## Saving
-save(dorms_final, file="dorms_final.RData")
-save(dorms_rare, file="dorms_rare.RData")
+save(dorms, file="dorms_unfiltered.RData")
+save(dorms_final, file="dorms_final_sheetwashfreq.RData")
+save(dorms_rare, file="dorms_rare_sheetwashfreq.RData")
