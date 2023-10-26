@@ -1,0 +1,595 @@
+#SampleID	anonymized_name	collection_timestamp	commonloungetime_hr	description	floor	geo_loc_name	host_life_stage	host_subject_id	hoursoutside	lastshower_day	plants	roomateids	roomates	sample_type	samplenum	sex	sheetwashfreq_week	surface	surfaceaggregated	surfacegroup	timepoint	washlast_day	windowsopenhours	sheetwashfreq_binned	last_shower_binned	hoursoutside_binned
+12470.1.Bed.Sheet.2	1	2016	0.17	sample of Bed Sheet	6	US:IL:Chicago	Not applicable	1	9	0.54	0	NA	0	surface	209	male	4.5	Bed.Sheet	Bed Sheet	Hand	2	0	2			
+12470.1.Bed.Sheet.3	1	2016	0.05	sample of Bed Sheet	6	US:IL:Chicago	Not applicable	1	13	0.33	0	NA	0	surface	546	male	3	Bed.Sheet	Bed Sheet	Hand	3	21	15			
+12470.1.Bed.Sheet.4	1	2016	0	sample of Bed Sheet	6	US:IL:Chicago	Not applicable	1	1.5	0.75	0	NA	0	surface	301	male	4	Bed.Sheet	Bed Sheet	Hand	4	7	10			
+12470.1.Desk.2	1	2016	0.17	sample of Desk	6	US:IL:Chicago	Not applicable	1	9	0.54	0	NA	0	surface	205	male	4.5	Desk	Desk	Hand	2	0	2			
+12470.1.Desk.3	1	2016	0.05	sample of Desk	6	US:IL:Chicago	Not applicable	1	13	0.33	0	NA	0	surface	542	male	3	Desk	Desk	Hand	3	21	15			
+12470.1.Desk.4	1	2016	0	sample of Desk	6	US:IL:Chicago	Not applicable	1	1.5	0.75	0	NA	0	surface	305	male	4	Desk	Desk	Hand	4	7	10			
+12470.1.Door.Handle.2	1	2016	0.17	sample of Door Handle	6	US:IL:Chicago	Not applicable	1	9	0.54	0	NA	0	surface	208	male	4.5	Door.Handle	Door Handle	Hand	2	0	2			
+12470.1.Door.Handle.3	1	2016	0.05	sample of Door Handle	6	US:IL:Chicago	Not applicable	1	13	0.33	0	NA	0	surface	543	male	3	Door.Handle	Door Handle	Hand	3	21	15			
+12470.1.Door.Handle.4	1	2016	0	sample of Door Handle	6	US:IL:Chicago	Not applicable	1	1.5	0.75	0	NA	0	surface	302	male	4	Door.Handle	Door Handle	Hand	4	7	10			
+12470.1.Floor.2	1	2016	0.17	sample of Floor	6	US:IL:Chicago	Not applicable	1	9	0.54	0	NA	0	surface	210	male	4.5	Floor	Floor	Floor	2	0	2			
+12470.1.Floor.3	1	2016	0.05	sample of Floor	6	US:IL:Chicago	Not applicable	1	13	0.33	0	NA	0	surface	544	male	3	Floor	Floor	Floor	3	21	15			
+12470.1.Floor.4	1	2016	0	sample of Floor	6	US:IL:Chicago	Not applicable	1	1.5	0.75	0	NA	0	surface	300	male	4	Floor	Floor	Floor	4	7	10			
+12470.1.Hand.1	1	2016	NA	sample of Hand	6	US:IL:Chicago	adult	1	NA	NA	NA	NA	0	skin	57	male	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.1.Hand.2	1	2016	0.17	sample of Hand	6	US:IL:Chicago	adult	1	9	0.54	0	NA	0	skin	207	male	4.5	Hand	Hand	Hand	2	0	2	medium	recent	high
+12470.1.Hand.3	1	2016	0.05	sample of Hand	6	US:IL:Chicago	adult	1	13	0.33	0	NA	0	skin	541	male	3	Hand	Hand	Hand	3	21	15	medium	recent	high
+12470.1.Hand.4	1	2016	0	sample of Hand	6	US:IL:Chicago	adult	1	1.5	0.75	0	NA	0	skin	304	male	4	Hand	Hand	Hand	4	7	10	medium	recent	low
+12470.1.Shoe.2	1	2016	0.17	sample of Shoe	6	US:IL:Chicago	Not applicable	1	9	0.54	0	NA	0	surface	206	male	4.5	Shoe	Shoe	Floor	2	0	2			
+12470.1.Shoe.3	1	2016	0.05	sample of Shoe	6	US:IL:Chicago	Not applicable	1	13	0.33	0	NA	0	surface	545	male	3	Shoe	Shoe	Floor	3	21	15			
+12470.1.Shoe.4	1	2016	0	sample of Shoe	6	US:IL:Chicago	Not applicable	1	1.5	0.75	0	NA	0	surface	303	male	4	Shoe	Shoe	Floor	4	7	10			
+12470.10.Bed.Sheet.2	10	2016	0	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	10	1	0.25	0	NA	0	surface	107	male	2	Bed.Sheet	Bed Sheet	Hand	2	2	0			
+12470.10.Bed.Sheet.3	10	2016	15	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	10	4	1	0	NA	0	surface	287	male	2	Bed.Sheet	Bed Sheet	Hand	3	7	0			
+12470.10.Bed.Sheet.4	10	2016	10	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	10	3	0.5	0	NA	0	surface	355	male	8	Bed.Sheet	Bed Sheet	Hand	4	14	5			
+12470.10.Desk.2	10	2016	0	sample of Desk	7	US:IL:Chicago	Not applicable	10	1	0.25	0	NA	0	surface	115	male	2	Desk	Desk	Hand	2	2	0			
+12470.10.Desk.3	10	2016	15	sample of Desk	7	US:IL:Chicago	Not applicable	10	4	1	0	NA	0	surface	288	male	2	Desk	Desk	Hand	3	7	0			
+12470.10.Desk.4	10	2016	10	sample of Desk	7	US:IL:Chicago	Not applicable	10	3	0.5	0	NA	0	surface	359	male	8	Desk	Desk	Hand	4	14	5			
+12470.10.Door.Handle.3	10	2016	15	sample of Door Handle	7	US:IL:Chicago	Not applicable	10	4	1	0	NA	0	surface	285	male	2	Door.Handle	Door Handle	Hand	3	7	0			
+12470.10.Door.Handle.4	10	2016	10	sample of Door Handle	7	US:IL:Chicago	Not applicable	10	3	0.5	0	NA	0	surface	356	male	8	Door.Handle	Door Handle	Hand	4	14	5			
+12470.10.Floor.2	10	2016	0	sample of Floor	7	US:IL:Chicago	Not applicable	10	1	0.25	0	NA	0	surface	131	male	2	Floor	Floor	Floor	2	2	0			
+12470.10.Floor.3	10	2016	15	sample of Floor	7	US:IL:Chicago	Not applicable	10	4	1	0	NA	0	surface	286	male	2	Floor	Floor	Floor	3	7	0			
+12470.10.Floor.4	10	2016	10	sample of Floor	7	US:IL:Chicago	Not applicable	10	3	0.5	0	NA	0	surface	354	male	8	Floor	Floor	Floor	4	14	5			
+12470.10.Hand.1	10	2016	NA	sample of Hand	7	US:IL:Chicago	adult	10	NA	NA	NA	NA	0	skin	33	male	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.10.Hand.2	10	2016	0	sample of Hand	7	US:IL:Chicago	adult	10	1	0.25	0	NA	0	skin	123	male	2	Hand	Hand	Hand	2	2	0	high	recent	low
+12470.10.Hand.3	10	2016	15	sample of Hand	7	US:IL:Chicago	adult	10	4	1	0	NA	0	skin	284	male	2	Hand	Hand	Hand	3	7	0	high	recent	low
+12470.10.Hand.4	10	2016	10	sample of Hand	7	US:IL:Chicago	adult	10	3	0.5	0	NA	0	skin	358	male	8	Hand	Hand	Hand	4	14	5	low	recent	low
+12470.10.Shoe.2	10	2016	0	sample of Shoe	7	US:IL:Chicago	Not applicable	10	1	0.25	0	NA	0	surface	99	male	2	Shoe	Shoe	Floor	2	2	0			
+12470.10.Shoe.3	10	2016	15	sample of Shoe	7	US:IL:Chicago	Not applicable	10	4	1	0	NA	0	surface	283	male	2	Shoe	Shoe	Floor	3	7	0			
+12470.10.Shoe.4	10	2016	10	sample of Shoe	7	US:IL:Chicago	Not applicable	10	3	0.5	0	NA	0	surface	357	male	8	Shoe	Shoe	Floor	4	14	5			
+12470.11.Bed.Sheet.2	11	2016	0	sample of Bed Sheet	6	US:IL:Chicago	Not applicable	11	48	0.58	0	NA	1	surface	233	male	3	Bed.Sheet	Bed Sheet	Hand	2	14	168			
+12470.11.Bed.Sheet.3	11	2016	15	sample of Bed Sheet	5	US:IL:Chicago	Not applicable	11	28	0.17	0	NA	0	surface	441	male	2	Bed.Sheet	Bed Sheet	Hand	3	7	48			
+12470.11.Bed.Sheet.4	11	2016	4	sample of Bed Sheet	5	US:IL:Chicago	Not applicable	11	30	0.08	0	NA	0	surface	361	male	3	Bed.Sheet	Bed Sheet	Hand	4	21	168			
+12470.11.Desk.2	11	2016	0	sample of Desk	6	US:IL:Chicago	Not applicable	11	48	0.58	0	NA	1	surface	229	male	3	Desk	Desk	Hand	2	14	168			
+12470.11.Desk.3	11	2016	15	sample of Desk	5	US:IL:Chicago	Not applicable	11	28	0.17	0	NA	0	surface	442	male	2	Desk	Desk	Hand	3	7	48			
+12470.11.Desk.4	11	2016	4	sample of Desk	5	US:IL:Chicago	Not applicable	11	30	0.08	0	NA	0	surface	365	male	3	Desk	Desk	Hand	4	21	168			
+12470.11.Door.Handle.2	11	2016	0	sample of Door Handle	6	US:IL:Chicago	Not applicable	11	48	0.58	0	NA	1	surface	234	male	3	Door.Handle	Door Handle	Hand	2	14	168			
+12470.11.Door.Handle.3	11	2016	15	sample of Door Handle	5	US:IL:Chicago	Not applicable	11	28	0.17	0	NA	0	surface	443	male	2	Door.Handle	Door Handle	Hand	3	7	48			
+12470.11.Door.Handle.4	11	2016	4	sample of Door Handle	5	US:IL:Chicago	Not applicable	11	30	0.08	0	NA	0	surface	362	male	3	Door.Handle	Door Handle	Hand	4	21	168			
+12470.11.Floor.2	11	2016	0	sample of Floor	6	US:IL:Chicago	Not applicable	11	48	0.58	0	NA	1	surface	231	male	3	Floor	Floor	Floor	2	14	168			
+12470.11.Floor.4	11	2016	4	sample of Floor	5	US:IL:Chicago	Not applicable	11	30	0.08	0	NA	0	surface	360	male	3	Floor	Floor	Floor	4	21	168			
+12470.11.Hand.1	11	2016	NA	sample of Hand	5	US:IL:Chicago	adult	11	NA	NA	NA	NA	0	skin	35	male	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.11.Hand.2	11	2016	0	sample of Hand	6	US:IL:Chicago	adult	11	48	0.58	0	NA	1	skin	232	male	3	Hand	Hand	Hand	2	14	168	medium	recent	high
+12470.11.Hand.3	11	2016	15	sample of Hand	5	US:IL:Chicago	adult	11	28	0.17	0	NA	0	skin	440	male	2	Hand	Hand	Hand	3	7	48	high	recent	high
+12470.11.Hand.4	11	2016	4	sample of Hand	5	US:IL:Chicago	adult	11	30	0.08	0	NA	0	skin	364	male	3	Hand	Hand	Hand	4	21	168	medium	recent	high
+12470.11.Shoe.2	11	2016	0	sample of Shoe	6	US:IL:Chicago	Not applicable	11	48	0.58	0	NA	1	surface	230	male	3	Shoe	Shoe	Floor	2	14	168			
+12470.11.Shoe.3	11	2016	15	sample of Shoe	5	US:IL:Chicago	Not applicable	11	28	0.17	0	NA	0	surface	444	male	2	Shoe	Shoe	Floor	3	7	48			
+12470.11.Shoe.4	11	2016	4	sample of Shoe	5	US:IL:Chicago	Not applicable	11	30	0.08	0	NA	0	surface	363	male	3	Shoe	Shoe	Floor	4	21	168			
+12470.12.Bed.Sheet.2	12	2016	0	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	12	6	1	0	6	1	surface	531	female	NA	Bed.Sheet	Bed Sheet	Hand	2	NA	9			
+12470.12.Bed.Sheet.3	12	2016	0	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	12	4	1.5	0	6	1	surface	175	female	10	Bed.Sheet	Bed Sheet	Hand	3	90+	0			
+12470.12.Bed.Sheet.4	12	2016	0	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	12	12	2	0	6	2	surface	367	female	NA	Bed.Sheet	Bed Sheet	Hand	4	NA	168			
+12470.12.Desk.2	12	2016	0	sample of Desk	7	US:IL:Chicago	Not applicable	12	6	1	0	6	1	surface	534	female	NA	Desk	Desk	Hand	2	NA	9			
+12470.12.Desk.3	12	2016	0	sample of Desk	7	US:IL:Chicago	Not applicable	12	4	1.5	0	6	1	surface	151	female	10	Desk	Desk	Hand	3	90+	0			
+12470.12.Desk.4	12	2016	0	sample of Desk	7	US:IL:Chicago	Not applicable	12	12	2	0	6	2	surface	371	female	NA	Desk	Desk	Hand	4	NA	168			
+12470.12.Door.Handle.2	12	2016	0	sample of Door Handle	7	US:IL:Chicago	Not applicable	12	6	1	0	6	1	surface	530	female	NA	Door.Handle	Door Handle	Hand	2	NA	9			
+12470.12.Door.Handle.3	12	2016	0	sample of Door Handle	7	US:IL:Chicago	Not applicable	12	4	1.5	0	6	1	surface	183	female	10	Door.Handle	Door Handle	Hand	3	90+	0			
+12470.12.Door.Handle.4	12	2016	0	sample of Door Handle	7	US:IL:Chicago	Not applicable	12	12	2	0	6	2	surface	368	female	NA	Door.Handle	Door Handle	Hand	4	NA	168			
+12470.12.Floor.2	12	2016	0	sample of Floor	7	US:IL:Chicago	Not applicable	12	6	1	0	6	1	surface	532	female	NA	Floor	Floor	Floor	2	NA	9			
+12470.12.Floor.3	12	2016	0	sample of Floor	7	US:IL:Chicago	Not applicable	12	4	1.5	0	6	1	surface	159	female	10	Floor	Floor	Floor	3	90+	0			
+12470.12.Floor.4	12	2016	0	sample of Floor	7	US:IL:Chicago	Not applicable	12	12	2	0	6	2	surface	366	female	NA	Floor	Floor	Floor	4	NA	168			
+12470.12.Hand.1	12	2016	NA	sample of Hand	7	US:IL:Chicago	adult	12	NA	NA	NA	6	2	skin	32	female	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.12.Hand.2	12	2016	0	sample of Hand	7	US:IL:Chicago	adult	12	6	1	0	6	1	skin	533	female	NA	Hand	Hand	Hand	2	NA	9	NA	recent	high
+12470.12.Hand.4	12	2016	0	sample of Hand	7	US:IL:Chicago	adult	12	12	2	0	6	2	skin	370	female	NA	Hand	Hand	Hand	4	NA	168	NA	not_recent	high
+12470.12.Shoe.2	12	2016	0	sample of Shoe	7	US:IL:Chicago	Not applicable	12	6	1	0	6	1	surface	529	female	NA	Shoe	Shoe	Floor	2	NA	9			
+12470.12.Shoe.3	12	2016	0	sample of Shoe	7	US:IL:Chicago	Not applicable	12	4	1.5	0	6	1	surface	191	female	10	Shoe	Shoe	Floor	3	90+	0			
+12470.12.Shoe.4	12	2016	0	sample of Shoe	7	US:IL:Chicago	Not applicable	12	12	2	0	6	2	surface	369	female	NA	Shoe	Shoe	Floor	4	NA	168			
+12470.13.Bed.Sheet.2	13	2016	0	sample of Bed Sheet	5	US:IL:Chicago	Not applicable	13	7	1.08	0	NA	0	surface	224	female	3	Bed.Sheet	Bed Sheet	Hand	2	0	0			
+12470.13.Bed.Sheet.3	13	2016	2	sample of Bed Sheet	5	US:IL:Chicago	Not applicable	13	4	2	0	NA	0	surface	128	female	2	Bed.Sheet	Bed Sheet	Hand	3	14	0			
+12470.13.Bed.Sheet.4	13	2016	1	sample of Bed Sheet	5	US:IL:Chicago	Not applicable	13	4	0.08	0	NA	0	surface	373	female	2	Bed.Sheet	Bed Sheet	Hand	4	7	0			
+12470.13.Desk.2	13	2016	0	sample of Desk	5	US:IL:Chicago	Not applicable	13	7	1.08	0	NA	0	surface	225	female	3	Desk	Desk	Hand	2	0	0			
+12470.13.Desk.3	13	2016	2	sample of Desk	5	US:IL:Chicago	Not applicable	13	4	2	0	NA	0	surface	120	female	2	Desk	Desk	Hand	3	14	0			
+12470.13.Desk.4	13	2016	1	sample of Desk	5	US:IL:Chicago	Not applicable	13	4	0.08	0	NA	0	surface	377	female	2	Desk	Desk	Hand	4	7	0			
+12470.13.Door.Handle.2	13	2016	0	sample of Door Handle	5	US:IL:Chicago	Not applicable	13	7	1.08	0	NA	0	surface	223	female	3	Door.Handle	Door Handle	Hand	2	0	0			
+12470.13.Door.Handle.3	13	2016	2	sample of Door Handle	5	US:IL:Chicago	Not applicable	13	4	2	0	NA	0	surface	112	female	2	Door.Handle	Door Handle	Hand	3	14	0			
+12470.13.Door.Handle.4	13	2016	1	sample of Door Handle	5	US:IL:Chicago	Not applicable	13	4	0.08	0	NA	0	surface	374	female	2	Door.Handle	Door Handle	Hand	4	7	0			
+12470.13.Floor.2	13	2016	0	sample of Floor	5	US:IL:Chicago	Not applicable	13	7	1.08	0	NA	0	surface	227	female	3	Floor	Floor	Floor	2	0	0			
+12470.13.Floor.3	13	2016	2	sample of Floor	5	US:IL:Chicago	Not applicable	13	4	2	0	NA	0	surface	104	female	2	Floor	Floor	Floor	3	14	0			
+12470.13.Floor.4	13	2016	1	sample of Floor	5	US:IL:Chicago	Not applicable	13	4	0.08	0	NA	0	surface	372	female	2	Floor	Floor	Floor	4	7	0			
+12470.13.Hand.1	13	2016	NA	sample of Hand	5	US:IL:Chicago	adult	13	NA	NA	NA	NA	0	skin	31	female	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.13.Hand.2	13	2016	0	sample of Hand	5	US:IL:Chicago	adult	13	7	1.08	0	NA	0	skin	228	female	3	Hand	Hand	Hand	2	0	0	medium	not_recent	high
+12470.13.Shoe.2	13	2016	0	sample of Shoe	5	US:IL:Chicago	Not applicable	13	7	1.08	0	NA	0	surface	226	female	3	Shoe	Shoe	Floor	2	0	0			
+12470.13.Shoe.4	13	2016	1	sample of Shoe	5	US:IL:Chicago	Not applicable	13	4	0.08	0	NA	0	surface	375	female	2	Shoe	Shoe	Floor	4	7	0			
+12470.14.Bed.Sheet.2	14	2016	1	sample of Bed Sheet	6	US:IL:Chicago	Not applicable	14	2	0	0	Outside Study	1	surface	247	female	10	Bed.Sheet	Bed Sheet	Hand	2	1	0			
+12470.14.Bed.Sheet.3	14	2016	2	sample of Bed Sheet	6	US:IL:Chicago	Not applicable	14	3	0.83	0	Outside Study	1	surface	421	female	10	Bed.Sheet	Bed Sheet	Hand	3	14	168			
+12470.14.Bed.Sheet.4	14	2016	2	sample of Bed Sheet	6	US:IL:Chicago	Not applicable	14	3	0.5	0	Outside Study	1	surface	581	female	10	Bed.Sheet	Bed Sheet	Hand	4	35	168			
+12470.14.Desk.4	14	2016	2	sample of Desk	6	US:IL:Chicago	Not applicable	14	3	0.5	0	Outside Study	1	surface	580	female	10	Desk	Desk	Hand	4	35	168			
+12470.14.Door.Handle.2	14	2016	1	sample of Door Handle	6	US:IL:Chicago	Not applicable	14	2	0	0	Outside Study	1	surface	249	female	10	Door.Handle	Door Handle	Hand	2	1	0			
+12470.14.Door.Handle.3	14	2016	2	sample of Door Handle	6	US:IL:Chicago	Not applicable	14	3	0.83	0	Outside Study	1	surface	425	female	10	Door.Handle	Door Handle	Hand	3	14	168			
+12470.14.Door.Handle.4	14	2016	2	sample of Door Handle	6	US:IL:Chicago	Not applicable	14	3	0.5	0	Outside Study	1	surface	582	female	10	Door.Handle	Door Handle	Hand	4	35	168			
+12470.14.Floor.2	14	2016	1	sample of Floor	6	US:IL:Chicago	Not applicable	14	2	0	0	Outside Study	1	surface	251	female	10	Floor	Floor	Floor	2	1	0			
+12470.14.Floor.3	14	2016	2	sample of Floor	6	US:IL:Chicago	Not applicable	14	3	0.83	0	Outside Study	1	surface	424	female	10	Floor	Floor	Floor	3	14	168			
+12470.14.Floor.4	14	2016	2	sample of Floor	6	US:IL:Chicago	Not applicable	14	3	0.5	0	Outside Study	1	surface	577	female	10	Floor	Floor	Floor	4	35	168			
+12470.14.Hand.1	14	2016	NA	sample of Hand	6	US:IL:Chicago	adult	14	NA	NA	NA	Outside Study	1	skin	39	female	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.14.Hand.2	14	2016	1	sample of Hand	6	US:IL:Chicago	adult	14	2	0	0	Outside Study	1	skin	252	female	10	Hand	Hand	Hand	2	1	0	low	recent	low
+12470.14.Hand.3	14	2016	2	sample of Hand	6	US:IL:Chicago	adult	14	3	0.83	0	Outside Study	1	skin	426	female	10	Hand	Hand	Hand	3	14	168	low	recent	low
+12470.14.Hand.4	14	2016	2	sample of Hand	6	US:IL:Chicago	adult	14	3	0.5	0	Outside Study	1	skin	578	female	10	Hand	Hand	Hand	4	35	168	low	recent	low
+12470.14.Shoe.2	14	2016	1	sample of Shoe	6	US:IL:Chicago	Not applicable	14	2	0	0	Outside Study	1	surface	248	female	10	Shoe	Shoe	Floor	2	1	0			
+12470.14.Shoe.3	14	2016	2	sample of Shoe	6	US:IL:Chicago	Not applicable	14	3	0.83	0	Outside Study	1	surface	422	female	10	Shoe	Shoe	Floor	3	14	168			
+12470.14.Shoe.4	14	2016	2	sample of Shoe	6	US:IL:Chicago	Not applicable	14	3	0.5	0	Outside Study	1	surface	579	female	10	Shoe	Shoe	Floor	4	35	168			
+12470.15.Bed.Sheet.2	15	2016	4	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	15	4	0.21	0	Outside Study	1	surface	255	male	2	Bed.Sheet	Bed Sheet	Hand	2	14	168			
+12470.15.Bed.Sheet.3	15	2016	20	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	15	3	0.75	0	Outside Study	1	surface	400	male	2	Bed.Sheet	Bed Sheet	Hand	3	7	168			
+12470.15.Bed.Sheet.4	15	2016	10	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	15	7	0.42	0	Outside Study	1	surface	588	male	2	Bed.Sheet	Bed Sheet	Hand	4	7	168			
+12470.15.Desk.2	15	2016	4	sample of Desk	7	US:IL:Chicago	Not applicable	15	4	0.21	0	Outside Study	1	surface	258	male	2	Desk	Desk	Hand	2	14	168			
+12470.15.Desk.3	15	2016	20	sample of Desk	7	US:IL:Chicago	Not applicable	15	3	0.75	0	Outside Study	1	surface	397	male	2	Desk	Desk	Hand	3	7	168			
+12470.15.Desk.4	15	2016	10	sample of Desk	7	US:IL:Chicago	Not applicable	15	7	0.42	0	Outside Study	1	surface	587	male	2	Desk	Desk	Hand	4	7	168			
+12470.15.Door.Handle.2	15	2016	4	sample of Door Handle	7	US:IL:Chicago	Not applicable	15	4	0.21	0	Outside Study	1	surface	253	male	2	Door.Handle	Door Handle	Hand	2	14	168			
+12470.15.Door.Handle.3	15	2016	20	sample of Door Handle	7	US:IL:Chicago	Not applicable	15	3	0.75	0	Outside Study	1	surface	399	male	2	Door.Handle	Door Handle	Hand	3	7	168			
+12470.15.Door.Handle.4	15	2016	10	sample of Door Handle	7	US:IL:Chicago	Not applicable	15	7	0.42	0	Outside Study	1	surface	584	male	2	Door.Handle	Door Handle	Hand	4	7	168			
+12470.15.Floor.2	15	2016	4	sample of Floor	7	US:IL:Chicago	Not applicable	15	4	0.21	0	Outside Study	1	surface	254	male	2	Floor	Floor	Floor	2	14	168			
+12470.15.Floor.3	15	2016	20	sample of Floor	7	US:IL:Chicago	Not applicable	15	3	0.75	0	Outside Study	1	surface	398	male	2	Floor	Floor	Floor	3	7	168			
+12470.15.Floor.4	15	2016	10	sample of Floor	7	US:IL:Chicago	Not applicable	15	7	0.42	0	Outside Study	1	surface	586	male	2	Floor	Floor	Floor	4	7	168			
+12470.15.Hand.1	15	2016	NA	sample of Hand	7	US:IL:Chicago	adult	15	NA	NA	NA	Outside Study	1	skin	41	male	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.15.Hand.2	15	2016	4	sample of Hand	7	US:IL:Chicago	adult	15	4	0.21	0	Outside Study	1	skin	257	male	2	Hand	Hand	Hand	2	14	168	high	recent	low
+12470.15.Hand.3	15	2016	20	sample of Hand	7	US:IL:Chicago	adult	15	3	0.75	0	Outside Study	1	skin	401	male	2	Hand	Hand	Hand	3	7	168	high	recent	low
+12470.15.Hand.4	15	2016	10	sample of Hand	7	US:IL:Chicago	adult	15	7	0.42	0	Outside Study	1	skin	585	male	2	Hand	Hand	Hand	4	7	168	high	recent	high
+12470.15.Shoe.2	15	2016	4	sample of Shoe	7	US:IL:Chicago	Not applicable	15	4	0.21	0	Outside Study	1	surface	256	male	2	Shoe	Shoe	Floor	2	14	168			
+12470.15.Shoe.4	15	2016	10	sample of Shoe	7	US:IL:Chicago	Not applicable	15	7	0.42	0	Outside Study	1	surface	583	male	2	Shoe	Shoe	Floor	4	7	168			
+12470.16.Bed.Sheet.2	16	2016	3	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	16	15	NA	1	9	1	surface	266	male	2.5	Bed.Sheet	Bed Sheet	Hand	2	21	4			
+12470.16.Bed.Sheet.3	16	2016	4	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	16	9	1.46	1	9	1	surface	66	male	4	Bed.Sheet	Bed Sheet	Hand	3	0	20			
+12470.16.Bed.Sheet.4	16	2016	6	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	16	10	0.54	1	9	1	surface	592	male	3	Bed.Sheet	Bed Sheet	Hand	4	14	168			
+12470.16.Desk.2	16	2016	3	sample of Desk	7	US:IL:Chicago	Not applicable	16	15	NA	1	9	1	surface	269	male	2.5	Desk	Desk	Hand	2	21	4			
+12470.16.Desk.3	16	2016	4	sample of Desk	7	US:IL:Chicago	Not applicable	16	9	1.46	1	9	1	surface	61	male	4	Desk	Desk	Hand	3	0	20			
+12470.16.Door.Handle.3	16	2016	4	sample of Door Handle	7	US:IL:Chicago	Not applicable	16	9	1.46	1	9	1	surface	63	male	4	Door.Handle	Door Handle	Hand	3	0	20			
+12470.16.Door.Handle.4	16	2016	6	sample of Door Handle	7	US:IL:Chicago	Not applicable	16	10	0.54	1	9	1	surface	593	male	3	Door.Handle	Door Handle	Hand	4	14	168			
+12470.16.Floor.2	16	2016	3	sample of Floor	7	US:IL:Chicago	Not applicable	16	15	NA	1	9	1	surface	265	male	2.5	Floor	Floor	Floor	2	21	4			
+12470.16.Floor.3	16	2016	4	sample of Floor	7	US:IL:Chicago	Not applicable	16	9	1.46	1	9	1	surface	62	male	4	Floor	Floor	Floor	3	0	20			
+12470.16.Floor.4	16	2016	6	sample of Floor	7	US:IL:Chicago	Not applicable	16	10	0.54	1	9	1	surface	590	male	3	Floor	Floor	Floor	4	14	168			
+12470.16.Hand.1	16	2016	NA	sample of Hand	7	US:IL:Chicago	adult	16	NA	NA	NA	9	1	skin	40	male	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.16.Hand.2	16	2016	3	sample of Hand	7	US:IL:Chicago	adult	16	15	NA	1	9	1	skin	268	male	2.5	Hand	Hand	Hand	2	21	4	medium	NA	high
+12470.16.Hand.3	16	2016	4	sample of Hand	7	US:IL:Chicago	adult	16	9	1.46	1	9	1	skin	64	male	4	Hand	Hand	Hand	3	0	20	medium	not_recent	high
+12470.16.Hand.4	16	2016	6	sample of Hand	7	US:IL:Chicago	adult	16	10	0.54	1	9	1	skin	594	male	3	Hand	Hand	Hand	4	14	168	medium	recent	high
+12470.16.Shoe.2	16	2016	3	sample of Shoe	7	US:IL:Chicago	Not applicable	16	15	NA	1	9	1	surface	270	male	2.5	Shoe	Shoe	Floor	2	21	4			
+12470.16.Shoe.3	16	2016	4	sample of Shoe	7	US:IL:Chicago	Not applicable	16	9	1.46	1	9	1	surface	65	male	4	Shoe	Shoe	Floor	3	0	20			
+12470.16.Shoe.4	16	2016	6	sample of Shoe	7	US:IL:Chicago	Not applicable	16	10	0.54	1	9	1	surface	589	male	3	Shoe	Shoe	Floor	4	14	168			
+12470.17.Bed.Sheet.2	17	2016	NA	sample of Bed Sheet	5	US:IL:Chicago	Not applicable	17	NA	NA	NA	NA	NA	surface	221	NA	NA	Bed.Sheet	Bed Sheet	Hand	2	NA	NA			
+12470.17.Bed.Sheet.3	17	2016	NA	sample of Bed Sheet	5	US:IL:Chicago	Not applicable	17	NA	NA	NA	NA	NA	surface	498	NA	NA	Bed.Sheet	Bed Sheet	Hand	3	NA	NA			
+12470.17.Desk.2	17	2016	NA	sample of Desk	5	US:IL:Chicago	Not applicable	17	NA	NA	NA	NA	NA	surface	219	NA	NA	Desk	Desk	Hand	2	NA	NA			
+12470.17.Desk.3	17	2016	NA	sample of Desk	5	US:IL:Chicago	Not applicable	17	NA	NA	NA	NA	NA	surface	494	NA	NA	Desk	Desk	Hand	3	NA	NA			
+12470.17.Door.Handle.2	17	2016	NA	sample of Door Handle	5	US:IL:Chicago	Not applicable	17	NA	NA	NA	NA	NA	surface	218	NA	NA	Door.Handle	Door Handle	Hand	2	NA	NA			
+12470.17.Door.Handle.3	17	2016	NA	sample of Door Handle	5	US:IL:Chicago	Not applicable	17	NA	NA	NA	NA	NA	surface	497	NA	NA	Door.Handle	Door Handle	Hand	3	NA	NA			
+12470.17.Floor.2	17	2016	NA	sample of Floor	5	US:IL:Chicago	Not applicable	17	NA	NA	NA	NA	NA	surface	217	NA	NA	Floor	Floor	Floor	2	NA	NA			
+12470.17.Floor.3	17	2016	NA	sample of Floor	5	US:IL:Chicago	Not applicable	17	NA	NA	NA	NA	NA	surface	496	NA	NA	Floor	Floor	Floor	3	NA	NA			
+12470.17.Hand.1	17	2016	NA	sample of Hand	5	US:IL:Chicago	adult	17	NA	NA	NA	NA	NA	skin	42	NA	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.17.Hand.2	17	2016	NA	sample of Hand	5	US:IL:Chicago	adult	17	NA	NA	NA	NA	NA	skin	220	NA	NA	Hand	Hand	Hand	2	NA	NA	NA	NA	NA
+12470.17.Hand.3	17	2016	NA	sample of Hand	5	US:IL:Chicago	adult	17	NA	NA	NA	NA	NA	skin	495	NA	NA	Hand	Hand	Hand	3	NA	NA	NA	NA	NA
+12470.17.Shoe.2	17	2016	NA	sample of Shoe	5	US:IL:Chicago	Not applicable	17	NA	NA	NA	NA	NA	surface	222	NA	NA	Shoe	Shoe	Floor	2	NA	NA			
+12470.17.Shoe.3	17	2016	NA	sample of Shoe	5	US:IL:Chicago	Not applicable	17	NA	NA	NA	NA	NA	surface	493	NA	NA	Shoe	Shoe	Floor	3	NA	NA			
+12470.18.Bed.Sheet.2	18	2016	6	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	18	2	0.25	0	NA	0	surface	416	male	4	Bed.Sheet	Bed Sheet	Hand	2	28	5			
+12470.18.Bed.Sheet.3	18	2016	12	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	18	8	0.58	0	NA	0	surface	552	male	7	Bed.Sheet	Bed Sheet	Hand	3	70+	2			
+12470.18.Desk.2	18	2016	6	sample of Desk	7	US:IL:Chicago	Not applicable	18	2	0.25	0	NA	0	surface	420	male	4	Desk	Desk	Hand	2	28	5			
+12470.18.Desk.3	18	2016	12	sample of Desk	7	US:IL:Chicago	Not applicable	18	8	0.58	0	NA	0	surface	548	male	7	Desk	Desk	Hand	3	70+	2			
+12470.18.Door.Handle.2	18	2016	6	sample of Door Handle	7	US:IL:Chicago	Not applicable	18	2	0.25	0	NA	0	surface	415	male	4	Door.Handle	Door Handle	Hand	2	28	5			
+12470.18.Door.Handle.3	18	2016	12	sample of Door Handle	7	US:IL:Chicago	Not applicable	18	8	0.58	0	NA	0	surface	550	male	7	Door.Handle	Door Handle	Hand	3	70+	2			
+12470.18.Floor.2	18	2016	6	sample of Floor	7	US:IL:Chicago	Not applicable	18	2	0.25	0	NA	0	surface	419	male	4	Floor	Floor	Floor	2	28	5			
+12470.18.Floor.3	18	2016	12	sample of Floor	7	US:IL:Chicago	Not applicable	18	8	0.58	0	NA	0	surface	547	male	7	Floor	Floor	Floor	3	70+	2			
+12470.18.Hand.1	18	2016	NA	sample of Hand	7	US:IL:Chicago	adult	18	NA	NA	NA	NA	0	skin	37	male	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.18.Hand.2	18	2016	6	sample of Hand	7	US:IL:Chicago	adult	18	2	0.25	0	NA	0	skin	417	male	4	Hand	Hand	Hand	2	28	5	medium	recent	low
+12470.18.Hand.3	18	2016	12	sample of Hand	7	US:IL:Chicago	adult	18	8	0.58	0	NA	0	skin	549	male	7	Hand	Hand	Hand	3	70+	2	low	recent	high
+12470.18.Shoe.2	18	2016	6	sample of Shoe	7	US:IL:Chicago	Not applicable	18	2	0.25	0	NA	0	surface	418	male	4	Shoe	Shoe	Floor	2	28	5			
+12470.18.Shoe.3	18	2016	12	sample of Shoe	7	US:IL:Chicago	Not applicable	18	8	0.58	0	NA	0	surface	551	male	7	Shoe	Shoe	Floor	3	70+	2			
+12470.19.Bed.Sheet.2	19	2016	28	sample of Bed Sheet	5	US:IL:Chicago	Not applicable	19	10	1	0	20	1	surface	140	female	2	Bed.Sheet	Bed Sheet	Hand	2	2	0			
+12470.19.Bed.Sheet.3	19	2016	10	sample of Bed Sheet	5	US:IL:Chicago	Not applicable	19	15	1	0	20	1	surface	468	female	2	Bed.Sheet	Bed Sheet	Hand	3	14	0			
+12470.19.Bed.Sheet.4	19	2016	5	sample of Bed Sheet	5	US:IL:Chicago	Not applicable	19	12	1	0	20	1	surface	595	female	4	Bed.Sheet	Bed Sheet	Hand	4	28	10			
+12470.19.Desk.2	19	2016	28	sample of Desk	5	US:IL:Chicago	Not applicable	19	10	1	0	20	1	surface	100	female	2	Desk	Desk	Hand	2	2	0			
+12470.19.Desk.3	19	2016	10	sample of Desk	5	US:IL:Chicago	Not applicable	19	15	1	0	20	1	surface	463	female	2	Desk	Desk	Hand	3	14	0			
+12470.19.Door.Handle.2	19	2016	28	sample of Door Handle	5	US:IL:Chicago	Not applicable	19	10	1	0	20	1	surface	132	female	2	Door.Handle	Door Handle	Hand	2	2	0			
+12470.19.Door.Handle.3	19	2016	10	sample of Door Handle	5	US:IL:Chicago	Not applicable	19	15	1	0	20	1	surface	464	female	2	Door.Handle	Door Handle	Hand	3	14	0			
+12470.19.Floor.2	19	2016	28	sample of Floor	5	US:IL:Chicago	Not applicable	19	10	1	0	20	1	surface	108	female	2	Floor	Floor	Floor	2	2	0			
+12470.19.Floor.3	19	2016	10	sample of Floor	5	US:IL:Chicago	Not applicable	19	15	1	0	20	1	surface	465	female	2	Floor	Floor	Floor	3	14	0			
+12470.19.Floor.4	19	2016	5	sample of Floor	5	US:IL:Chicago	Not applicable	19	12	1	0	20	1	surface	600	female	4	Floor	Floor	Floor	4	28	10			
+12470.19.Hand.1	19	2016	NA	sample of Hand	5	US:IL:Chicago	adult	19	NA	NA	NA	20	1	skin	38	female	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.19.Hand.2	19	2016	28	sample of Hand	5	US:IL:Chicago	adult	19	10	1	0	20	1	skin	124	female	2	Hand	Hand	Hand	2	2	0	high	recent	high
+12470.19.Hand.3	19	2016	10	sample of Hand	5	US:IL:Chicago	adult	19	15	1	0	20	1	skin	466	female	2	Hand	Hand	Hand	3	14	0	high	recent	high
+12470.19.Hand.4	19	2016	5	sample of Hand	5	US:IL:Chicago	adult	19	12	1	0	20	1	skin	599	female	4	Hand	Hand	Hand	4	28	10	medium	recent	high
+12470.19.Shoe.2	19	2016	28	sample of Shoe	5	US:IL:Chicago	Not applicable	19	10	1	0	20	1	surface	116	female	2	Shoe	Shoe	Floor	2	2	0			
+12470.19.Shoe.3	19	2016	10	sample of Shoe	5	US:IL:Chicago	Not applicable	19	15	1	0	20	1	surface	467	female	2	Shoe	Shoe	Floor	3	14	0			
+12470.19.Shoe.4	19	2016	5	sample of Shoe	5	US:IL:Chicago	Not applicable	19	12	1	0	20	1	surface	596	female	4	Shoe	Shoe	Floor	4	28	10			
+12470.2.Bed.Sheet.2	2	2016	NA	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	2	NA	NA	NA	NA	1	surface	200	male	NA	Bed.Sheet	Bed Sheet	Hand	2	NA	NA			
+12470.2.Bed.Sheet.3	2	2016	NA	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	2	NA	NA	NA	NA	1	surface	280	male	NA	Bed.Sheet	Bed Sheet	Hand	3	NA	NA			
+12470.2.Bed.Sheet.4	2	2016	12	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	2	4	0.21	0	NA	1	surface	307	male	2	Bed.Sheet	Bed Sheet	Hand	4	3	168			
+12470.2.Desk.2	2	2016	NA	sample of Desk	8	US:IL:Chicago	Not applicable	2	NA	NA	NA	NA	1	surface	201	male	NA	Desk	Desk	Hand	2	NA	NA			
+12470.2.Desk.3	2	2016	NA	sample of Desk	8	US:IL:Chicago	Not applicable	2	NA	NA	NA	NA	1	surface	281	male	NA	Desk	Desk	Hand	3	NA	NA			
+12470.2.Door.Handle.2	2	2016	NA	sample of Door Handle	8	US:IL:Chicago	Not applicable	2	NA	NA	NA	NA	1	surface	203	male	NA	Door.Handle	Door Handle	Hand	2	NA	NA			
+12470.2.Door.Handle.3	2	2016	NA	sample of Door Handle	8	US:IL:Chicago	Not applicable	2	NA	NA	NA	NA	1	surface	278	male	NA	Door.Handle	Door Handle	Hand	3	NA	NA			
+12470.2.Door.Handle.4	2	2016	12	sample of Door Handle	8	US:IL:Chicago	Not applicable	2	4	0.21	0	NA	1	surface	308	male	2	Door.Handle	Door Handle	Hand	4	3	168			
+12470.2.Floor.2	2	2016	NA	sample of Floor	8	US:IL:Chicago	Not applicable	2	NA	NA	NA	NA	1	surface	199	male	NA	Floor	Floor	Floor	2	NA	NA			
+12470.2.Floor.3	2	2016	NA	sample of Floor	8	US:IL:Chicago	Not applicable	2	NA	NA	NA	NA	1	surface	279	male	NA	Floor	Floor	Floor	3	NA	NA			
+12470.2.Floor.4	2	2016	12	sample of Floor	8	US:IL:Chicago	Not applicable	2	4	0.21	0	NA	1	surface	306	male	2	Floor	Floor	Floor	4	3	168			
+12470.2.Hand.2	2	2016	NA	sample of Hand	8	US:IL:Chicago	adult	2	NA	NA	NA	NA	1	skin	202	male	NA	Hand	Hand	Hand	2	NA	NA	NA	NA	NA
+12470.2.Hand.3	2	2016	NA	sample of Hand	8	US:IL:Chicago	adult	2	NA	NA	NA	NA	1	skin	277	male	NA	Hand	Hand	Hand	3	NA	NA	NA	NA	NA
+12470.2.Hand.4	2	2016	12	sample of Hand	8	US:IL:Chicago	adult	2	4	0.21	0	NA	1	skin	310	male	2	Hand	Hand	Hand	4	3	168	high	recent	low
+12470.2.Shoe.2	2	2016	NA	sample of Shoe	8	US:IL:Chicago	Not applicable	2	NA	NA	NA	NA	1	surface	204	male	NA	Shoe	Shoe	Floor	2	NA	NA			
+12470.2.Shoe.3	2	2016	NA	sample of Shoe	8	US:IL:Chicago	Not applicable	2	NA	NA	NA	NA	1	surface	282	male	NA	Shoe	Shoe	Floor	3	NA	NA			
+12470.2.Shoe.4	2	2016	12	sample of Shoe	8	US:IL:Chicago	Not applicable	2	4	0.21	0	NA	1	surface	309	male	2	Shoe	Shoe	Floor	4	3	168			
+12470.20.Bed.Sheet.2	20	2016	8	sample of Bed Sheet	5	US:IL:Chicago	Not applicable	20	2	1.67	0	19	1	surface	196	female	3.5	Bed.Sheet	Bed Sheet	Hand	2	14	2			
+12470.20.Bed.Sheet.3	20	2016	12	sample of Bed Sheet	5	US:IL:Chicago	Not applicable	20	1	1	0	19	1	surface	492	female	3.5	Bed.Sheet	Bed Sheet	Hand	3	21	0			
+12470.20.Desk.3	20	2016	12	sample of Desk	5	US:IL:Chicago	Not applicable	20	1	1	0	19	1	surface	488	female	3.5	Desk	Desk	Hand	3	21	0			
+12470.20.Door.Handle.2	20	2016	8	sample of Door Handle	5	US:IL:Chicago	Not applicable	20	2	1.67	0	19	1	surface	195	female	3.5	Door.Handle	Door Handle	Hand	2	14	2			
+12470.20.Door.Handle.3	20	2016	12	sample of Door Handle	5	US:IL:Chicago	Not applicable	20	1	1	0	19	1	surface	489	female	3.5	Door.Handle	Door Handle	Hand	3	21	0			
+12470.20.Floor.2	20	2016	8	sample of Floor	5	US:IL:Chicago	Not applicable	20	2	1.67	0	19	1	surface	198	female	3.5	Floor	Floor	Floor	2	14	2			
+12470.20.Floor.3	20	2016	12	sample of Floor	5	US:IL:Chicago	Not applicable	20	1	1	0	19	1	surface	490	female	3.5	Floor	Floor	Floor	3	21	0			
+12470.20.Hand.1	20	2016	NA	sample of Hand	5	US:IL:Chicago	adult	20	NA	NA	NA	19	1	skin	56	female	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.20.Hand.2	20	2016	8	sample of Hand	5	US:IL:Chicago	adult	20	2	1.67	0	19	1	skin	193	female	3.5	Hand	Hand	Hand	2	14	2	medium	not_recent	low
+12470.20.Hand.3	20	2016	12	sample of Hand	5	US:IL:Chicago	adult	20	1	1	0	19	1	skin	487	female	3.5	Hand	Hand	Hand	3	21	0	medium	recent	low
+12470.20.Shoe.2	20	2016	8	sample of Shoe	5	US:IL:Chicago	Not applicable	20	2	1.67	0	19	1	surface	197	female	3.5	Shoe	Shoe	Floor	2	14	2			
+12470.20.Shoe.3	20	2016	12	sample of Shoe	5	US:IL:Chicago	Not applicable	20	1	1	0	19	1	surface	491	female	3.5	Shoe	Shoe	Floor	3	21	0			
+12470.21.Bed.Sheet.2	21	2016	0	sample of Bed Sheet	6	US:IL:Chicago	Not applicable	21	5.5	0.38	2	NA	0	surface	570	female	2.4	Bed.Sheet	Bed Sheet	Hand	2	18	2			
+12470.21.Bed.Sheet.3	21	2016	0	sample of Bed Sheet	6	US:IL:Chicago	Not applicable	21	16	0.33	2	NA	0	surface	237	female	2	Bed.Sheet	Bed Sheet	Hand	3	1.5	0			
+12470.21.Bed.Sheet.4	21	2016	0	sample of Bed Sheet	6	US:IL:Chicago	Not applicable	21	8	0.33	2	NA	0	surface	601	female	2	Bed.Sheet	Bed Sheet	Hand	4	7	4.5			
+12470.21.Desk.2	21	2016	0	sample of Desk	6	US:IL:Chicago	Not applicable	21	5.5	0.38	2	NA	0	surface	569	female	2.4	Desk	Desk	Hand	2	18	2			
+12470.21.Desk.3	21	2016	0	sample of Desk	6	US:IL:Chicago	Not applicable	21	16	0.33	2	NA	0	surface	239	female	2	Desk	Desk	Hand	3	1.5	0			
+12470.21.Desk.4	21	2016	0	sample of Desk	6	US:IL:Chicago	Not applicable	21	8	0.33	2	NA	0	surface	603	female	2	Desk	Desk	Hand	4	7	4.5			
+12470.21.Door.Handle.2	21	2016	0	sample of Door Handle	6	US:IL:Chicago	Not applicable	21	5.5	0.38	2	NA	0	surface	567	female	2.4	Door.Handle	Door Handle	Hand	2	18	2			
+12470.21.Door.Handle.3	21	2016	0	sample of Door Handle	6	US:IL:Chicago	Not applicable	21	16	0.33	2	NA	0	surface	238	female	2	Door.Handle	Door Handle	Hand	3	1.5	0			
+12470.21.Door.Handle.4	21	2016	0	sample of Door Handle	6	US:IL:Chicago	Not applicable	21	8	0.33	2	NA	0	surface	606	female	2	Door.Handle	Door Handle	Hand	4	7	4.5			
+12470.21.Floor.2	21	2016	0	sample of Floor	6	US:IL:Chicago	Not applicable	21	5.5	0.38	2	NA	0	surface	565	female	2.4	Floor	Floor	Floor	2	18	2			
+12470.21.Floor.3	21	2016	0	sample of Floor	6	US:IL:Chicago	Not applicable	21	16	0.33	2	NA	0	surface	235	female	2	Floor	Floor	Floor	3	1.5	0			
+12470.21.Floor.4	21	2016	0	sample of Floor	6	US:IL:Chicago	Not applicable	21	8	0.33	2	NA	0	surface	604	female	2	Floor	Floor	Floor	4	7	4.5			
+12470.21.Hand.2	21	2016	0	sample of Hand	6	US:IL:Chicago	adult	21	5.5	0.38	2	NA	0	skin	566	female	2.4	Hand	Hand	Hand	2	18	2	medium	recent	low
+12470.21.Hand.3	21	2016	0	sample of Hand	6	US:IL:Chicago	adult	21	16	0.33	2	NA	0	skin	240	female	2	Hand	Hand	Hand	3	1.5	0	high	recent	high
+12470.21.Hand.4	21	2016	0	sample of Hand	6	US:IL:Chicago	adult	21	8	0.33	2	NA	0	skin	602	female	2	Hand	Hand	Hand	4	7	4.5	high	recent	high
+12470.21.Shoe.2	21	2016	0	sample of Shoe	6	US:IL:Chicago	Not applicable	21	5.5	0.38	2	NA	0	surface	568	female	2.4	Shoe	Shoe	Floor	2	18	2			
+12470.21.Shoe.3	21	2016	0	sample of Shoe	6	US:IL:Chicago	Not applicable	21	16	0.33	2	NA	0	surface	236	female	2	Shoe	Shoe	Floor	3	1.5	0			
+12470.21.Shoe.4	21	2016	0	sample of Shoe	6	US:IL:Chicago	Not applicable	21	8	0.33	2	NA	0	surface	605	female	2	Shoe	Shoe	Floor	4	7	4.5			
+12470.22.Bed.Sheet.3	22	2016	4	sample of Bed Sheet	5	US:IL:Chicago	Not applicable	22	4	0	0	22	1	surface	461	male	5	Bed.Sheet	Bed Sheet	Hand	3	7	0			
+12470.22.Desk.2	22	2016	0	sample of Desk	5	US:IL:Chicago	Not applicable	22	4	1.21	0	22	1	surface	130	male	NA	Desk	Desk	Hand	2	NA	0			
+12470.22.Desk.3	22	2016	4	sample of Desk	5	US:IL:Chicago	Not applicable	22	4	0	0	22	1	surface	457	male	5	Desk	Desk	Hand	3	7	0			
+12470.22.Desk.4	22	2016	2	sample of Desk	5	US:IL:Chicago	Not applicable	22	8	2.71	0	22	1	surface	613	male	NA	Desk	Desk	Hand	4	NA	0			
+12470.22.Door.Handle.2	22	2016	0	sample of Door Handle	5	US:IL:Chicago	Not applicable	22	4	1.21	0	22	1	surface	122	male	NA	Door.Handle	Door Handle	Hand	2	NA	0			
+12470.22.Door.Handle.3	22	2016	4	sample of Door Handle	5	US:IL:Chicago	Not applicable	22	4	0	0	22	1	surface	462	male	5	Door.Handle	Door Handle	Hand	3	7	0			
+12470.22.Floor.3	22	2016	4	sample of Floor	5	US:IL:Chicago	Not applicable	22	4	0	0	22	1	surface	458	male	5	Floor	Floor	Floor	3	7	0			
+12470.22.Floor.4	22	2016	2	sample of Floor	5	US:IL:Chicago	Not applicable	22	8	2.71	0	22	1	surface	607	male	NA	Floor	Floor	Floor	4	NA	0			
+12470.22.Hand.1	22	2016	NA	sample of Hand	5	US:IL:Chicago	adult	22	NA	NA	NA	27	1	skin	58	male	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.22.Hand.3	22	2016	4	sample of Hand	5	US:IL:Chicago	adult	22	4	0	0	22	1	skin	459	male	5	Hand	Hand	Hand	3	7	0	medium	recent	low
+12470.22.Hand.4	22	2016	2	sample of Hand	5	US:IL:Chicago	adult	22	8	2.71	0	22	1	skin	612	male	NA	Hand	Hand	Hand	4	NA	0	NA	not_recent	high
+12470.22.Shoe.2	22	2016	0	sample of Shoe	5	US:IL:Chicago	Not applicable	22	4	1.21	0	22	1	surface	114	male	NA	Shoe	Shoe	Floor	2	NA	0			
+12470.22.Shoe.3	22	2016	4	sample of Shoe	5	US:IL:Chicago	Not applicable	22	4	0	0	22	1	surface	460	male	5	Shoe	Shoe	Floor	3	7	0			
+12470.23.Bed.Sheet.2	23	2016	NA	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	23	NA	NA	NA	NA	0	surface	504	male	NA	Bed.Sheet	Bed Sheet	Hand	2	NA	NA			
+12470.23.Bed.Sheet.3	23	2016	5	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	23	12	0.33	0	NA	0	surface	168	male	NA	Bed.Sheet	Bed Sheet	Hand	3	1	0			
+12470.23.Desk.2	23	2016	NA	sample of Desk	8	US:IL:Chicago	Not applicable	23	NA	NA	NA	NA	0	surface	501	male	NA	Desk	Desk	Hand	2	NA	NA			
+12470.23.Desk.3	23	2016	5	sample of Desk	8	US:IL:Chicago	Not applicable	23	12	0.33	0	NA	0	surface	184	male	NA	Desk	Desk	Hand	3	1	0			
+12470.23.Desk.4	23	2016	NA	sample of Desk	8	US:IL:Chicago	Not applicable	23	NA	NA	NA	NA	0	surface	614	male	NA	Desk	Desk	Hand	4	NA	NA			
+12470.23.Door.Handle.2	23	2016	NA	sample of Door Handle	8	US:IL:Chicago	Not applicable	23	NA	NA	NA	NA	0	surface	502	male	NA	Door.Handle	Door Handle	Hand	2	NA	NA			
+12470.23.Door.Handle.3	23	2016	5	sample of Door Handle	8	US:IL:Chicago	Not applicable	23	12	0.33	0	NA	0	surface	152	male	NA	Door.Handle	Door Handle	Hand	3	1	0			
+12470.23.Door.Handle.4	23	2016	NA	sample of Door Handle	8	US:IL:Chicago	Not applicable	23	NA	NA	NA	NA	0	surface	617	male	NA	Door.Handle	Door Handle	Hand	4	NA	NA			
+12470.23.Floor.2	23	2016	NA	sample of Floor	8	US:IL:Chicago	Not applicable	23	NA	NA	NA	NA	0	surface	503	male	NA	Floor	Floor	Floor	2	NA	NA			
+12470.23.Floor.3	23	2016	5	sample of Floor	8	US:IL:Chicago	Not applicable	23	12	0.33	0	NA	0	surface	192	male	NA	Floor	Floor	Floor	3	1	0			
+12470.23.Floor.4	23	2016	NA	sample of Floor	8	US:IL:Chicago	Not applicable	23	NA	NA	NA	NA	0	surface	616	male	NA	Floor	Floor	Floor	4	NA	NA			
+12470.23.Hand.1	23	2016	NA	sample of Hand	8	US:IL:Chicago	adult	23	NA	NA	NA	NA	0	skin	60	male	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.23.Hand.2	23	2016	NA	sample of Hand	8	US:IL:Chicago	adult	23	NA	NA	NA	NA	0	skin	499	male	NA	Hand	Hand	Hand	2	NA	NA	NA	NA	NA
+12470.23.Hand.3	23	2016	5	sample of Hand	8	US:IL:Chicago	adult	23	12	0.33	0	NA	0	skin	176	male	NA	Hand	Hand	Hand	3	1	0	NA	recent	high
+12470.23.Hand.4	23	2016	NA	sample of Hand	8	US:IL:Chicago	adult	23	NA	NA	NA	NA	0	skin	615	male	NA	Hand	Hand	Hand	4	NA	NA	NA	NA	NA
+12470.23.Shoe.2	23	2016	NA	sample of Shoe	8	US:IL:Chicago	Not applicable	23	NA	NA	NA	NA	0	surface	500	male	NA	Shoe	Shoe	Floor	2	NA	NA			
+12470.23.Shoe.4	23	2016	NA	sample of Shoe	8	US:IL:Chicago	Not applicable	23	NA	NA	NA	NA	0	surface	618	male	NA	Shoe	Shoe	Floor	4	NA	NA			
+12470.24.Bed.Sheet.2	24	2016	12	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	24	6	0.5	0	NA	0	surface	173	male	2	Bed.Sheet	Bed Sheet	Hand	2	0	8			
+12470.24.Bed.Sheet.3	24	2016	12	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	24	3	0.5	0	NA	0	surface	214	male	2	Bed.Sheet	Bed Sheet	Hand	3	21	0			
+12470.24.Desk.2	24	2016	12	sample of Desk	8	US:IL:Chicago	Not applicable	24	6	0.5	0	NA	0	surface	189	male	2	Desk	Desk	Hand	2	0	8			
+12470.24.Desk.3	24	2016	12	sample of Desk	8	US:IL:Chicago	Not applicable	24	3	0.5	0	NA	0	surface	215	male	2	Desk	Desk	Hand	3	21	0			
+12470.24.Door.Handle.2	24	2016	12	sample of Door Handle	8	US:IL:Chicago	Not applicable	24	6	0.5	0	NA	0	surface	157	male	2	Door.Handle	Door Handle	Hand	2	0	8			
+12470.24.Door.Handle.3	24	2016	12	sample of Door Handle	8	US:IL:Chicago	Not applicable	24	3	0.5	0	NA	0	surface	216	male	2	Door.Handle	Door Handle	Hand	3	21	0			
+12470.24.Floor.3	24	2016	12	sample of Floor	8	US:IL:Chicago	Not applicable	24	3	0.5	0	NA	0	surface	213	male	2	Floor	Floor	Floor	3	21	0			
+12470.24.Hand.1	24	2016	NA	sample of Hand	8	US:IL:Chicago	adult	24	NA	NA	NA	NA	0	skin	59	male	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.24.Hand.3	24	2016	12	sample of Hand	8	US:IL:Chicago	adult	24	3	0.5	0	NA	0	skin	211	male	2	Hand	Hand	Hand	3	21	0	high	recent	low
+12470.24.Shoe.2	24	2016	12	sample of Shoe	8	US:IL:Chicago	Not applicable	24	6	0.5	0	NA	0	surface	181	male	2	Shoe	Shoe	Floor	2	0	8			
+12470.24.Shoe.3	24	2016	12	sample of Shoe	8	US:IL:Chicago	Not applicable	24	3	0.5	0	NA	0	surface	212	male	2	Shoe	Shoe	Floor	3	21	0			
+12470.25.Bed.Sheet.2	25	2016	4	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	25	16	1.5	0	Outside Study	1	surface	179	female	3	Bed.Sheet	Bed Sheet	Hand	2	15	0			
+12470.25.Bed.Sheet.4	25	2016	10	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	25	3.5	0.08	0	Outside Study	1	surface	621	female	4	Bed.Sheet	Bed Sheet	Hand	4	7	168			
+12470.25.Desk.3	25	2016	14	sample of Desk	7	US:IL:Chicago	Not applicable	25	6	1.5	0	Outside Study	1	surface	412	female	4	Desk	Desk	Hand	3	21	0			
+12470.25.Desk.4	25	2016	10	sample of Desk	7	US:IL:Chicago	Not applicable	25	3.5	0.08	0	Outside Study	1	surface	620	female	4	Desk	Desk	Hand	4	7	168			
+12470.25.Door.Handle.3	25	2016	14	sample of Door Handle	7	US:IL:Chicago	Not applicable	25	6	1.5	0	Outside Study	1	surface	414	female	4	Door.Handle	Door Handle	Hand	3	21	0			
+12470.25.Door.Handle.4	25	2016	10	sample of Door Handle	7	US:IL:Chicago	Not applicable	25	3.5	0.08	0	Outside Study	1	surface	622	female	4	Door.Handle	Door Handle	Hand	4	7	168			
+12470.25.Floor.3	25	2016	14	sample of Floor	7	US:IL:Chicago	Not applicable	25	6	1.5	0	Outside Study	1	surface	409	female	4	Floor	Floor	Floor	3	21	0			
+12470.25.Floor.4	25	2016	10	sample of Floor	7	US:IL:Chicago	Not applicable	25	3.5	0.08	0	Outside Study	1	surface	624	female	4	Floor	Floor	Floor	4	7	168			
+12470.25.Hand.1	25	2016	NA	sample of Hand	7	US:IL:Chicago	adult	25	NA	NA	NA	Outside Study	1	skin	16	female	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.25.Hand.2	25	2016	4	sample of Hand	7	US:IL:Chicago	adult	25	16	1.5	0	Outside Study	1	skin	171	female	3	Hand	Hand	Hand	2	15	0	medium	not_recent	high
+12470.25.Hand.3	25	2016	14	sample of Hand	7	US:IL:Chicago	adult	25	6	1.5	0	Outside Study	1	skin	410	female	4	Hand	Hand	Hand	3	21	0	medium	not_recent	high
+12470.25.Hand.4	25	2016	10	sample of Hand	7	US:IL:Chicago	adult	25	3.5	0.08	0	Outside Study	1	skin	623	female	4	Hand	Hand	Hand	4	7	168	medium	recent	low
+12470.25.Shoe.2	25	2016	4	sample of Shoe	7	US:IL:Chicago	Not applicable	25	16	1.5	0	Outside Study	1	surface	187	female	3	Shoe	Shoe	Floor	2	15	0			
+12470.25.Shoe.3	25	2016	14	sample of Shoe	7	US:IL:Chicago	Not applicable	25	6	1.5	0	Outside Study	1	surface	413	female	4	Shoe	Shoe	Floor	3	21	0			
+12470.25.Shoe.4	25	2016	10	sample of Shoe	7	US:IL:Chicago	Not applicable	25	3.5	0.08	0	Outside Study	1	surface	619	female	4	Shoe	Shoe	Floor	4	7	168			
+12470.26.Bed.Sheet.2	26	2016	2	sample of Bed Sheet	5	US:IL:Chicago	Not applicable	26	6	0.67	0	NA	0	surface	262	male	8	Bed.Sheet	Bed Sheet	Hand	2	60	168			
+12470.26.Bed.Sheet.3	26	2016	3	sample of Bed Sheet	5	US:IL:Chicago	Not applicable	26	8	0.13	0	NA	0	surface	473	male	8	Bed.Sheet	Bed Sheet	Hand	3	28	168			
+12470.26.Bed.Sheet.4	26	2016	3	sample of Bed Sheet	5	US:IL:Chicago	Not applicable	26	10	0.5	0	NA	0	surface	630	male	10	Bed.Sheet	Bed Sheet	Hand	4	90+	168			
+12470.26.Desk.2	26	2016	2	sample of Desk	5	US:IL:Chicago	Not applicable	26	6	0.67	0	NA	0	surface	259	male	8	Desk	Desk	Hand	2	60	168			
+12470.26.Desk.3	26	2016	3	sample of Desk	5	US:IL:Chicago	Not applicable	26	8	0.13	0	NA	0	surface	469	male	8	Desk	Desk	Hand	3	28	168			
+12470.26.Desk.4	26	2016	3	sample of Desk	5	US:IL:Chicago	Not applicable	26	10	0.5	0	NA	0	surface	626	male	10	Desk	Desk	Hand	4	90+	168			
+12470.26.Door.Handle.2	26	2016	2	sample of Door Handle	5	US:IL:Chicago	Not applicable	26	6	0.67	0	NA	0	surface	264	male	8	Door.Handle	Door Handle	Hand	2	60	168			
+12470.26.Door.Handle.3	26	2016	3	sample of Door Handle	5	US:IL:Chicago	Not applicable	26	8	0.13	0	NA	0	surface	471	male	8	Door.Handle	Door Handle	Hand	3	28	168			
+12470.26.Door.Handle.4	26	2016	3	sample of Door Handle	5	US:IL:Chicago	Not applicable	26	10	0.5	0	NA	0	surface	629	male	10	Door.Handle	Door Handle	Hand	4	90+	168			
+12470.26.Floor.2	26	2016	2	sample of Floor	5	US:IL:Chicago	Not applicable	26	6	0.67	0	NA	0	surface	263	male	8	Floor	Floor	Floor	2	60	168			
+12470.26.Floor.3	26	2016	3	sample of Floor	5	US:IL:Chicago	Not applicable	26	8	0.13	0	NA	0	surface	474	male	8	Floor	Floor	Floor	3	28	168			
+12470.26.Floor.4	26	2016	3	sample of Floor	5	US:IL:Chicago	Not applicable	26	10	0.5	0	NA	0	surface	628	male	10	Floor	Floor	Floor	4	90+	168			
+12470.26.Hand.1	26	2016	NA	sample of Hand	5	US:IL:Chicago	adult	26	NA	NA	NA	NA	0	skin	18	male	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.26.Hand.2	26	2016	2	sample of Hand	5	US:IL:Chicago	adult	26	6	0.67	0	NA	0	skin	260	male	8	Hand	Hand	Hand	2	60	168	low	recent	high
+12470.26.Hand.3	26	2016	3	sample of Hand	5	US:IL:Chicago	adult	26	8	0.13	0	NA	0	skin	472	male	8	Hand	Hand	Hand	3	28	168	low	recent	high
+12470.26.Hand.4	26	2016	3	sample of Hand	5	US:IL:Chicago	adult	26	10	0.5	0	NA	0	skin	627	male	10	Hand	Hand	Hand	4	90+	168	low	recent	high
+12470.26.Shoe.2	26	2016	2	sample of Shoe	5	US:IL:Chicago	Not applicable	26	6	0.67	0	NA	0	surface	261	male	8	Shoe	Shoe	Floor	2	60	168			
+12470.26.Shoe.3	26	2016	3	sample of Shoe	5	US:IL:Chicago	Not applicable	26	8	0.13	0	NA	0	surface	470	male	8	Shoe	Shoe	Floor	3	28	168			
+12470.26.Shoe.4	26	2016	3	sample of Shoe	5	US:IL:Chicago	Not applicable	26	10	0.5	0	NA	0	surface	625	male	10	Shoe	Shoe	Floor	4	90+	168			
+12470.27.Hand.1	27	2016	NA	sample of Hand		US:IL:Chicago	adult	27	NA	NA	NA	22	NA	skin	15	NA	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.28.Bed.Sheet.2	28	2016	0	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	28	4	1	4	"35, 29, 36"	3	surface	137	male	3	Bed.Sheet	Bed Sheet	Hand	2	8	0			
+12470.28.Bed.Sheet.3	28	2016	0	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	28	3	3	4	"35, 29, 36"	3	surface	154	male	10	Bed.Sheet	Bed Sheet	Hand	3	3	0			
+12470.28.Desk.2	28	2016	0	sample of Desk	8	US:IL:Chicago	Not applicable	28	4	1	4	"35, 29, 36"	3	surface	105	male	3	Desk	Desk	Hand	2	8	0			
+12470.28.Desk.3	28	2016	0	sample of Desk	8	US:IL:Chicago	Not applicable	28	3	3	4	"35, 29, 36"	3	surface	186	male	10	Desk	Desk	Hand	3	3	0			
+12470.28.Door.Handle.2	28	2016	0	sample of Door Handle	8	US:IL:Chicago	Not applicable	28	4	1	4	"35, 29, 36"	3	surface	121	male	3	Door.Handle	Door Handle	Hand	2	8	0			
+12470.28.Door.Handle.3	28	2016	0	sample of Door Handle	8	US:IL:Chicago	Not applicable	28	3	3	4	"35, 29, 36"	3	surface	146	male	10	Door.Handle	Door Handle	Hand	3	3	0			
+12470.28.Floor.2	28	2016	0	sample of Floor	8	US:IL:Chicago	Not applicable	28	4	1	4	"35, 29, 36"	3	surface	97	male	3	Floor	Floor	Floor	2	8	0			
+12470.28.Floor.3	28	2016	0	sample of Floor	8	US:IL:Chicago	Not applicable	28	3	3	4	"35, 29, 36"	3	surface	178	male	10	Floor	Floor	Floor	3	3	0			
+12470.28.Hand.1	28	2016	NA	sample of Hand	8	US:IL:Chicago	adult	28	NA	NA	NA	"35, 29, 36"	3	skin	13	male	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.28.Hand.2	28	2016	0	sample of Hand	8	US:IL:Chicago	adult	28	4	1	4	"35, 29, 36"	3	skin	113	male	3	Hand	Hand	Hand	2	8	0	medium	recent	low
+12470.28.Hand.3	28	2016	0	sample of Hand	8	US:IL:Chicago	adult	28	3	3	4	"35, 29, 36"	3	skin	170	male	10	Hand	Hand	Hand	3	3	0	low	not_recent	low
+12470.28.Shoe.2	28	2016	0	sample of Shoe	8	US:IL:Chicago	Not applicable	28	4	1	4	"35, 29, 36"	3	surface	129	male	3	Shoe	Shoe	Floor	2	8	0			
+12470.28.Shoe.3	28	2016	0	sample of Shoe	8	US:IL:Chicago	Not applicable	28	3	3	4	"35, 29, 36"	3	surface	162	male	10	Shoe	Shoe	Floor	3	3	0			
+12470.29.Bed.Sheet.2	29	2016	0	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	29	4	0.13	0	"28,35,26"	3	surface	438	female	4	Bed.Sheet	Bed Sheet	Hand	2	21	0			
+12470.29.Bed.Sheet.3	29	2016	1	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	29	8	0.38	0	"28,35,26"	3	surface	188	female	4	Bed.Sheet	Bed Sheet	Hand	3	28	0			
+12470.29.Bed.Sheet.4	29	2016	0	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	29	2	0.33	0	"28,35,26"	3	surface	636	female	3.5	Bed.Sheet	Bed Sheet	Hand	4	21	0			
+12470.29.Desk.2	29	2016	0	sample of Desk	8	US:IL:Chicago	Not applicable	29	4	0.13	0	"28,35,26"	3	surface	435	female	4	Desk	Desk	Hand	2	21	0			
+12470.29.Desk.3	29	2016	1	sample of Desk	8	US:IL:Chicago	Not applicable	29	8	0.38	0	"28,35,26"	3	surface	180	female	4	Desk	Desk	Hand	3	28	0			
+12470.29.Desk.4	29	2016	0	sample of Desk	8	US:IL:Chicago	Not applicable	29	2	0.33	0	"28,35,26"	3	surface	631	female	3.5	Desk	Desk	Hand	4	21	0			
+12470.29.Door.Handle.2	29	2016	0	sample of Door Handle	8	US:IL:Chicago	Not applicable	29	4	0.13	0	"28,35,26"	3	surface	434	female	4	Door.Handle	Door Handle	Hand	2	21	0			
+12470.29.Door.Handle.3	29	2016	1	sample of Door Handle	8	US:IL:Chicago	Not applicable	29	8	0.38	0	"28,35,26"	3	surface	148	female	4	Door.Handle	Door Handle	Hand	3	28	0			
+12470.29.Door.Handle.4	29	2016	0	sample of Door Handle	8	US:IL:Chicago	Not applicable	29	2	0.33	0	"28,35,26"	3	surface	633	female	3.5	Door.Handle	Door Handle	Hand	4	21	0			
+12470.29.Floor.2	29	2016	0	sample of Floor	8	US:IL:Chicago	Not applicable	29	4	0.13	0	"28,35,26"	3	surface	433	female	4	Floor	Floor	Floor	2	21	0			
+12470.29.Floor.4	29	2016	0	sample of Floor	8	US:IL:Chicago	Not applicable	29	2	0.33	0	"28,35,26"	3	surface	632	female	3.5	Floor	Floor	Floor	4	21	0			
+12470.29.Hand.1	29	2016	NA	sample of Hand	8	US:IL:Chicago	adult	29	NA	NA	NA	"28,35,26"	3	skin	14	female	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.29.Hand.2	29	2016	0	sample of Hand	8	US:IL:Chicago	adult	29	4	0.13	0	"28,35,26"	3	skin	437	female	4	Hand	Hand	Hand	2	21	0	medium	recent	low
+12470.29.Hand.3	29	2016	1	sample of Hand	8	US:IL:Chicago	adult	29	8	0.38	0	"28,35,26"	3	skin	164	female	4	Hand	Hand	Hand	3	28	0	medium	recent	high
+12470.29.Hand.4	29	2016	0	sample of Hand	8	US:IL:Chicago	adult	29	2	0.33	0	"28,35,26"	3	skin	635	female	3.5	Hand	Hand	Hand	4	21	0	medium	recent	low
+12470.29.Shoe.2	29	2016	0	sample of Shoe	8	US:IL:Chicago	Not applicable	29	4	0.13	0	"28,35,26"	3	surface	436	female	4	Shoe	Shoe	Floor	2	21	0			
+12470.29.Shoe.3	29	2016	1	sample of Shoe	8	US:IL:Chicago	Not applicable	29	8	0.38	0	"28,35,26"	3	surface	172	female	4	Shoe	Shoe	Floor	3	28	0			
+12470.29.Shoe.4	29	2016	0	sample of Shoe	8	US:IL:Chicago	Not applicable	29	2	0.33	0	"28,35,26"	3	surface	634	female	3.5	Shoe	Shoe	Floor	4	21	0			
+12470.3.Bed.Sheet.2	3	2016	4	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	3	24	0.38	0	NA	0	surface	481	male	5	Bed.Sheet	Bed Sheet	Hand	2	7	17.5			
+12470.3.Bed.Sheet.3	3	2016	40	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	3	2	0.63	0	NA	0	surface	560	male	5	Bed.Sheet	Bed Sheet	Hand	3	21	168			
+12470.3.Bed.Sheet.4	3	2016	25	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	3	6	0	0	NA	0	surface	313	male	5	Bed.Sheet	Bed Sheet	Hand	4	35	168			
+12470.3.Desk.2	3	2016	4	sample of Desk	8	US:IL:Chicago	Not applicable	3	24	0.38	0	NA	0	surface	486	male	5	Desk	Desk	Hand	2	7	17.5			
+12470.3.Desk.3	3	2016	40	sample of Desk	8	US:IL:Chicago	Not applicable	3	2	0.63	0	NA	0	surface	563	male	5	Desk	Desk	Hand	3	21	168			
+12470.3.Desk.4	3	2016	25	sample of Desk	8	US:IL:Chicago	Not applicable	3	6	0	0	NA	0	surface	317	male	5	Desk	Desk	Hand	4	35	168			
+12470.3.Door.Handle.2	3	2016	4	sample of Door Handle	8	US:IL:Chicago	Not applicable	3	24	0.38	0	NA	0	surface	483	male	5	Door.Handle	Door Handle	Hand	2	7	17.5			
+12470.3.Door.Handle.3	3	2016	40	sample of Door Handle	8	US:IL:Chicago	Not applicable	3	2	0.63	0	NA	0	surface	562	male	5	Door.Handle	Door Handle	Hand	3	21	168			
+12470.3.Door.Handle.4	3	2016	25	sample of Door Handle	8	US:IL:Chicago	Not applicable	3	6	0	0	NA	0	surface	314	male	5	Door.Handle	Door Handle	Hand	4	35	168			
+12470.3.Floor.2	3	2016	4	sample of Floor	8	US:IL:Chicago	Not applicable	3	24	0.38	0	NA	0	surface	482	male	5	Floor	Floor	Floor	2	7	17.5			
+12470.3.Floor.3	3	2016	40	sample of Floor	8	US:IL:Chicago	Not applicable	3	2	0.63	0	NA	0	surface	561	male	5	Floor	Floor	Floor	3	21	168			
+12470.3.Floor.4	3	2016	25	sample of Floor	8	US:IL:Chicago	Not applicable	3	6	0	0	NA	0	surface	312	male	5	Floor	Floor	Floor	4	35	168			
+12470.3.Hand.1	3	2016	NA	sample of Hand	8	US:IL:Chicago	adult	3	NA	NA	NA	NA	0	skin	52	male	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.3.Hand.3	3	2016	40	sample of Hand	8	US:IL:Chicago	adult	3	2	0.63	0	NA	0	skin	559	male	5	Hand	Hand	Hand	3	21	168	medium	recent	low
+12470.3.Hand.4	3	2016	25	sample of Hand	8	US:IL:Chicago	adult	3	6	0	0	NA	0	skin	316	male	5	Hand	Hand	Hand	4	35	168	medium	recent	high
+12470.3.Shoe.2	3	2016	4	sample of Shoe	8	US:IL:Chicago	Not applicable	3	24	0.38	0	NA	0	surface	484	male	5	Shoe	Shoe	Floor	2	7	17.5			
+12470.3.Shoe.3	3	2016	40	sample of Shoe	8	US:IL:Chicago	Not applicable	3	2	0.63	0	NA	0	surface	564	male	5	Shoe	Shoe	Floor	3	21	168			
+12470.3.Shoe.4	3	2016	25	sample of Shoe	8	US:IL:Chicago	Not applicable	3	6	0	0	NA	0	surface	315	male	5	Shoe	Shoe	Floor	4	35	168			
+12470.30.Bed.Sheet.2	30	2016	15	sample of Bed Sheet	6	US:IL:Chicago	Not applicable	30	16	0.21	0	8	1	surface	101	female	2	Bed.Sheet	Bed Sheet	Hand	2	7	2			
+12470.30.Bed.Sheet.3	30	2016	20	sample of Bed Sheet	6	US:IL:Chicago	Not applicable	30	8	1.25	0	8	1	surface	427	female	2	Bed.Sheet	Bed Sheet	Hand	3	21	3			
+12470.30.Bed.Sheet.4	30	2016	24	sample of Bed Sheet	6	US:IL:Chicago	Not applicable	30	3	0.46	0	8	1	surface	641	female	5	Bed.Sheet	Bed Sheet	Hand	4	5	60			
+12470.30.Desk.2	30	2016	15	sample of Desk	6	US:IL:Chicago	Not applicable	30	16	0.21	0	8	1	surface	109	female	2	Desk	Desk	Hand	2	7	2			
+12470.30.Desk.3	30	2016	20	sample of Desk	6	US:IL:Chicago	Not applicable	30	8	1.25	0	8	1	surface	431	female	2	Desk	Desk	Hand	3	21	3			
+12470.30.Desk.4	30	2016	24	sample of Desk	6	US:IL:Chicago	Not applicable	30	3	0.46	0	8	1	surface	637	female	5	Desk	Desk	Hand	4	5	60			
+12470.30.Door.Handle.2	30	2016	15	sample of Door Handle	6	US:IL:Chicago	Not applicable	30	16	0.21	0	8	1	surface	117	female	2	Door.Handle	Door Handle	Hand	2	7	2			
+12470.30.Door.Handle.4	30	2016	24	sample of Door Handle	6	US:IL:Chicago	Not applicable	30	3	0.46	0	8	1	surface	639	female	5	Door.Handle	Door Handle	Hand	4	5	60			
+12470.30.Floor.2	30	2016	15	sample of Floor	6	US:IL:Chicago	Not applicable	30	16	0.21	0	8	1	surface	125	female	2	Floor	Floor	Floor	2	7	2			
+12470.30.Floor.4	30	2016	24	sample of Floor	6	US:IL:Chicago	Not applicable	30	3	0.46	0	8	1	surface	638	female	5	Floor	Floor	Floor	4	5	60			
+12470.30.Hand.1	30	2016	NA	sample of Hand	6	US:IL:Chicago	adult	30	NA	NA	NA	8	1	skin	8	female	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.30.Hand.2	30	2016	15	sample of Hand	6	US:IL:Chicago	adult	30	16	0.21	0	8	1	skin	141	female	2	Hand	Hand	Hand	2	7	2	high	recent	high
+12470.30.Hand.3	30	2016	20	sample of Hand	6	US:IL:Chicago	adult	30	8	1.25	0	8	1	skin	428	female	2	Hand	Hand	Hand	3	21	3	high	not_recent	high
+12470.30.Hand.4	30	2016	24	sample of Hand	6	US:IL:Chicago	adult	30	3	0.46	0	8	1	skin	642	female	5	Hand	Hand	Hand	4	5	60	medium	recent	low
+12470.30.Shoe.2	30	2016	15	sample of Shoe	6	US:IL:Chicago	Not applicable	30	16	0.21	0	8	1	surface	133	female	2	Shoe	Shoe	Floor	2	7	2			
+12470.30.Shoe.4	30	2016	24	sample of Shoe	6	US:IL:Chicago	Not applicable	30	3	0.46	0	8	1	surface	640	female	5	Shoe	Shoe	Floor	4	5	60			
+12470.31.Bed.Sheet.2	31	2016	0	sample of Bed Sheet	5	US:IL:Chicago	Not applicable	31	2	0.83	0	Outside Study	1	surface	478	female	4	Bed.Sheet	Bed Sheet	Hand	2	1	0			
+12470.31.Bed.Sheet.4	31	2016	0	sample of Bed Sheet	5	US:IL:Chicago	Not applicable	31	12	0.54	0	Outside Study	1	surface	644	female	4	Bed.Sheet	Bed Sheet	Hand	4	28	19			
+12470.31.Desk.2	31	2016	0	sample of Desk	5	US:IL:Chicago	Not applicable	31	2	0.83	0	Outside Study	1	surface	476	female	4	Desk	Desk	Hand	2	1	0			
+12470.31.Door.Handle.2	31	2016	0	sample of Door Handle	5	US:IL:Chicago	Not applicable	31	2	0.83	0	Outside Study	1	surface	480	female	4	Door.Handle	Door Handle	Hand	2	1	0			
+12470.31.Floor.2	31	2016	0	sample of Floor	5	US:IL:Chicago	Not applicable	31	2	0.83	0	Outside Study	1	surface	477	female	4	Floor	Floor	Floor	2	1	0			
+12470.31.Hand.1	31	2016	NA	sample of Hand	5	US:IL:Chicago	adult	31	NA	NA	NA	Outside Study	1	skin	12	female	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.31.Hand.4	31	2016	0	sample of Hand	5	US:IL:Chicago	adult	31	12	0.54	0	Outside Study	1	skin	647	female	4	Hand	Hand	Hand	4	28	19	medium	recent	high
+12470.31.Shoe.2	31	2016	0	sample of Shoe	5	US:IL:Chicago	Not applicable	31	2	0.83	0	Outside Study	1	surface	475	female	4	Shoe	Shoe	Floor	2	1	0			
+12470.31.Shoe.4	31	2016	0	sample of Shoe	5	US:IL:Chicago	Not applicable	31	12	0.54	0	Outside Study	1	surface	643	female	4	Shoe	Shoe	Floor	4	28	19			
+12470.32.Bed.Sheet.3	32	2016	NA	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	32	NA	NA	NA	NA	0	surface	558	male	NA	Bed.Sheet	Bed Sheet	Hand	3	NA	NA			
+12470.32.Bed.Sheet.4	32	2016	10	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	32	5	0.42	0	NA	0	surface	655	male	2	Bed.Sheet	Bed Sheet	Hand	4	14	72			
+12470.32.Desk.2	32	2016	3	sample of Desk	8	US:IL:Chicago	Not applicable	32	15	0.75	0	NA	0	surface	572	male	2	Desk	Desk	Hand	2	14	0			
+12470.32.Desk.3	32	2016	NA	sample of Desk	8	US:IL:Chicago	Not applicable	32	NA	NA	NA	NA	0	surface	554	male	NA	Desk	Desk	Hand	3	NA	NA			
+12470.32.Desk.4	32	2016	10	sample of Desk	8	US:IL:Chicago	Not applicable	32	5	0.42	0	NA	0	surface	652	male	2	Desk	Desk	Hand	4	14	72			
+12470.32.Door.Handle.2	32	2016	3	sample of Door Handle	8	US:IL:Chicago	Not applicable	32	15	0.75	0	NA	0	surface	575	male	2	Door.Handle	Door Handle	Hand	2	14	0			
+12470.32.Door.Handle.3	32	2016	NA	sample of Door Handle	8	US:IL:Chicago	Not applicable	32	NA	NA	NA	NA	0	surface	556	male	NA	Door.Handle	Door Handle	Hand	3	NA	NA			
+12470.32.Door.Handle.4	32	2016	10	sample of Door Handle	8	US:IL:Chicago	Not applicable	32	5	0.42	0	NA	0	surface	654	male	2	Door.Handle	Door Handle	Hand	4	14	72			
+12470.32.Floor.2	32	2016	3	sample of Floor	8	US:IL:Chicago	Not applicable	32	15	0.75	0	NA	0	surface	571	male	2	Floor	Floor	Floor	2	14	0			
+12470.32.Floor.3	32	2016	NA	sample of Floor	8	US:IL:Chicago	Not applicable	32	NA	NA	NA	NA	0	surface	555	male	NA	Floor	Floor	Floor	3	NA	NA			
+12470.32.Floor.4	32	2016	10	sample of Floor	8	US:IL:Chicago	Not applicable	32	5	0.42	0	NA	0	surface	650	male	2	Floor	Floor	Floor	4	14	72			
+12470.32.Hand.1	32	2016	NA	sample of Hand	8	US:IL:Chicago	adult	32	NA	NA	NA	NA	0	skin	23	male	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.32.Hand.2	32	2016	3	sample of Hand	8	US:IL:Chicago	adult	32	15	0.75	0	NA	0	skin	573	male	2	Hand	Hand	Hand	2	14	0	high	recent	high
+12470.32.Hand.3	32	2016	NA	sample of Hand	8	US:IL:Chicago	adult	32	NA	NA	NA	NA	0	skin	553	male	NA	Hand	Hand	Hand	3	NA	NA	NA	NA	NA
+12470.32.Hand.4	32	2016	10	sample of Hand	8	US:IL:Chicago	adult	32	5	0.42	0	NA	0	skin	653	male	2	Hand	Hand	Hand	4	14	72	high	recent	low
+12470.32.Shoe.2	32	2016	3	sample of Shoe	8	US:IL:Chicago	Not applicable	32	15	0.75	0	NA	0	surface	574	male	2	Shoe	Shoe	Floor	2	14	0			
+12470.32.Shoe.3	32	2016	NA	sample of Shoe	8	US:IL:Chicago	Not applicable	32	NA	NA	NA	NA	0	surface	557	male	NA	Shoe	Shoe	Floor	3	NA	NA			
+12470.32.Shoe.4	32	2016	10	sample of Shoe	8	US:IL:Chicago	Not applicable	32	5	0.42	0	NA	0	surface	651	male	2	Shoe	Shoe	Floor	4	14	72			
+12470.33.Bed.Sheet.2	33	2016	2	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	33	2	0.27	0	NA	0	surface	392	female	1	Bed.Sheet	Bed Sheet	Hand	2	7	0			
+12470.33.Desk.2	33	2016	2	sample of Desk	8	US:IL:Chicago	Not applicable	33	2	0.27	0	NA	0	surface	394	female	1	Desk	Desk	Hand	2	7	0			
+12470.33.Desk.3	33	2016	1	sample of Desk	8	US:IL:Chicago	Not applicable	33	5	0.13	0	NA	0	surface	406	female	1	Desk	Desk	Hand	3	0	48			
+12470.33.Door.Handle.3	33	2016	1	sample of Door Handle	8	US:IL:Chicago	Not applicable	33	5	0.13	0	NA	0	surface	404	female	1	Door.Handle	Door Handle	Hand	3	0	48			
+12470.33.Floor.2	33	2016	2	sample of Floor	8	US:IL:Chicago	Not applicable	33	2	0.27	0	NA	0	surface	395	female	1	Floor	Floor	Floor	2	7	0			
+12470.33.Floor.3	33	2016	1	sample of Floor	8	US:IL:Chicago	Not applicable	33	5	0.13	0	NA	0	surface	405	female	1	Floor	Floor	Floor	3	0	48			
+12470.33.Hand.1	33	2016	NA	sample of Hand	8	US:IL:Chicago	adult	33	NA	NA	NA	NA	0	skin	22	female	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.33.Hand.2	33	2016	2	sample of Hand	8	US:IL:Chicago	adult	33	2	0.27	0	NA	0	skin	393	female	1	Hand	Hand	Hand	2	7	0	high	recent	low
+12470.33.Hand.3	33	2016	1	sample of Hand	8	US:IL:Chicago	adult	33	5	0.13	0	NA	0	skin	408	female	1	Hand	Hand	Hand	3	0	48	high	recent	low
+12470.33.Shoe.2	33	2016	2	sample of Shoe	8	US:IL:Chicago	Not applicable	33	2	0.27	0	NA	0	surface	396	female	1	Shoe	Shoe	Floor	2	7	0			
+12470.33.Shoe.3	33	2016	1	sample of Shoe	8	US:IL:Chicago	Not applicable	33	5	0.13	0	NA	0	surface	407	female	1	Shoe	Shoe	Floor	3	0	48			
+12470.34.Hand.1	34	2016	NA	sample of Hand		US:IL:Chicago	adult	34	NA	NA	NA	NA	NA	skin	21	NA	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.35.Bed.Sheet.2	35	2016	0	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	35	9	0.29	0	"28, 36, 29"	3	surface	527	male	0.5	Bed.Sheet	Bed Sheet	Hand	2	14	0			
+12470.35.Bed.Sheet.3	35	2016	NA	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	35	NA	NA	NA	"28, 36, 29"	3	surface	519	male	NA	Bed.Sheet	Bed Sheet	Hand	3	NA	NA			
+12470.35.Bed.Sheet.4	35	2016	2	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	35	18	0.04	0	"28, 36, 29"	3	surface	649	male	2	Bed.Sheet	Bed Sheet	Hand	4	7	6			
+12470.35.Desk.2	35	2016	0	sample of Desk	8	US:IL:Chicago	Not applicable	35	9	0.29	0	"28, 36, 29"	3	surface	528	male	0.5	Desk	Desk	Hand	2	14	0			
+12470.35.Desk.3	35	2016	NA	sample of Desk	8	US:IL:Chicago	Not applicable	35	NA	NA	NA	"28, 36, 29"	3	surface	517	male	NA	Desk	Desk	Hand	3	NA	NA			
+12470.35.Desk.4	35	2016	2	sample of Desk	8	US:IL:Chicago	Not applicable	35	18	0.04	0	"28, 36, 29"	3	surface	384	male	2	Desk	Desk	Hand	4	7	6			
+12470.35.Door.Handle.2	35	2016	0	sample of Door Handle	8	US:IL:Chicago	Not applicable	35	9	0.29	0	"28, 36, 29"	3	surface	524	male	0.5	Door.Handle	Door Handle	Hand	2	14	0			
+12470.35.Door.Handle.3	35	2016	NA	sample of Door Handle	8	US:IL:Chicago	Not applicable	35	NA	NA	NA	"28, 36, 29"	3	surface	522	male	NA	Door.Handle	Door Handle	Hand	3	NA	NA			
+12470.35.Door.Handle.4	35	2016	2	sample of Door Handle	8	US:IL:Chicago	Not applicable	35	18	0.04	0	"28, 36, 29"	3	surface	658	male	2	Door.Handle	Door Handle	Hand	4	7	6			
+12470.35.Floor.2	35	2016	0	sample of Floor	8	US:IL:Chicago	Not applicable	35	9	0.29	0	"28, 36, 29"	3	surface	523	male	0.5	Floor	Floor	Floor	2	14	0			
+12470.35.Floor.3	35	2016	NA	sample of Floor	8	US:IL:Chicago	Not applicable	35	NA	NA	NA	"28, 36, 29"	3	surface	518	male	NA	Floor	Floor	Floor	3	NA	NA			
+12470.35.Floor.4	35	2016	2	sample of Floor	8	US:IL:Chicago	Not applicable	35	18	0.04	0	"28, 36, 29"	3	surface	659	male	2	Floor	Floor	Floor	4	7	6			
+12470.35.Hand.1	35	2016	NA	sample of Hand	8	US:IL:Chicago	adult	35	NA	NA	NA	"28, 36, 29"	3	skin	19	male	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.35.Hand.2	35	2016	0	sample of Hand	8	US:IL:Chicago	adult	35	9	0.29	0	"28, 36, 29"	3	skin	525	male	0.5	Hand	Hand	Hand	2	14	0	high	recent	high
+12470.35.Hand.3	35	2016	NA	sample of Hand	8	US:IL:Chicago	adult	35	NA	NA	NA	"28, 36, 29"	3	skin	521	male	NA	Hand	Hand	Hand	3	NA	NA	NA	NA	NA
+12470.35.Hand.4	35	2016	2	sample of Hand	8	US:IL:Chicago	adult	35	18	0.04	0	"28, 36, 29"	3	skin	657	male	2	Hand	Hand	Hand	4	7	6	high	recent	high
+12470.35.Shoe.2	35	2016	0	sample of Shoe	8	US:IL:Chicago	Not applicable	35	9	0.29	0	"28, 36, 29"	3	surface	526	male	0.5	Shoe	Shoe	Floor	2	14	0			
+12470.35.Shoe.3	35	2016	NA	sample of Shoe	8	US:IL:Chicago	Not applicable	35	NA	NA	NA	"28, 36, 29"	3	surface	520	male	NA	Shoe	Shoe	Floor	3	NA	NA			
+12470.35.Shoe.4	35	2016	2	sample of Shoe	8	US:IL:Chicago	Not applicable	35	18	0.04	0	"28, 36, 29"	3	surface	656	male	2	Shoe	Shoe	Floor	4	7	6			
+12470.36.Bed.Sheet.3	36	2016	1	sample of Bed Sheet	8	US:IL:Chicago	Not applicable	36	NA	3.5	0	"28, 35, 29"	3	surface	246	female	8	Bed.Sheet	Bed Sheet	Hand	3	3	0			
+12470.36.Desk.3	36	2016	1	sample of Desk	8	US:IL:Chicago	Not applicable	36	NA	3.5	0	"28, 35, 29"	3	surface	243	female	8	Desk	Desk	Hand	3	3	0			
+12470.36.Floor.3	36	2016	1	sample of Floor	8	US:IL:Chicago	Not applicable	36	NA	3.5	0	"28, 35, 29"	3	surface	244	female	8	Floor	Floor	Floor	3	3	0			
+12470.36.Hand.3	36	2016	1	sample of Hand	8	US:IL:Chicago	adult	36	NA	3.5	0	"28, 35, 29"	3	skin	241	female	8	Hand	Hand	Hand	3	3	0	low	not_recent	NA
+12470.36.Shoe.3	36	2016	1	sample of Shoe	8	US:IL:Chicago	Not applicable	36	NA	3.5	0	"28, 35, 29"	3	surface	242	female	8	Shoe	Shoe	Floor	3	3	0			
+12470.37.Desk.2	37	2016	0	sample of Desk	8	US:IL:Chicago	Not applicable	37	5	0.19	0	Outside Study	1	surface	145	male	3	Desk	Desk	Hand	2	42	168			
+12470.37.Desk.3	37	2016	0	sample of Desk	8	US:IL:Chicago	Not applicable	37	NA	NA	0	Outside Study	1	surface	119	male	3	Desk	Desk	Hand	3	56	168			
+12470.37.Door.Handle.3	37	2016	0	sample of Door Handle	8	US:IL:Chicago	Not applicable	37	NA	NA	0	Outside Study	1	surface	111	male	3	Door.Handle	Door Handle	Hand	3	56	168			
+12470.37.Floor.3	37	2016	0	sample of Floor	8	US:IL:Chicago	Not applicable	37	NA	NA	0	Outside Study	1	surface	135	male	3	Floor	Floor	Floor	3	56	168			
+12470.37.Hand.1	37	2016	NA	sample of Hand	8	US:IL:Chicago	adult	37	NA	NA	NA	Outside Study	1	skin	25	male	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.37.Hand.3	37	2016	0	sample of Hand	8	US:IL:Chicago	adult	37	NA	NA	0	Outside Study	1	skin	103	male	3	Hand	Hand	Hand	3	56	168	medium	NA	NA
+12470.37.Shoe.3	37	2016	0	sample of Shoe	8	US:IL:Chicago	Not applicable	37	NA	NA	0	Outside Study	1	surface	127	male	3	Shoe	Shoe	Floor	3	56	168			
+12470.4.Bed.Sheet.2	4	2016	3	sample of Bed Sheet	5	US:IL:Chicago	Not applicable	4	20	0.02	0	NA	0	surface	190	male	10	Bed.Sheet	Bed Sheet	Hand	2	1	0			
+12470.4.Bed.Sheet.4	4	2016	3	sample of Bed Sheet	5	US:IL:Chicago	Not applicable	4	15	2	3	NA	0	surface	319	male	10	Bed.Sheet	Bed Sheet	Hand	4	3	10			
+12470.4.Desk.2	4	2016	3	sample of Desk	5	US:IL:Chicago	Not applicable	4	20	0.02	0	NA	0	surface	174	male	10	Desk	Desk	Hand	2	1	0			
+12470.4.Desk.4	4	2016	3	sample of Desk	5	US:IL:Chicago	Not applicable	4	15	2	3	NA	0	surface	323	male	10	Desk	Desk	Hand	4	3	10			
+12470.4.Door.Handle.2	4	2016	3	sample of Door Handle	5	US:IL:Chicago	Not applicable	4	20	0.02	0	NA	0	surface	182	male	10	Door.Handle	Door Handle	Hand	2	1	0			
+12470.4.Floor.2	4	2016	3	sample of Floor	5	US:IL:Chicago	Not applicable	4	20	0.02	0	NA	0	surface	150	male	10	Floor	Floor	Floor	2	1	0			
+12470.4.Hand.1	4	2016	NA	sample of Hand	5	US:IL:Chicago	adult	4	NA	NA	NA	NA	0	skin	51	male	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.4.Hand.2	4	2016	3	sample of Hand	5	US:IL:Chicago	adult	4	20	0.02	0	NA	0	skin	166	male	10	Hand	Hand	Hand	2	1	0	low	recent	high
+12470.4.Shoe.2	4	2016	3	sample of Shoe	5	US:IL:Chicago	Not applicable	4	20	0.02	0	NA	0	surface	158	male	10	Shoe	Shoe	Floor	2	1	0			
+12470.4.Shoe.4	4	2016	3	sample of Shoe	5	US:IL:Chicago	Not applicable	4	15	2	3	NA	0	surface	321	male	10	Shoe	Shoe	Floor	4	3	10			
+12470.5.Bed.Sheet.2	5	2016	0	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	5	1	0.5	0	NA	0	surface	537	male	2	Bed.Sheet	Bed Sheet	Hand	2	14	0			
+12470.5.Bed.Sheet.3	5	2016	14	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	5	8	0.46	0	NA	0	surface	453	male	1	Bed.Sheet	Bed Sheet	Hand	3	1	0			
+12470.5.Bed.Sheet.4	5	2016	NA	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	5	NA	NA	NA	NA	0	surface	325	male	NA	Bed.Sheet	Bed Sheet	Hand	4	NA	NA			
+12470.5.Desk.2	5	2016	0	sample of Desk	7	US:IL:Chicago	Not applicable	5	1	0.5	0	NA	0	surface	535	male	2	Desk	Desk	Hand	2	14	0			
+12470.5.Desk.3	5	2016	14	sample of Desk	7	US:IL:Chicago	Not applicable	5	8	0.46	0	NA	0	surface	451	male	1	Desk	Desk	Hand	3	1	0			
+12470.5.Door.Handle.2	5	2016	0	sample of Door Handle	7	US:IL:Chicago	Not applicable	5	1	0.5	0	NA	0	surface	539	male	2	Door.Handle	Door Handle	Hand	2	14	0			
+12470.5.Door.Handle.3	5	2016	14	sample of Door Handle	7	US:IL:Chicago	Not applicable	5	8	0.46	0	NA	0	surface	452	male	1	Door.Handle	Door Handle	Hand	3	1	0			
+12470.5.Door.Handle.4	5	2016	NA	sample of Door Handle	7	US:IL:Chicago	Not applicable	5	NA	NA	NA	NA	0	surface	326	male	NA	Door.Handle	Door Handle	Hand	4	NA	NA			
+12470.5.Floor.2	5	2016	0	sample of Floor	7	US:IL:Chicago	Not applicable	5	1	0.5	0	NA	0	surface	538	male	2	Floor	Floor	Floor	2	14	0			
+12470.5.Floor.3	5	2016	14	sample of Floor	7	US:IL:Chicago	Not applicable	5	8	0.46	0	NA	0	surface	454	male	1	Floor	Floor	Floor	3	1	0			
+12470.5.Floor.4	5	2016	NA	sample of Floor	7	US:IL:Chicago	Not applicable	5	NA	NA	NA	NA	0	surface	324	male	NA	Floor	Floor	Floor	4	NA	NA			
+12470.5.Hand.1	5	2016	NA	sample of Hand	7	US:IL:Chicago	adult	5	NA	NA	NA	NA	0	skin	50	male	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.5.Hand.2	5	2016	0	sample of Hand	7	US:IL:Chicago	adult	5	1	0.5	0	NA	0	skin	536	male	2	Hand	Hand	Hand	2	14	0	high	recent	low
+12470.5.Hand.3	5	2016	14	sample of Hand	7	US:IL:Chicago	adult	5	8	0.46	0	NA	0	skin	455	male	1	Hand	Hand	Hand	3	1	0	high	recent	high
+12470.5.Hand.4	5	2016	NA	sample of Hand	7	US:IL:Chicago	adult	5	NA	NA	NA	NA	0	skin	328	male	NA	Hand	Hand	Hand	4	NA	NA	NA	NA	NA
+12470.5.Shoe.2	5	2016	0	sample of Shoe	7	US:IL:Chicago	Not applicable	5	1	0.5	0	NA	0	surface	540	male	2	Shoe	Shoe	Floor	2	14	0			
+12470.5.Shoe.3	5	2016	14	sample of Shoe	7	US:IL:Chicago	Not applicable	5	8	0.46	0	NA	0	surface	456	male	1	Shoe	Shoe	Floor	3	1	0			
+12470.6.Bed.Sheet.2	6	2016	0	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	6	13	0.42	1	12	1	surface	102	male	1	Bed.Sheet	Bed Sheet	Hand	2	1	2.4			
+12470.6.Bed.Sheet.3	6	2016	2	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	6	7	0.08	1	12	1	surface	446	male	2	Bed.Sheet	Bed Sheet	Hand	3	14	168			
+12470.6.Bed.Sheet.4	6	2016	0	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	6	5	0.25	1	12	1	surface	331	male	2	Bed.Sheet	Bed Sheet	Hand	4	5	168			
+12470.6.Desk.2	6	2016	0	sample of Desk	7	US:IL:Chicago	Not applicable	6	13	0.42	1	12	1	surface	134	male	1	Desk	Desk	Hand	2	1	2.4			
+12470.6.Desk.3	6	2016	2	sample of Desk	7	US:IL:Chicago	Not applicable	6	7	0.08	1	12	1	surface	449	male	2	Desk	Desk	Hand	3	14	168			
+12470.6.Door.Handle.2	6	2016	0	sample of Door Handle	7	US:IL:Chicago	Not applicable	6	13	0.42	1	12	1	surface	118	male	1	Door.Handle	Door Handle	Hand	2	1	2.4			
+12470.6.Door.Handle.3	6	2016	2	sample of Door Handle	7	US:IL:Chicago	Not applicable	6	7	0.08	1	12	1	surface	447	male	2	Door.Handle	Door Handle	Hand	3	14	168			
+12470.6.Door.Handle.4	6	2016	0	sample of Door Handle	7	US:IL:Chicago	Not applicable	6	5	0.25	1	12	1	surface	332	male	2	Door.Handle	Door Handle	Hand	4	5	168			
+12470.6.Floor.2	6	2016	0	sample of Floor	7	US:IL:Chicago	Not applicable	6	13	0.42	1	12	1	surface	110	male	1	Floor	Floor	Floor	2	1	2.4			
+12470.6.Floor.3	6	2016	2	sample of Floor	7	US:IL:Chicago	Not applicable	6	7	0.08	1	12	1	surface	445	male	2	Floor	Floor	Floor	3	14	168			
+12470.6.Floor.4	6	2016	0	sample of Floor	7	US:IL:Chicago	Not applicable	6	5	0.25	1	12	1	surface	330	male	2	Floor	Floor	Floor	4	5	168			
+12470.6.Hand.1	6	2016	NA	sample of Hand	7	US:IL:Chicago	adult	6	NA	NA	NA	12	1	skin	49	male	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.6.Hand.2	6	2016	0	sample of Hand	7	US:IL:Chicago	adult	6	13	0.42	1	12	1	skin	142	male	1	Hand	Hand	Hand	2	1	2.4	high	recent	high
+12470.6.Hand.3	6	2016	2	sample of Hand	7	US:IL:Chicago	adult	6	7	0.08	1	12	1	skin	448	male	2	Hand	Hand	Hand	3	14	168	high	recent	high
+12470.6.Hand.4	6	2016	0	sample of Hand	7	US:IL:Chicago	adult	6	5	0.25	1	12	1	skin	334	male	2	Hand	Hand	Hand	4	5	168	high	recent	low
+12470.6.Shoe.2	6	2016	0	sample of Shoe	7	US:IL:Chicago	Not applicable	6	13	0.42	1	12	1	surface	126	male	1	Shoe	Shoe	Floor	2	1	2.4			
+12470.6.Shoe.3	6	2016	2	sample of Shoe	7	US:IL:Chicago	Not applicable	6	7	0.08	1	12	1	surface	450	male	2	Shoe	Shoe	Floor	3	14	168			
+12470.6.Shoe.4	6	2016	0	sample of Shoe	7	US:IL:Chicago	Not applicable	6	5	0.25	1	12	1	surface	333	male	2	Shoe	Shoe	Floor	4	5	168			
+12470.7.Bed.Sheet.2	7	2016	0	sample of Bed Sheet	6	US:IL:Chicago	Not applicable	7	5	0.63	0	NA	0	surface	505	male	1	Bed.Sheet	Bed Sheet	Hand	2	14	160			
+12470.7.Bed.Sheet.3	7	2016	3	sample of Bed Sheet	5	US:IL:Chicago	Not applicable	7	5	0.25	0	NA	0	surface	514	male	1	Bed.Sheet	Bed Sheet	Hand	3	7	80			
+12470.7.Desk.2	7	2016	0	sample of Desk	6	US:IL:Chicago	Not applicable	7	5	0.63	0	NA	0	surface	507	male	1	Desk	Desk	Hand	2	14	160			
+12470.7.Desk.3	7	2016	3	sample of Desk	5	US:IL:Chicago	Not applicable	7	5	0.25	0	NA	0	surface	516	male	1	Desk	Desk	Hand	3	7	80			
+12470.7.Door.Handle.2	7	2016	0	sample of Door Handle	6	US:IL:Chicago	Not applicable	7	5	0.63	0	NA	0	surface	510	male	1	Door.Handle	Door Handle	Hand	2	14	160			
+12470.7.Door.Handle.3	7	2016	3	sample of Door Handle	5	US:IL:Chicago	Not applicable	7	5	0.25	0	NA	0	surface	511	male	1	Door.Handle	Door Handle	Hand	3	7	80			
+12470.7.Floor.2	7	2016	0	sample of Floor	6	US:IL:Chicago	Not applicable	7	5	0.63	0	NA	0	surface	509	male	1	Floor	Floor	Floor	2	14	160			
+12470.7.Floor.3	7	2016	3	sample of Floor	5	US:IL:Chicago	Not applicable	7	5	0.25	0	NA	0	surface	515	male	1	Floor	Floor	Floor	3	7	80			
+12470.7.Hand.1	7	2016	NA	sample of Hand	6	US:IL:Chicago	adult	7	NA	NA	NA	NA	0	skin	54	male	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.7.Hand.2	7	2016	0	sample of Hand	6	US:IL:Chicago	adult	7	5	0.63	0	NA	0	skin	508	male	1	Hand	Hand	Hand	2	14	160	high	recent	low
+12470.7.Hand.3	7	2016	3	sample of Hand	5	US:IL:Chicago	adult	7	5	0.25	0	NA	0	skin	513	male	1	Hand	Hand	Hand	3	7	80	high	recent	low
+12470.7.Shoe.3	7	2016	3	sample of Shoe	5	US:IL:Chicago	Not applicable	7	5	0.25	0	NA	0	surface	512	male	1	Shoe	Shoe	Floor	3	7	80			
+12470.8.Bed.Sheet.2	8	2016	3	sample of Bed Sheet	6	US:IL:Chicago	Not applicable	8	4	0.25	0	30	1	surface	390	female	3	Bed.Sheet	Bed Sheet	Hand	2	3	0			
+12470.8.Desk.2	8	2016	3	sample of Desk	6	US:IL:Chicago	Not applicable	8	4	0.25	0	30	1	surface	385	female	3	Desk	Desk	Hand	2	3	0			
+12470.8.Door.Handle.2	8	2016	3	sample of Door Handle	6	US:IL:Chicago	Not applicable	8	4	0.25	0	30	1	surface	389	female	3	Door.Handle	Door Handle	Hand	2	3	0			
+12470.8.Floor.2	8	2016	3	sample of Floor	6	US:IL:Chicago	Not applicable	8	4	0.25	0	30	1	surface	387	female	3	Floor	Floor	Floor	2	3	0			
+12470.8.Hand.1	8	2016	NA	sample of Hand	6	US:IL:Chicago	adult	8	NA	NA	NA	30	1	skin	34	female	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.8.Hand.2	8	2016	3	sample of Hand	6	US:IL:Chicago	adult	8	4	0.25	0	30	1	skin	386	female	3	Hand	Hand	Hand	2	3	0	medium	recent	low
+12470.8.Shoe.2	8	2016	3	sample of Shoe	6	US:IL:Chicago	Not applicable	8	4	0.25	0	30	1	surface	388	female	3	Shoe	Shoe	Floor	2	3	0			
+12470.9.Bed.Sheet.2	9	2016	0.5	sample of Bed Sheet	7	US:IL:Chicago	Not applicable	9	10	1	0	16	1	surface	271	male	2	Bed.Sheet	Bed Sheet	Hand	2	14	0			
+12470.9.Desk.2	9	2016	0.5	sample of Desk	7	US:IL:Chicago	Not applicable	9	10	1	0	16	1	surface	273	male	2	Desk	Desk	Hand	2	14	0			
+12470.9.Door.Handle.2	9	2016	0.5	sample of Door Handle	7	US:IL:Chicago	Not applicable	9	10	1	0	16	1	surface	276	male	2	Door.Handle	Door Handle	Hand	2	14	0			
+12470.9.Floor.2	9	2016	0.5	sample of Floor	7	US:IL:Chicago	Not applicable	9	10	1	0	16	1	surface	274	male	2	Floor	Floor	Floor	2	14	0			
+12470.9.Hand.1	9	2016	NA	sample of Hand	7	US:IL:Chicago	adult	9	NA	NA	NA	16	1	skin	36	male	NA	Hand	Hand	Hand	1	NA	NA	NA	NA	NA
+12470.9.Hand.2	9	2016	0.5	sample of Hand	7	US:IL:Chicago	adult	9	10	1	0	16	1	skin	272	male	2	Hand	Hand	Hand	2	14	0	high	recent	high
+12470.9.Shoe.2	9	2016	0.5	sample of Shoe	7	US:IL:Chicago	Not applicable	9	10	1	0	16	1	surface	275	male	2	Shoe	Shoe	Floor	2	14	0			
+12470.Env.Br5.1	Env	2016	NA	sample of Bathroom	5	US:IL:Chicago	Not applicable	Env.Br5.1	NA	NA	NA	NA	NA	surface	44	NA	NA	Br5	Bathroom	Hand	1	NA	NA			
+12470.Env.Br5.2	Env	2016	NA	sample of Bathroom	5	US:IL:Chicago	Not applicable	Env.Br5.2	NA	NA	NA	NA	NA	surface	351	NA	NA	Br5	Bathroom	Hand	2	NA	NA			
+12470.Env.Br5.3	Env	2016	NA	sample of Bathroom	5	US:IL:Chicago	Not applicable	Env.Br5.3	NA	NA	NA	NA	NA	surface	75	NA	NA	Br5	Bathroom	Hand	3	NA	NA			
+12470.Env.Br5.4	Env	2016	NA	sample of Bathroom	5	US:IL:Chicago	Not applicable	Env.Br5.4	NA	NA	NA	NA	NA	surface	338	NA	NA	Br5	Bathroom	Hand	4	NA	NA			
+12470.Env.Br51.1	Env	2016	NA	sample of Bathroom	5	US:IL:Chicago	Not applicable	Env.Br51.1	NA	NA	NA	NA	NA	surface	43	NA	NA	Br51	Bathroom	Hand	1	NA	NA			
+12470.Env.Br51.2	Env	2016	NA	sample of Bathroom	5	US:IL:Chicago	Not applicable	Env.Br51.2	NA	NA	NA	NA	NA	surface	378	NA	NA	Br51	Bathroom	Hand	2	NA	NA			
+12470.Env.Br51.3	Env	2016	NA	sample of Bathroom	5	US:IL:Chicago	Not applicable	Env.Br51.3	NA	NA	NA	NA	NA	surface	79	NA	NA	Br51	Bathroom	Hand	3	NA	NA			
+12470.Env.Br51.4	Env	2016	NA	sample of Bathroom	5	US:IL:Chicago	Not applicable	Env.Br51.4	NA	NA	NA	NA	NA	surface	292	NA	NA	Br51	Bathroom	Hand	4	NA	NA			
+12470.Env.Br6.1	Env	2016	NA	sample of Bathroom	6	US:IL:Chicago	Not applicable	Env.Br6.1	NA	NA	NA	NA	NA	surface	3	NA	NA	Br6	Bathroom	Hand	1	NA	NA			
+12470.Env.Br6.2	Env	2016	NA	sample of Bathroom	6	US:IL:Chicago	Not applicable	Env.Br6.2	NA	NA	NA	NA	NA	surface	352	NA	NA	Br6	Bathroom	Hand	2	NA	NA			
+12470.Env.Br6.3	Env	2016	NA	sample of Bathroom	6	US:IL:Chicago	Not applicable	Env.Br6.3	NA	NA	NA	NA	NA	surface	77	NA	NA	Br6	Bathroom	Hand	3	NA	NA			
+12470.Env.Br6.4	Env	2016	NA	sample of Bathroom	6	US:IL:Chicago	Not applicable	Env.Br6.4	NA	NA	NA	NA	NA	surface	86	NA	NA	Br6	Bathroom	Hand	4	NA	NA			
+12470.Env.Br7.1	Env	2016	NA	sample of Bathroom	7	US:IL:Chicago	Not applicable	Env.Br7.1	NA	NA	NA	NA	NA	surface	4	NA	NA	Br7	Bathroom	Hand	1	NA	NA			
+12470.Env.Br7.2	Env	2016	NA	sample of Bathroom	7	US:IL:Chicago	Not applicable	Env.Br7.2	NA	NA	NA	NA	NA	surface	382	NA	NA	Br7	Bathroom	Hand	2	NA	NA			
+12470.Env.Br7.3	Env	2016	NA	sample of Bathroom	7	US:IL:Chicago	Not applicable	Env.Br7.3	NA	NA	NA	NA	NA	surface	71	NA	NA	Br7	Bathroom	Hand	3	NA	NA			
+12470.Env.Br7.4	Env	2016	NA	sample of Bathroom	7	US:IL:Chicago	Not applicable	Env.Br7.4	NA	NA	NA	NA	NA	surface	289	NA	NA	Br7	Bathroom	Hand	4	NA	NA			
+12470.Env.Br8.1	Env	2016	NA	sample of Bathroom	8	US:IL:Chicago	Not applicable	Env.Br8.1	NA	NA	NA	NA	NA	surface	1	NA	NA	Br8	Bathroom	Hand	1	NA	NA			
+12470.Env.Br8.2	Env	2016	NA	sample of Bathroom	8	US:IL:Chicago	Not applicable	Env.Br8.2	NA	NA	NA	NA	NA	surface	353	NA	NA	Br8	Bathroom	Hand	2	NA	NA			
+12470.Env.Br8.3	Env	2016	NA	sample of Bathroom	8	US:IL:Chicago	Not applicable	Env.Br8.3	NA	NA	NA	NA	NA	surface	81	NA	NA	Br8	Bathroom	Hand	3	NA	NA			
+12470.Env.Br8.4	Env	2016	NA	sample of Bathroom	8	US:IL:Chicago	Not applicable	Env.Br8.4	NA	NA	NA	NA	NA	surface	337	NA	NA	Br8	Bathroom	Hand	4	NA	NA			
+12470.Env.Ctrl.1	Env	2016	NA	sample of Ctrl		US:IL:Chicago	Not applicable	Env.Ctrl.1	NA	NA	NA	NA	NA	control blank DNA extraction	24	NA	NA	Ctrl	Ctrl	Ctrl	1	NA	NA			
+12470.Env.Eb1.1	Env	2016	NA	sample of Elevator Button	1	US:IL:Chicago	Not applicable	Env.Eb1.1	NA	NA	NA	NA	NA	surface	9	NA	NA	Eb1	Elevator Button	Hand	1	NA	NA			
+12470.Env.Eb1.2	Env	2016	NA	sample of Elevator Button	1	US:IL:Chicago	Not applicable	Env.Eb1.2	NA	NA	NA	NA	NA	surface	340	NA	NA	Eb1	Elevator Button	Hand	2	NA	NA			
+12470.Env.Eb1.3	Env	2016	NA	sample of Elevator Button	1	US:IL:Chicago	Not applicable	Env.Eb1.3	NA	NA	NA	NA	NA	surface	78	NA	NA	Eb1	Elevator Button	Hand	3	NA	NA			
+12470.Env.Eb1.4	Env	2016	NA	sample of Elevator Button	1	US:IL:Chicago	Not applicable	Env.Eb1.4	NA	NA	NA	NA	NA	surface	93	NA	NA	Eb1	Elevator Button	Hand	4	NA	NA			
+12470.Env.Eb5.1	Env	2016	NA	sample of Elevator Button	5	US:IL:Chicago	Not applicable	Env.Eb5.1	NA	NA	NA	NA	NA	surface	2	NA	NA	Eb5	Elevator Button	Hand	1	NA	NA			
+12470.Env.Eb5.2	Env	2016	NA	sample of Elevator Button	5	US:IL:Chicago	Not applicable	Env.Eb5.2	NA	NA	NA	NA	NA	surface	339	NA	NA	Eb5	Elevator Button	Hand	2	NA	NA			
+12470.Env.Eb5.3	Env	2016	NA	sample of Elevator Button	5	US:IL:Chicago	Not applicable	Env.Eb5.3	NA	NA	NA	NA	NA	surface	83	NA	NA	Eb5	Elevator Button	Hand	3	NA	NA			
+12470.Env.Eb6.1	Env	2016	NA	sample of Elevator Button	6	US:IL:Chicago	Not applicable	Env.Eb6.1	NA	NA	NA	NA	NA	surface	5	NA	NA	Eb6	Elevator Button	Hand	1	NA	NA			
+12470.Env.Eb6.2	Env	2016	NA	sample of Elevator Button	6	US:IL:Chicago	Not applicable	Env.Eb6.2	NA	NA	NA	NA	NA	surface	380	NA	NA	Eb6	Elevator Button	Hand	2	NA	NA			
+12470.Env.Eb6.3	Env	2016	NA	sample of Elevator Button	6	US:IL:Chicago	Not applicable	Env.Eb6.3	NA	NA	NA	NA	NA	surface	68	NA	NA	Eb6	Elevator Button	Hand	3	NA	NA			
+12470.Env.Eb6.4	Env	2016	NA	sample of Elevator Button	6	US:IL:Chicago	Not applicable	Env.Eb6.4	NA	NA	NA	NA	NA	surface	294	NA	NA	Eb6	Elevator Button	Hand	4	NA	NA			
+12470.Env.Eb7.1	Env	2016	NA	sample of Elevator Button	7	US:IL:Chicago	Not applicable	Env.Eb7.1	NA	NA	NA	NA	NA	surface	6	NA	NA	Eb7	Elevator Button	Hand	1	NA	NA			
+12470.Env.Eb7.2	Env	2016	NA	sample of Elevator Button	7	US:IL:Chicago	Not applicable	Env.Eb7.2	NA	NA	NA	NA	NA	surface	381	NA	NA	Eb7	Elevator Button	Hand	2	NA	NA			
+12470.Env.Eb7.3	Env	2016	NA	sample of Elevator Button	7	US:IL:Chicago	Not applicable	Env.Eb7.3	NA	NA	NA	NA	NA	surface	80	NA	NA	Eb7	Elevator Button	Hand	3	NA	NA			
+12470.Env.Eb7.4	Env	2016	NA	sample of Elevator Button	7	US:IL:Chicago	Not applicable	Env.Eb7.4	NA	NA	NA	NA	NA	surface	290	NA	NA	Eb7	Elevator Button	Hand	4	NA	NA			
+12470.Env.Eb8.1	Env	2016	NA	sample of Elevator Button	8	US:IL:Chicago	Not applicable	Env.Eb8.1	NA	NA	NA	NA	NA	surface	17	NA	NA	Eb8	Elevator Button	Hand	1	NA	NA			
+12470.Env.Eb8.2	Env	2016	NA	sample of Elevator Button	8	US:IL:Chicago	Not applicable	Env.Eb8.2	NA	NA	NA	NA	NA	surface	383	NA	NA	Eb8	Elevator Button	Hand	2	NA	NA			
+12470.Env.Eb8.3	Env	2016	NA	sample of Elevator Button	8	US:IL:Chicago	Not applicable	Env.Eb8.3	NA	NA	NA	NA	NA	surface	73	NA	NA	Eb8	Elevator Button	Hand	3	NA	NA			
+12470.Env.Fl5.2	Env	2016	NA	sample of Hallway	5	US:IL:Chicago	Not applicable	Env.Fl5.2	NA	NA	NA	NA	NA	surface	342	NA	NA	Fl5	Hallway	Hand	2	NA	NA			
+12470.Env.Fl5.3	Env	2016	NA	sample of Hallway	5	US:IL:Chicago	Not applicable	Env.Fl5.3	NA	NA	NA	NA	NA	surface	95	NA	NA	Fl5	Hallway	Hand	3	NA	NA			
+12470.Env.Fl5.4	Env	2016	NA	sample of Hallway	5	US:IL:Chicago	Not applicable	Env.Fl5.4	NA	NA	NA	NA	NA	surface	296	NA	NA	Fl5	Hallway	Hand	4	NA	NA			
+12470.Env.Fl5c.2	Env	2016	NA	sample of Hallway	5	US:IL:Chicago	Not applicable	Env.Fl5c.2	NA	NA	NA	NA	NA	surface	348	NA	NA	Fl5c	Hallway	Hand	2	NA	NA			
+12470.Env.Fl6.2	Env	2016	NA	sample of Hallway	6	US:IL:Chicago	Not applicable	Env.Fl6.2	NA	NA	NA	NA	NA	surface	349	NA	NA	Fl6	Hallway	Hand	2	NA	NA			
+12470.Env.Fl6.3	Env	2016	NA	sample of Hallway	6	US:IL:Chicago	Not applicable	Env.Fl6.3	NA	NA	NA	NA	NA	surface	94	NA	NA	Fl6	Hallway	Hand	3	NA	NA			
+12470.Env.Fl6.4	Env	2016	NA	sample of Hallway	6	US:IL:Chicago	Not applicable	Env.Fl6.4	NA	NA	NA	NA	NA	surface	85	NA	NA	Fl6	Hallway	Hand	4	NA	NA			
+12470.Env.Fl7.2	Env	2016	NA	sample of Hallway	7	US:IL:Chicago	Not applicable	Env.Fl7.2	NA	NA	NA	NA	NA	surface	346	NA	NA	Fl7	Hallway	Hand	2	NA	NA			
+12470.Env.Fl7.3	Env	2016	NA	sample of Hallway	7	US:IL:Chicago	Not applicable	Env.Fl7.3	NA	NA	NA	NA	NA	surface	88	NA	NA	Fl7	Hallway	Hand	3	NA	NA			
+12470.Env.Fl7.4	Env	2016	NA	sample of Hallway	7	US:IL:Chicago	Not applicable	Env.Fl7.4	NA	NA	NA	NA	NA	surface	299	NA	NA	Fl7	Hallway	Hand	4	NA	NA			
+12470.Env.Fl8.2	Env	2016	NA	sample of Hallway	8	US:IL:Chicago	Not applicable	Env.Fl8.2	NA	NA	NA	NA	NA	surface	347	NA	NA	Fl8	Hallway	Hand	2	NA	NA			
+12470.Env.Fl8.3	Env	2016	NA	sample of Hallway	8	US:IL:Chicago	Not applicable	Env.Fl8.3	NA	NA	NA	NA	NA	surface	89	NA	NA	Fl8	Hallway	Hand	3	NA	NA			
+12470.Env.Fl8.4	Env	2016	NA	sample of Hallway	8	US:IL:Chicago	Not applicable	Env.Fl8.4	NA	NA	NA	NA	NA	surface	293	NA	NA	Fl8	Hallway	Hand	4	NA	NA			
+12470.Env.Md1.1	Env	2016	NA	sample of Main Door	1	US:IL:Chicago	Not applicable	Env.Md1.1	NA	NA	NA	NA	NA	surface	10	NA	NA	Md1	Main Door	Hand	1	NA	NA			
+12470.Env.Md1.2	Env	2016	NA	sample of Main Door	1	US:IL:Chicago	Not applicable	Env.Md1.2	NA	NA	NA	NA	NA	surface	336	NA	NA	Md1	Main Door	Hand	2	NA	NA			
+12470.Env.Md1.3	Env	2016	NA	sample of Main Door	1	US:IL:Chicago	Not applicable	Env.Md1.3	NA	NA	NA	NA	NA	surface	67	NA	NA	Md1	Main Door	Hand	3	NA	NA			
+12470.Env.Md1.4	Env	2016	NA	sample of Main Door	1	US:IL:Chicago	Not applicable	Env.Md1.4	NA	NA	NA	NA	NA	surface	90	NA	NA	Md1	Main Door	Hand	4	NA	NA			
+12470.Env.Md2.1	Env	2016	NA	sample of Main Door	5	US:IL:Chicago	Not applicable	Env.Md2.1	NA	NA	NA	NA	NA	surface	7	NA	NA	Md2	Main Door	Hand	1	NA	NA			
+12470.Env.Md2.2	Env	2016	NA	sample of Main Door	5	US:IL:Chicago	Not applicable	Env.Md2.2	NA	NA	NA	NA	NA	surface	350	NA	NA	Md2	Main Door	Hand	2	NA	NA			
+12470.Env.Md2.3	Env	2016	NA	sample of Main Door	5	US:IL:Chicago	Not applicable	Env.Md2.3	NA	NA	NA	NA	NA	surface	74	NA	NA	Md2	Main Door	Hand	3	NA	NA			
+12470.Env.Md2.4	Env	2016	NA	sample of Main Door	5	US:IL:Chicago	Not applicable	Env.Md2.4	NA	NA	NA	NA	NA	surface	96	NA	NA	Md2	Main Door	Hand	4	NA	NA			
+12470.Env.Md3.1	Env	2016	NA	sample of Main Door	5	US:IL:Chicago	Not applicable	Env.Md3.1	NA	NA	NA	NA	NA	surface	11	NA	NA	Md3	Main Door	Hand	1	NA	NA			
+12470.Env.Md3.2	Env	2016	NA	sample of Main Door	5	US:IL:Chicago	Not applicable	Env.Md3.2	NA	NA	NA	NA	NA	surface	341	NA	NA	Md3	Main Door	Hand	2	NA	NA			
+12470.Env.Md3.3	Env	2016	NA	sample of Main Door	5	US:IL:Chicago	Not applicable	Env.Md3.3	NA	NA	NA	NA	NA	surface	82	NA	NA	Md3	Main Door	Hand	3	NA	NA			
+12470.Env.Md3.4	Env	2016	NA	sample of Main Door	5	US:IL:Chicago	Not applicable	Env.Md3.4	NA	NA	NA	NA	NA	surface	84	NA	NA	Md3	Main Door	Hand	4	NA	NA			
+12470.Env.Md4.4	Env	2016	NA	sample of Main Door	5	US:IL:Chicago	Not applicable	Env.Md4.4	NA	NA	NA	NA	NA	surface	92	NA	NA	Md4	Main Door	Hand	4	NA	NA			
+12470.Env.Tb1.1	Env	2016	NA	sample of Table	1	US:IL:Chicago	Not applicable	Env.Tb1.1	NA	NA	NA	NA	NA	surface	47	NA	NA	Tb1	Table	Hand	1	NA	NA			
+12470.Env.Tb1.2	Env	2016	NA	sample of Table	1	US:IL:Chicago	Not applicable	Env.Tb1.2	NA	NA	NA	NA	NA	surface	344	NA	NA	Tb1	Table	Hand	2	NA	NA			
+12470.Env.Tb1.3	Env	2016	NA	sample of Table	1	US:IL:Chicago	Not applicable	Env.Tb1.3	NA	NA	NA	NA	NA	surface	69	NA	NA	Tb1	Table	Hand	3	NA	NA			
+12470.Env.Tb1.4	Env	2016	NA	sample of Table	1	US:IL:Chicago	Not applicable	Env.Tb1.4	NA	NA	NA	NA	NA	surface	91	NA	NA	Tb1	Table	Hand	4	NA	NA			
+12470.Env.Tb2.1	Env	2016	NA	sample of Table	5	US:IL:Chicago	Not applicable	Env.Tb2.1	NA	NA	NA	NA	NA	surface	46	NA	NA	Tb2	Table	Hand	1	NA	NA			
+12470.Env.Tb2.2	Env	2016	NA	sample of Table	5	US:IL:Chicago	Not applicable	Env.Tb2.2	NA	NA	NA	NA	NA	surface	343	NA	NA	Tb2	Table	Hand	2	NA	NA			
+12470.Env.Tb2.3	Env	2016	NA	sample of Table	5	US:IL:Chicago	Not applicable	Env.Tb2.3	NA	NA	NA	NA	NA	surface	72	NA	NA	Tb2	Table	Hand	3	NA	NA			
+12470.Env.Tb2.4	Env	2016	NA	sample of Table	5	US:IL:Chicago	Not applicable	Env.Tb2.4	NA	NA	NA	NA	NA	surface	295	NA	NA	Tb2	Table	Hand	4	NA	NA			
+12470.Env.Tb3.1	Env	2016	NA	sample of Table	5	US:IL:Chicago	Not applicable	Env.Tb3.1	NA	NA	NA	NA	NA	surface	48	NA	NA	Tb3	Table	Hand	1	NA	NA			
+12470.Env.Tb3.2	Env	2016	NA	sample of Table	5	US:IL:Chicago	Not applicable	Env.Tb3.2	NA	NA	NA	NA	NA	surface	379	NA	NA	Tb3	Table	Hand	2	NA	NA			
+12470.Env.Tb3.3	Env	2016	NA	sample of Table	5	US:IL:Chicago	Not applicable	Env.Tb3.3	NA	NA	NA	NA	NA	surface	70	NA	NA	Tb3	Table	Hand	3	NA	NA			
+12470.Env.Tb3.4	Env	2016	NA	sample of Table	5	US:IL:Chicago	Not applicable	Env.Tb3.4	NA	NA	NA	NA	NA	surface	291	NA	NA	Tb3	Table	Hand	4	NA	NA			
+12470.Env.Tb4.1	Env	2016	NA	sample of Table	5	US:IL:Chicago	Not applicable	Env.Tb4.1	NA	NA	NA	NA	NA	surface	45	NA	NA	Tb4	Table	Hand	1	NA	NA			
+12470.Env.Tb4.2	Env	2016	NA	sample of Table	5	US:IL:Chicago	Not applicable	Env.Tb4.2	NA	NA	NA	NA	NA	surface	345	NA	NA	Tb4	Table	Hand	2	NA	NA			
+12470.Env.Tb4.3	Env	2016	NA	sample of Table	5	US:IL:Chicago	Not applicable	Env.Tb4.3	NA	NA	NA	NA	NA	surface	76	NA	NA	Tb4	Table	Hand	3	NA	NA			
+12470.Env.Tb4.4	Env	2016	NA	sample of Table	5	US:IL:Chicago	Not applicable	Env.Tb4.4	NA	NA	NA	NA	NA	surface	297	NA	NA	Tb4	Table	Hand	4	NA	NA			
