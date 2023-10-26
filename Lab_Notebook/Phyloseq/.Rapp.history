@@ -1,1 +1,2 @@
 load("/Users/mairimacaulay/Desktop/MICB475_Project/Lab_Notebook/Phyloseq/dorms_rare_sheetwashfreq_deseq.RData")
+load("/Users/bettyh/Desktop/Github/Lab_Notebook/Phyloseq/dorms_final_showerrecency_deseq.RData")
