@@ -3,7 +3,7 @@
 
 # Project Proposal
 ### Proposed title: 
-- often reflects the overarching goal of your project
+Effect of Hygiene Practice on Skin Microbial Composition of Individuals Residing in Shared Housing
 
 ### Introduction and Background: 
 - provides the premise for why/how your dataset was collected in addition to an overview of the studies that have already been conducted on your dataset or relevant to your dataset (consider what you presented for your P2 review oral presentation)
