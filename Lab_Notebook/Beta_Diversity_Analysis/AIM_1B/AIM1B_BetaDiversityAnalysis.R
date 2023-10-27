@@ -10,7 +10,6 @@ library(picante)
 set.seed(2)
 
 ##Load files##
-dorms_metadata <- read_delim(file = "Lab_Notebook/metadata/dorms_metadata_updated.txt", delim = "\t")
 load(file="Lab_Notebook/Phyloseq/dorms_rare_showerrecency.RData")
 
 ##Removing rows with "na" for sheetwashing frequency##
@@ -27,6 +26,7 @@ pcoa_unifrac <- ordinate(dorms_rare, method="PCoA", distance=unifrac_dm)
 gg_pcoa_unifrac <- plot_ordination(dorms_rare, pcoa_unifrac, color = "last_shower_binned") +
   labs(col="Shower Recency") + stat_ellipse()
 gg_pcoa_unifrac
+
 
 #Unweighted Unifrac PERMANOVA Test#
 unifrac_dm <- UniFrac(dorms_rare, weighted=FALSE)

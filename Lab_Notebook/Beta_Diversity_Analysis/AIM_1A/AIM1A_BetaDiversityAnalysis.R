@@ -10,7 +10,6 @@ library(vegan)
 set.seed(1) 
 
 ##Load files##
-dorms_metadata <- read_delim(file = "Lab_Notebook/metadata/dorms_metadata_updated.txt", delim = "\t")
 load(file="Lab_Notebook/Phyloseq/dorms_rare_sheetwashfreq.RData")
 
 ##Removing rows with "na" for sheetwashing frequency##
@@ -32,6 +31,12 @@ gg_pcoa_unifrac
 unifrac_dm <- UniFrac(dorms_rare, weighted=FALSE)
 adonis2(unifrac_dm ~ sheetwashfreq_binned, data=samp_dat_wdiv)
 
+#save PCoA#
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_unweighted_pcoa.png"
+       , gg_pcoa_unifrac
+       , height=4, width=5)
+
+
 
 ##Weighted Unifrac##
 wu_dm <- distance(dorms_rare, method="wunifrac")
@@ -44,26 +49,44 @@ gg_pcoa_wunifrac
 wunifrac_dm <- UniFrac(dorms_rare, weighted=TRUE)
 adonis2(wunifrac_dm ~ sheetwashfreq_binned, data=samp_dat_wdiv)
 
+#save PCoA#
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_weighted_pcoa.png"
+       , gg_pcoa_wunifrac
+       , height=4, width=5)
+
+
 
 ##Jaccard##
 j_dm <- distance(dorms_rare, method = "jaccard", binary = TRUE)
 pcoa_jaccard <- ordinate(dorms_rare, method="PCoA", distance=j_dm)
-plot_ordination(dorms_rare, pcoa_jaccard, color = "sheetwashfreq_binned") + labs(col = "Sheet Wash Frequency") + stat_ellipse()
-pcoa_jaccard
+gg_pcoa_jaccard <- plot_ordination(dorms_rare, pcoa_jaccard, color = "sheetwashfreq_binned") + labs(col = "Sheet Wash Frequency") + stat_ellipse()
+gg_pcoa_jaccard
 
-#Jaccard diversity PERMANOVA Test#
+#Jaccard Diversity PERMANOVA Test#
 dm_jaccard <- vegdist(t(otu_table(dorms_rare)), method="jaccard")
 adonis2(dm_jaccard ~ sheetwashfreq_binned, data=samp_dat_wdiv)
+
+#save PCoA#
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_jaccard_pcoa.png"
+       , gg_pcoa_jaccard
+       , height=4, width=5)
+
+
 
 ##Bray Curtis##
 bc_dm <- distance(dorms_rare, method="bray")
 pcoa_bc <- ordinate(dorms_rare, method="PCoA", distance=bc_dm)
-plot_ordination(dorms_rare, pcoa_bc, color = "sheetwashfreq_binned") + labs(col = "Sheet Wash Frequency") + stat_ellipse()
+gg_pcoa_bc <- plot_ordination(dorms_rare, pcoa_bc, color = "sheetwashfreq_binned") + labs(col = "Sheet Wash Frequency") + stat_ellipse()
+gg_pcoa_bc
 
-#Bray Curtic diversity PERMANOVA Test#
+#Bray Curtic Diversity PERMANOVA Test#
 dm_bray <- vegdist(t(otu_table(dorms_rare)), method="bray")
 adonis2(dm_bray ~ sheetwashfreq_binned, data=samp_dat_wdiv)
 
+#save PCoA#
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_bc_pcoa.png"
+       , gg_pcoa_bc
+       , height=4, width=5)
 
 
 
