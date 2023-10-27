@@ -14,10 +14,9 @@ load(file="Lab_Notebook/Phyloseq/dorms_rare_sheetwashfreq.RData")
 ##Removing rows with "na" for sheetwashing frequency##
 dorms_metadata_no_na <- sample_data(dorms_rare)
 
-#Generating diversity metrics
+##Generating diversity metrics##
 alphadiv <- estimate_richness(dorms_rare)
 samp_dat_wdiv <- data.frame(dorms_metadata_no_na, alphadiv)
-
 
 ##Unweighted Unifrac##
 unifrac_dm <- distance(dorms_rare, method="unifrac")
@@ -27,7 +26,6 @@ pcoa_unifrac <- ordinate(dorms_rare, method="PCoA", distance=unifrac_dm)
 gg_pcoa_unifrac <- plot_ordination(dorms_rare, pcoa_unifrac, color = "sheetwashfreq_binned") +
   labs(col="Sheet Wash Frequency")
 gg_pcoa_unifrac
-
 
 #Statistical Analysis#
 set.seed(1) #setting a seed like this ensures the stats test will be repeatable

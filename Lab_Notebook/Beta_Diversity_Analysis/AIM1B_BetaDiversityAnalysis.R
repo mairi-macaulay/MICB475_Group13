@@ -10,8 +10,12 @@ library(picante)
 dorms_metadata <- read_delim(file = "Lab_Notebook/metadata/dorms_metadata_updated.txt", delim = "\t")
 load(file="Lab_Notebook/Phyloseq/dorms_rare_showerrecency.RData")
 
-##Removing rows with "na" for last_shower_binned##
-dorms_metadata_no_na <- dorms_metadata[complete.cases(dorms_metadata$last_shower_binned), ]
+##Removing rows with "na" for sheetwashing frequency##
+dorms_metadata_no_na <- sample_data(dorms_rare)
+
+##Generating diversity metrics##
+alphadiv <- estimate_richness(dorms_rare)
+samp_dat_wdiv <- data.frame(dorms_metadata_no_na, alphadiv)
 
 ##Unweighted Unifrac##
 unifrac_dm <- distance(dorms_rare, method="unifrac")
@@ -24,8 +28,7 @@ gg_pcoa_unifrac
 
 #Statistical Analysis#
 unifrac_dm <- UniFrac(dorms_rare, weighted=FALSE)
-adonis2(unifrac_dm ~ last_shower_binned, data=dorms_metadata_no_na)
-
+adonis2(unifrac_dm ~ last_shower_binned, data=samp_dat_wdiv)
 
 ##Weighted Unifrac##
 wu_dm <- distance(dorms_rare, method="wunifrac")
@@ -37,8 +40,8 @@ gg_pcoa_wunifrac <- plot_ordination(dorms_rare, pcoa_wunifrac, color = "last_sho
 gg_pcoa_wunifrac
 
 #Statistical Analysis#
-wunifrac_dm <- UniFrac(dorms_rare, weighted=TRUE)
-adonis2(wunifrac_dm ~ last_shower_binned, data=dorms_metadata_no_na)
+unifrac_dm <- UniFrac(dorms_rare, weighted=TRUE)
+adonis2(unifrac_dm ~ last_shower_binned, data=samp_dat_wdiv)
 
 
 
