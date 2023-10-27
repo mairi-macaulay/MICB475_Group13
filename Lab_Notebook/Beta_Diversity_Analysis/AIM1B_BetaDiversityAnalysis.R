@@ -10,7 +10,7 @@ library(picante)
 dorms_metadata <- read_delim(file = "Lab_Notebook/metadata/dorms_metadata_updated.txt", delim = "\t")
 load(file="Lab_Notebook/Phyloseq/dorms_rare_showerrecency.RData")
 
-##Removing rows with "na" for sheetwashing frequency##
+##Removing rows with "na" for last_shower_binned##
 dorms_metadata_no_na <- dorms_metadata[complete.cases(dorms_metadata$last_shower_binned), ]
 
 ##Unweighted Unifrac##
