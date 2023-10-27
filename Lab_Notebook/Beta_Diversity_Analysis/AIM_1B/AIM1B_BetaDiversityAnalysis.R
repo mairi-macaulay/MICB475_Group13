@@ -7,7 +7,7 @@ library(tidyverse)
 library(picante) 
 
 ##Set a seed##
-set.seed(2)
+set.seed(1)
 
 ##Load files##
 load(file="Lab_Notebook/Phyloseq/dorms_rare_showerrecency.RData")
