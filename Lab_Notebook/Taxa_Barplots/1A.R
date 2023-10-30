@@ -39,8 +39,6 @@ grouped = gather(otu_meta, key = "ASV", value = "abundance", -(1:53) )
 #joining the taxa information to this transformed dataframe
 grouped_taxa = inner_join(tax_mat, grouped, by = "ASV", multiple = "all")
 
-#Renaming FD.severity to legend (optional)
-grouped_taxa$legend = paste(grouped_taxa$FD.severity)
 
 #collecting the list of unique severity names for the loop (high, medium, low)
 vars = unique(grouped_taxa$sheetwashfreq_binned)
