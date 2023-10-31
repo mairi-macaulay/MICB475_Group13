@@ -4,6 +4,7 @@ library(phyloseq)
 library(ape)
 library(tidyverse)
 library(picante)
+library(ggsignif)
 
 ##Load in RData
 load("../Phyloseq/dorms_rare_showerrecency.RData")
@@ -13,7 +14,7 @@ load("../Phyloseq/dorms_final_showerrecency.RData")
 #view all metrics
 plot_richness(dorms_rare)
 
-#extract information
+#extract information and combine with alpha diversity metrics
 alphadiv <- estimate_richness(dorms_rare)
 samp_dat <- sample_data(dorms_rare) #extract out metadata
 samp_dat_wdiv <- data.frame(samp_dat, alphadiv)
@@ -25,7 +26,10 @@ gg_shannon_showerrecency <- plot_richness(dorms_rare, x = "last_shower_binned", 
   geom_boxplot()
 gg_shannon_showerrecency
 
-#ANOVA
+#T-test
+t.test(samp_dat_wdiv$Shannon ~ samp_dat_wdiv$last_shower_binned)
+
+#Results: p-value = 0.8094 > 0.05 = not significant
 
 # save plot file 
 ggsave(filename = "showerrecency_plot_shannon.png"
@@ -39,7 +43,10 @@ gg_observed_showerrecency <- plot_richness(dorms_rare, x = "last_shower_binned",
   geom_boxplot()
 gg_observed_showerrecency
 
-#ANOVA
+#T-test
+t.test(samp_dat_wdiv$Observed ~ samp_dat_wdiv$last_shower_binned)
+
+#Results: p-value = 0.4466 > 0.05 = not significant
 
 # save plot file 
 ggsave(filename = "showerrecency_plot_observed.png"
@@ -53,7 +60,10 @@ gg_chao1_showerrecency <- plot_richness(dorms_rare, x = "last_shower_binned", me
   geom_boxplot()
 gg_chao1_showerrecency
 
-#ANOVA
+#T-test
+t.test(samp_dat_wdiv$Chao1 ~ samp_dat_wdiv$last_shower_binned)
+
+#Results: p-value = 0.4827 > 0.05 = not significant
 
 # save plot file 
 ggsave(filename = "showerrecency_plot_chao1.png"
@@ -67,7 +77,10 @@ gg_ace_showerrecency <- plot_richness(dorms_rare, x = "last_shower_binned", meas
   geom_boxplot()
 gg_ace_showerrecency
 
-#ANOVA
+#T-test
+t.test(samp_dat_wdiv$ACE ~ samp_dat_wdiv$last_shower_binned)
+
+#Results: p-value = 0.4849 > 0.05 = not significant
 
 # save plot file 
 ggsave(filename = "showerrecency_plot_ace.png"
@@ -81,7 +94,10 @@ gg_simpson_showerrecency <- plot_richness(dorms_rare, x = "last_shower_binned", 
   geom_boxplot()
 gg_simpson_showerrecency
 
-#ANOVA
+#T-test
+t.test(samp_dat_wdiv$Simpson ~ samp_dat_wdiv$last_shower_binned)
+
+#Results: p-value = 0.5755 > 0.05 = not significant
 
 # save plot file 
 ggsave(filename = "showerrecency_plot_simpson.png"
@@ -95,7 +111,10 @@ gg_invsimpson_showerrecency <- plot_richness(dorms_rare, x = "last_shower_binned
   geom_boxplot()
 gg_invsimpson_showerrecency
 
-#ANOVA
+#T-test
+t.test(samp_dat_wdiv$InvSimpson ~ samp_dat_wdiv$last_shower_binned)
+
+#Results: p-value = 0.5335 > 0.05 = not significant
 
 # save plot file 
 ggsave(filename = "showerrecency_plot_invsimpson.png"
@@ -109,7 +128,10 @@ gg_fisher_showerrecency <- plot_richness(dorms_rare, x = "last_shower_binned", m
   geom_boxplot()
 gg_fisher_showerrecency
 
-#ANOVA
+#T-test
+t.test(samp_dat_wdiv$Fisher ~ samp_dat_wdiv$last_shower_binned)
+
+#Results: p-value = 0.4621 > 0.05 = not significant
 
 # save plot file 
 ggsave(filename = "showerrecency_plot_fisher.png"
@@ -130,7 +152,7 @@ plot.pd_showerrecency <- ggplot(sample_data(dorms_rare), aes(last_shower_binned,
 # view plot
 plot.pd_showerrecency
 
-#ANOVA
+#T-test
 
 
 # save plot file 
