@@ -100,4 +100,3 @@ barplot_species_high_low = ggplot(species_sheetwash_sigASVs) +
   geom_errorbar(aes(x=Species, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE))+ theme(axis.text.x = element_text(angle = 90))
 
 ggsave(filename="barplot_species_high_low.png", barplot_species_high_low)
-
