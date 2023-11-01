@@ -28,6 +28,7 @@ gg_pcoa_unifrac <- plot_ordination(dorms_rare, pcoa_unifrac, color = "sex") +
 gg_pcoa_unifrac
 
 #Unweighted Unifrac PERMANOVA Test#
+set.seed(1) 
 unifrac_dm <- UniFrac(dorms_rare, weighted=FALSE)
 adonis2(unifrac_dm ~ sex, data=samp_dat_wdiv)
 
@@ -46,6 +47,7 @@ gg_pcoa_wunifrac <- plot_ordination(dorms_rare, pcoa_wunifrac, color = "sex") +
 gg_pcoa_wunifrac
 
 #Weighted Unifrac PERMANOVA Test#
+set.seed(1) 
 wunifrac_dm <- UniFrac(dorms_rare, weighted=TRUE)
 adonis2(wunifrac_dm ~ sex, data=samp_dat_wdiv)
 
@@ -63,6 +65,7 @@ gg_pcoa_jaccard <- plot_ordination(dorms_rare, pcoa_jaccard, color = "sex") + la
 gg_pcoa_jaccard
 
 #Jaccard Diversity PERMANOVA Test#
+set.seed(1) 
 dm_jaccard <- vegdist(t(otu_table(dorms_rare)), method="jaccard")
 adonis2(dm_jaccard ~ sex, data=samp_dat_wdiv)
 
@@ -80,6 +83,7 @@ gg_pcoa_bc <- plot_ordination(dorms_rare, pcoa_bc, color = "sex") + labs(col = "
 gg_pcoa_bc
 
 #Bray Curtis Diversity PERMANOVA Test#
+set.seed(1) 
 dm_bray <- vegdist(t(otu_table(dorms_rare)), method="bray")
 adonis2(dm_bray ~ sex, data=samp_dat_wdiv)
 
