@@ -37,7 +37,7 @@ adonis2(unifrac_dm ~ sex_sheetwashfreq, data=samp_dat_wdiv)
 #save PCoA#
 ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_2B/2B_unweighted_pcoa.png"
        , gg_pcoa_unifrac
-       , height=4, width=5)
+       , height=4, width=8)
 
 
 
@@ -56,7 +56,7 @@ adonis2(wunifrac_dm ~ sex_sheetwashfreq, data=samp_dat_wdiv)
 #save PCoA#
 ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_2B/2B_weighted_pcoa.png"
        , gg_pcoa_wunifrac
-       , height=4, width=5)
+       , height=4, width=8)
 
 
 
@@ -74,7 +74,7 @@ adonis2(dm_jaccard ~ sex_sheetwashfreq, data=samp_dat_wdiv)
 #save PCoA#
 ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_2B/2B_jaccard_pcoa.png"
        , gg_pcoa_jaccard
-       , height=4, width=5)
+       , height=4, width=8)
 
 
 
@@ -92,4 +92,4 @@ adonis2(dm_bray ~ sex_sheetwashfreq, data=samp_dat_wdiv)
 #save PCoA#
 ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_2B/2B_bc_pcoa.png"
        , gg_pcoa_bc
-       , height=4, width=5)
+       , height=4, width=8)
