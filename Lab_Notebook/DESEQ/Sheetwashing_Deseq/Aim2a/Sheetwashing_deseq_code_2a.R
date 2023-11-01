@@ -9,6 +9,9 @@ library(ape)
 library(vegan)
 library(FSA)
 
+#setting the seed
+set.seed(1)
+
 #### Loading data ####
 #Load dorms_final (filtered data)
 load("Lab_Notebook/DESEQ/Sheetwashing_deseq/dorms_final_sheetwashfreq_deseq.RData")
