@@ -5,56 +5,91 @@ BiocManager::install("DESeq2")
 library(tidyverse)
 library(phyloseq)
 library(DESeq2)
+library(ape)
+library(vegan)
+library(FSA)
 
+#### Loading data ####
+#Load dorms_final (filtered data)
+load("Lab_Notebook/DESEQ/Sheetwashing_deseq/dorms_final_sheetwashfreq_deseq.RData")
 
-#### Load data ####
-load("../Module_13/mpt_final.RData")
-
-#### DESeq ####
-mpt_deseq <- phyloseq_to_deseq2(mpt_final, ~`reported.antibiotic.usage`)
-DESEQ_mpt <- DESeq(mpt_deseq)
-
-## NOTE: If you get a zeros error, then you need to add '1' count to all reads
-mpt_plus1 <- transform_sample_counts(mpt_final, function(x) x+1)
-mpt_deseq <- phyloseq_to_deseq2(mpt_plus1, ~`reported.antibiotic.usage`)
-DESEQ_mpt <- DESeq(mpt_deseq)
-res <- results(DESEQ_mpt, tidy=TRUE, 
-               #this will ensure that No is your reference group
-               contrast = c("reported.antibiotic.usage","Yes","No"))
+#### DESeq Object Creation ####
+#adding +1 to all counts in the OTU table to correct for zero's that DESeq cant handle
+phyloseq_object_plus1 <- transform_sample_counts(dorms_final, function(x) x+1)
+#turning phloseq object to deseq object
+sheetwash_deseq <- phyloseq_to_deseq2(phyloseq_object_plus1, ~`sheetwashfreq_binned`)
+#running DESeq
+DESEQ_sheetwash <- DESeq(sheetwash_deseq)
+#viewing DESeq results
+#high group is the comparison group and low group is reference
+res <- results(DESEQ_sheetwash, tidy=TRUE, contrast= c("sheetwashfreq_binned","high","medium"))
 View(res)
 
-# Look at results 
 
-## Volcano plot: effect size VS significance
+### Creating the Volcano plot: effect size VS significance ###
 ggplot(res) +
   geom_point(aes(x=log2FoldChange, y=-log10(padj)))
 
-## Make variable to color by whether it is significant + large change
-vol_plot <- res %>%
+volcano_plot =  res %>%
   mutate(significant = padj<0.01 & abs(log2FoldChange)>2) %>%
   ggplot() +
   geom_point(aes(x=log2FoldChange, y=-log10(padj), col=significant))
 
-ggsave(filename="vol_plot.png",vol_plot)
-# To get table of results
+#saving file
+ggsave(filename="volcano_plot.png",volcano_plot)
+
+### Getting a table of Results ###
 sigASVs <- res %>% 
   filter(padj<0.01 & abs(log2FoldChange)>2) %>%
   dplyr::rename(ASV=row)
 View(sigASVs)
-# Get only asv names
+#Significant ASVs
 sigASVs_vec <- sigASVs %>%
   pull(ASV)
+#There are 45 significant ASV's
+view(sigASVs_vec)
 
-# Prune phyloseq file
-mpt_DESeq <- prune_taxa(sigASVs_vec,mpt_final)
-sigASVs <- tax_table(mpt_DESeq) %>% as.data.frame() %>%
+### Creating Bar plots ###
+#Prune phyloseq file
+sheetwash_DESeq_pruned <- prune_taxa(sigASVs_vec,dorms_final)
+
+# Phlyum level comparison
+phylum_sheetwash_sigASVs <- tax_table(sheetwash_DESeq_pruned) %>% as.data.frame() %>%
+  rownames_to_column(var="ASV") %>%
+  right_join(sigASVs) %>%
+  arrange(log2FoldChange) %>%
+  mutate(Phylum = make.unique(Phylum)) %>%
+  mutate(Phylum = factor(Phylum, levels=unique(Phylum)))
+
+ggplot(phylum_sheetwash_sigASVs) +
+  geom_bar(aes(x=Phylum, y=log2FoldChange), stat="identity")+
+  geom_errorbar(aes(x=Phylum, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE))
+
+
+# Genus level comparison
+genus_sheetwash_sigASVs <- tax_table(sheetwash_DESeq_pruned) %>% as.data.frame() %>%
   rownames_to_column(var="ASV") %>%
   right_join(sigASVs) %>%
   arrange(log2FoldChange) %>%
   mutate(Genus = make.unique(Genus)) %>%
   mutate(Genus = factor(Genus, levels=unique(Genus)))
 
-ggplot(sigASVs) +
+ggplot(genus_sheetwash_sigASVs) +
   geom_bar(aes(x=Genus, y=log2FoldChange), stat="identity")+
   geom_errorbar(aes(x=Genus, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE)) +
   theme(axis.text.x = element_text(angle=90, hjust=1, vjust=0.5))
+
+
+# Species level comparison
+species_sheetwash_sigASVs  <- tax_table(sheetwash_DESeq_pruned) %>% as.data.frame() %>%
+  rownames_to_column(var="ASV") %>%
+  right_join(sigASVs) %>%
+  arrange(log2FoldChange) %>%
+  mutate(Species = make.unique(Species)) %>%
+  mutate(Species = factor(Species, levels=unique(Species)))
+
+ggplot(species_sheetwash_sigASVs) +
+  geom_bar(aes(x=Species, y=log2FoldChange), stat="identity")+
+  geom_errorbar(aes(x=Species, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE))+ theme(axis.text.x = element_text(angle = 90))
+
+
