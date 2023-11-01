@@ -17,13 +17,13 @@ load("Lab_Notebook/DESEQ/Sheetwashing_deseq/dorms_final_sheetwashfreq_deseq.RDat
 #adding +1 to all counts in the OTU table to correct for zero's that DESeq cant handle
 phyloseq_object_plus1 <- transform_sample_counts(dorms_final, function(x) x+1)
 #turning phloseq object to deseq object
-sheetwash_deseq <- phyloseq_to_deseq2(phyloseq_object_plus1, ~`sheetwashfreq_binned`)
+sheetwash_deseq <- phyloseq_to_deseq2(phyloseq_object_plus1, ~`sex`)
 #running DESeq
 DESEQ_sheetwash <- DESeq(sheetwash_deseq)
 #viewing DESeq results
 #high group is the comparison group and low group is reference
-res <- results(DESEQ_sheetwash, tidy=TRUE, contrast= c("sheetwashfreq_binned","high","low"))
-#View(res)
+res <- results(DESEQ_sheetwash, tidy=TRUE, contrast= c("sex","female","male"))
+View(res)
 
 
 ### Creating the Volcano plot: effect size VS significance ###
@@ -46,7 +46,7 @@ View(sigASVs)
 #Significant ASVs
 sigASVs_vec <- sigASVs %>%
   pull(ASV)
-#There are 45 significant ASV's
+#There are 33 significant ASV's
 view(sigASVs_vec)
 
 ### Creating Bar plots ###
@@ -91,5 +91,3 @@ species_sheetwash_sigASVs  <- tax_table(sheetwash_DESeq_pruned) %>% as.data.fram
 ggplot(species_sheetwash_sigASVs) +
   geom_bar(aes(x=Species, y=log2FoldChange), stat="identity")+
   geom_errorbar(aes(x=Species, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE))+ theme(axis.text.x = element_text(angle = 90))
-
-
