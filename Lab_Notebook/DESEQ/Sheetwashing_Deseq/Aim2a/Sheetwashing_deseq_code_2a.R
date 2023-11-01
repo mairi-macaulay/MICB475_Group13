@@ -22,8 +22,8 @@ sheetwash_deseq <- phyloseq_to_deseq2(phyloseq_object_plus1, ~`sex`)
 DESEQ_sheetwash <- DESeq(sheetwash_deseq)
 #viewing DESeq results
 #high group is the comparison group and low group is reference
-res <- results(DESEQ_sheetwash, tidy=TRUE, contrast= c("sheetwashfreq_binned","high","low"))
-#View(res)
+res <- results(DESEQ_sheetwash, tidy=TRUE, contrast= c("sex","female","male"))
+View(res)
 
 
 ### Creating the Volcano plot: effect size VS significance ###
@@ -46,7 +46,7 @@ View(sigASVs)
 #Significant ASVs
 sigASVs_vec <- sigASVs %>%
   pull(ASV)
-#There are 45 significant ASV's
+#There are 33 significant ASV's
 view(sigASVs_vec)
 
 ### Creating Bar plots ###

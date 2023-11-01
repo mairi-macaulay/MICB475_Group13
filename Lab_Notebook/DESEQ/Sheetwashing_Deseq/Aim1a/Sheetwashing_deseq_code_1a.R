@@ -23,7 +23,7 @@ DESEQ_sheetwash <- DESeq(sheetwash_deseq)
 #viewing DESeq results
 #high group is the comparison group and low group is reference
 res <- results(DESEQ_sheetwash, tidy=TRUE, contrast= c("sheetwashfreq_binned","high","low"))
-#View(res)
+View(res)
 
 
 ### Creating the Volcano plot: effect size VS significance ###
@@ -39,7 +39,7 @@ volcano_plot =  res %>%
 ggsave(filename="volcano_plot.png",volcano_plot)
 
 ### Getting a table of Results ###
-sigASVs <- res %>% 
+sigASVs <- as.data.frame(res) %>% 
   filter(padj<0.01 & abs(log2FoldChange)>2) %>%
   dplyr::rename(ASV=row)
 View(sigASVs)
