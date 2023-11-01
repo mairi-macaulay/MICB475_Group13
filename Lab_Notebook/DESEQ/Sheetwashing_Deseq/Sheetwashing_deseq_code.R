@@ -22,8 +22,8 @@ sheetwash_deseq <- phyloseq_to_deseq2(phyloseq_object_plus1, ~`sheetwashfreq_bin
 DESEQ_sheetwash <- DESeq(sheetwash_deseq)
 #viewing DESeq results
 #high group is the comparison group and low group is reference
-res <- results(DESEQ_sheetwash, tidy=TRUE, contrast= c("sheetwashfreq_binned","high","medium"))
-View(res)
+res <- results(DESEQ_sheetwash, tidy=TRUE, contrast= c("sheetwashfreq_binned","high","low"))
+#View(res)
 
 
 ### Creating the Volcano plot: effect size VS significance ###
