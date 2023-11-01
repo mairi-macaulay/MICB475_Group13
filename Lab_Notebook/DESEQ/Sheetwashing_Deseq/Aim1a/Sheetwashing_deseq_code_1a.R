@@ -1,3 +1,4 @@
+set.seed(1)
 # if you didn't install the DESeq2 package, run the following
 BiocManager::install("DESeq2")
 
@@ -48,6 +49,7 @@ sigASVs_vec <- sigASVs %>%
   pull(ASV)
 #There are 45 significant ASV's
 view(sigASVs_vec)
+
 
 ### Creating Bar plots ###
 #Prune phyloseq file
