@@ -1,4 +1,4 @@
-####AIM 1A Beta Diversity Analysis####
+####AIM 2B Beta Diversity Analysis####
 
 ##Load Necessary Packages##
 library(phyloseq)
@@ -87,14 +87,3 @@ adonis2(dm_bray ~ sheetwashfreq_binned, data=samp_dat_wdiv)
 ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_bc_pcoa.png"
        , gg_pcoa_bc
        , height=4, width=5)
-
-
-
-
-
-
-
-
-
-
-
