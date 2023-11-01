@@ -21,11 +21,12 @@ phyloseq_object_plus1 <- transform_sample_counts(dorms_final, function(x) x+1)
 sheetwash_deseq <- phyloseq_to_deseq2(phyloseq_object_plus1, ~`sheetwashfreq_binned`)
 #running DESeq
 DESEQ_sheetwash <- DESeq(sheetwash_deseq)
-#viewing DESeq results
+
+
+###viewing DESeq results- comparison group 1 
 #high group is the comparison group and low group is reference
 res <- results(DESEQ_sheetwash, tidy=TRUE, contrast= c("sheetwashfreq_binned","high","low"))
 View(res)
-
 
 ### Creating the Volcano plot: effect size VS significance ###
 ggplot(res) +
@@ -37,7 +38,7 @@ volcano_plot =  res %>%
   geom_point(aes(x=log2FoldChange, y=-log10(padj), col=significant))
 
 #saving file
-ggsave(filename="volcano_plot.png",volcano_plot)
+ggsave(filename="volcano_plot_high_low.png",volcano_plot)
 
 ### Getting a table of Results ###
 sigASVs <- as.data.frame(res) %>% 
@@ -63,9 +64,11 @@ phylum_sheetwash_sigASVs <- tax_table(sheetwash_DESeq_pruned) %>% as.data.frame(
   mutate(Phylum = make.unique(Phylum)) %>%
   mutate(Phylum = factor(Phylum, levels=unique(Phylum)))
 
-ggplot(phylum_sheetwash_sigASVs) +
+barplot_phyla_high_low = ggplot(phylum_sheetwash_sigASVs) +
   geom_bar(aes(x=Phylum, y=log2FoldChange), stat="identity")+
   geom_errorbar(aes(x=Phylum, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE))
+
+ggsave(filename="barplot_phyla_high_low.png",barplot_phyla_high_low)
 
 
 # Genus level comparison
@@ -76,10 +79,12 @@ genus_sheetwash_sigASVs <- tax_table(sheetwash_DESeq_pruned) %>% as.data.frame()
   mutate(Genus = make.unique(Genus)) %>%
   mutate(Genus = factor(Genus, levels=unique(Genus)))
 
-ggplot(genus_sheetwash_sigASVs) +
+barplot_genus_high_low = ggplot(genus_sheetwash_sigASVs) +
   geom_bar(aes(x=Genus, y=log2FoldChange), stat="identity")+
   geom_errorbar(aes(x=Genus, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE)) +
   theme(axis.text.x = element_text(angle=90, hjust=1, vjust=0.5))
+
+ggsave(filename="barplot_genus_high_low.png",barplot_genus_high_low)
 
 
 # Species level comparison
@@ -90,8 +95,9 @@ species_sheetwash_sigASVs  <- tax_table(sheetwash_DESeq_pruned) %>% as.data.fram
   mutate(Species = make.unique(Species)) %>%
   mutate(Species = factor(Species, levels=unique(Species)))
 
-ggplot(species_sheetwash_sigASVs) +
+barplot_species_high_low = ggplot(species_sheetwash_sigASVs) +
   geom_bar(aes(x=Species, y=log2FoldChange), stat="identity")+
   geom_errorbar(aes(x=Species, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE))+ theme(axis.text.x = element_text(angle = 90))
 
+ggsave(filename="barplot_species_high_low.png", barplot_species_high_low)
 
