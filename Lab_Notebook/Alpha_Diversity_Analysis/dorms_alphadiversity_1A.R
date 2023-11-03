@@ -7,8 +7,8 @@ library(picante)
 library(ggsignif)
 
 ##Load in RData
-load("../Phyloseq/dorms_rare_sheetwashfreq.RData")
-load("../Phyloseq/dorms_final_sheetwashfreq.RData")
+load("../../Phyloseq/dorms_rare_sheetwashfreq.RData")
+load("../../Phyloseq/dorms_final_sheetwashfreq.RData")
 
 #### Alpha diversity ######
 #view all metrics
@@ -21,9 +21,10 @@ samp_dat_wdiv <- data.frame(samp_dat, alphadiv)
 
 #####Shannon#####
 # save into object, define x-axis as sheetwashfreq_binned and relabel, add a boxplot
-gg_shannon_sheetwashfreq <- plot_richness(dorms_rare, x = "sheetwashfreq_binned", measures = c("Shannon")) +
-  xlab("Sheet Wash Frequency") +
-  geom_boxplot()
+gg_shannon_sheetwashfreq <- ggplot(samp_dat_wdiv, aes(x=`sheetwashfreq_binned`, y=Shannon)) +
+  geom_boxplot() +
+  scale_x_discrete(limits = c("low", "medium", "high")) +
+  xlab("Sheet Wash Frequency")
 gg_shannon_sheetwashfreq
 
 #One-way ANOVA
@@ -45,9 +46,10 @@ ggsave(filename = "sheetwashfreq_plot_shannon.png"
 
 #####Observed##### 
 # save into object, define x-axis as sheetwashfreq_binned and relabel, add a boxplot
-gg_observed_sheetwashfreq <- plot_richness(dorms_rare, x = "sheetwashfreq_binned", measures = c("Observed")) +
-  xlab("Sheet Wash Frequency") +
-  geom_boxplot()
+gg_observed_sheetwashfreq <- ggplot(samp_dat_wdiv, aes(x=`sheetwashfreq_binned`, y=Observed)) +
+  geom_boxplot() +
+  scale_x_discrete(limits = c("low", "medium", "high")) +
+  xlab("Sheet Wash Frequency")
 gg_observed_sheetwashfreq
 
 #ANOVA
@@ -69,9 +71,10 @@ ggsave(filename = "sheetwashfreq_plot_observed.png"
 
 #####Chao1##### 
 # save into object, define x-axis as sheetwashfreq_binned and relabel, add a boxplot
-gg_chao1_sheetwashfreq <- plot_richness(dorms_rare, x = "sheetwashfreq_binned", measures = c("Chao1")) +
-  xlab("Sheet Wash Frequency") +
-  geom_boxplot()
+gg_chao1_sheetwashfreq <- ggplot(samp_dat_wdiv, aes(x=`sheetwashfreq_binned`, y=Chao1)) +
+  geom_boxplot() +
+  scale_x_discrete(limits = c("low", "medium", "high")) +
+  xlab("Sheet Wash Frequency")
 gg_chao1_sheetwashfreq
 
 #ANOVA
@@ -93,9 +96,10 @@ ggsave(filename = "sheetwashfreq_plot_chao1.png"
 
 #####ACE##### 
 # save into object, define x-axis as sheetwashfreq_binned and relabel, add a boxplot
-gg_ace_sheetwashfreq <- plot_richness(dorms_rare, x = "sheetwashfreq_binned", measures = c("ACE")) +
-  xlab("Sheet Wash Frequency") +
-  geom_boxplot()
+gg_ace_sheetwashfreq <- ggplot(samp_dat_wdiv, aes(x=`sheetwashfreq_binned`, y=ACE)) +
+  geom_boxplot() +
+  scale_x_discrete(limits = c("low", "medium", "high")) +
+  xlab("Sheet Wash Frequency")
 gg_ace_sheetwashfreq
 
 #ANOVA
@@ -117,9 +121,10 @@ ggsave(filename = "sheetwashfreq_plot_ace.png"
 
 #####Simpson##### 
 # save into object, define x-axis as sheetwashfreq_binned and relabel, add a boxplot
-gg_simpson_sheetwashfreq <- plot_richness(dorms_rare, x = "sheetwashfreq_binned", measures = c("Simpson")) +
-  xlab("Sheet Wash Frequency") +
-  geom_boxplot()
+gg_simpson_sheetwashfreq <- ggplot(samp_dat_wdiv, aes(x=`sheetwashfreq_binned`, y=Simpson)) +
+  geom_boxplot() +
+  scale_x_discrete(limits = c("low", "medium", "high")) +
+  xlab("Sheet Wash Frequency")
 gg_simpson_sheetwashfreq
 
 #ANOVA
@@ -141,9 +146,10 @@ ggsave(filename = "sheetwashfreq_plot_simpson.png"
 
 #####InvSimpson##### 
 # save into object, define x-axis as sheetwashfreq_binned and relabel, add a boxplot
-gg_invsimpson_sheetwashfreq <- plot_richness(dorms_rare, x = "sheetwashfreq_binned", measures = c("InvSimpson")) +
-  xlab("Sheet Wash Frequency") +
-  geom_boxplot()
+gg_invsimpson_sheetwashfreq <- ggplot(samp_dat_wdiv, aes(x=`sheetwashfreq_binned`, y=InvSimpson)) +
+  geom_boxplot() +
+  scale_x_discrete(limits = c("low", "medium", "high")) +
+  xlab("Sheet Wash Frequency")
 gg_invsimpson_sheetwashfreq
 
 #ANOVA
@@ -165,9 +171,10 @@ ggsave(filename = "sheetwashfreq_plot_invsimpson.png"
 
 #####Fisher##### 
 # save into object, define x-axis as sheetwashfreq_binned and relabel, add a boxplot
-gg_fisher_sheetwashfreq <- plot_richness(dorms_rare, x = "sheetwashfreq_binned", measures = c("Fisher")) +
-  xlab("Sheet Wash Frequency") +
-  geom_boxplot()
+gg_fisher_sheetwashfreq <- ggplot(samp_dat_wdiv, aes(x=`sheetwashfreq_binned`, y=Fisher)) +
+  geom_boxplot() +
+  scale_x_discrete(limits = c("low", "medium", "high")) +
+  xlab("Sheet Wash Frequency")
 gg_fisher_sheetwashfreq
 
 #ANOVA
@@ -200,9 +207,6 @@ plot.pd_sheetwashfreq <- ggplot(sample_data(dorms_rare), aes(sheetwashfreq_binne
   ylab("Phylogenetic Diversity")
 # view plot
 plot.pd_sheetwashfreq
-
-#ANOVA
-
 
 # save plot file 
 ggsave(filename = "sheetwashfreq_plot_pd.png"
