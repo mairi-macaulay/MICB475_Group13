@@ -8,7 +8,6 @@ library(ggsignif)
 
 ##Load in RData
 load("../../Phyloseq/dorms_rare_sheetwashfreq.RData")
-load("../../Phyloseq/dorms_final_sheetwashfreq.RData")
 
 #### Alpha diversity ######
 #view all metrics
@@ -21,9 +20,9 @@ samp_dat_wdiv <- data.frame(samp_dat, alphadiv)
 
 #####Shannon#####
 # save into object, define x-axis as sex and relabel, add a boxplot
-gg_shannon_gender <- plot_richness(dorms_rare, x = "sex", measures = c("Shannon")) +
-  xlab("Gender") +
-  geom_boxplot()
+gg_shannon_gender <- ggplot(samp_dat_wdiv, aes(x=`sex`, y=Shannon)) +
+  geom_boxplot() +
+  xlab("Gender")
 gg_shannon_gender
 
 #T-test
@@ -31,15 +30,15 @@ t.test(samp_dat_wdiv$Shannon ~ samp_dat_wdiv$sex)
 #p-value = 0.5554
 
 # save plot file 
-ggsave(filename = "gender_plot_shannon.png"
+ggsave(filename = "2A_plot_shannon.png"
        , gg_shannon_gender
        , height=4, width=6)
 
 #####Observed##### 
 # save into object, define x-axis as sex and relabel, add a boxplot
-gg_observed_gender <- plot_richness(dorms_rare, x = "sex", measures = c("Observed")) +
-  xlab("Gender") +
-  geom_boxplot()
+gg_observed_gender <- ggplot(samp_dat_wdiv, aes(x=`sex`, y=Observed)) +
+  geom_boxplot() +
+  xlab("Gender")
 gg_observed_gender
 
 #T-test
@@ -53,9 +52,9 @@ ggsave(filename = "2A_plot_observed.png"
 
 #####Chao1##### 
 # save into object, define x-axis as sex and relabel, add a boxplot
-gg_chao1_gender <- plot_richness(dorms_rare, x = "sex", measures = c("Chao1")) +
-  xlab("Gender") +
-  geom_boxplot()
+gg_chao1_gender <- ggplot(samp_dat_wdiv, aes(x=`sex`, y=Chao1)) +
+  geom_boxplot() +
+  xlab("Gender")
 gg_chao1_gender
 
 #T-test
@@ -69,9 +68,9 @@ ggsave(filename = "2A_plot_chao1.png"
 
 #####ACE##### 
 # save into object, define x-axis as sex and relabel, add a boxplot
-gg_ace_gender <- plot_richness(dorms_rare, x = "sex", measures = c("ACE")) +
-  xlab("Gender") +
-  geom_boxplot()
+gg_ace_gender <- ggplot(samp_dat_wdiv, aes(x=`sex`, y=ACE)) +
+  geom_boxplot() +
+  xlab("Gender")
 gg_ace_gender
 
 #T-test
@@ -85,9 +84,9 @@ ggsave(filename = "2A_plot_ace.png"
 
 #####Simpson##### 
 # save into object, define x-axis as sex and relabel, add a boxplot
-gg_simpson_gender <- plot_richness(dorms_rare, x = "sex", measures = c("Simpson")) +
-  xlab("Gender") +
-  geom_boxplot()
+gg_simpson_gender <- ggplot(samp_dat_wdiv, aes(x=`sex`, y=Simpson)) +
+  geom_boxplot() +
+  xlab("Gender")
 gg_simpson_gender
 
 #T-test
@@ -101,9 +100,9 @@ ggsave(filename = "2A_plot_simpson.png"
 
 #####InvSimpson##### 
 # save into object, define x-axis as sex and relabel, add a boxplot
-gg_invsimpson_gender <- plot_richness(dorms_rare, x = "sex", measures = c("InvSimpson")) +
-  xlab("Gender") +
-  geom_boxplot()
+gg_invsimpson_gender <- ggplot(samp_dat_wdiv, aes(x=`sex`, y=InvSimpson)) +
+  geom_boxplot() +
+  xlab("Gender")
 gg_invsimpson_gender
 
 #T-test
@@ -117,9 +116,9 @@ ggsave(filename = "2A_plot_invsimpson.png"
 
 #####Fisher##### 
 # save into object, define x-axis as sex and relabel, add a boxplot
-gg_fisher_gender <- plot_richness(dorms_rare, x = "sex", measures = c("Fisher")) +
-  xlab("Gender") +
-  geom_boxplot()
+gg_fisher_gender <- ggplot(samp_dat_wdiv, aes(x=`sex`, y=Fisher)) +
+  geom_boxplot() +
+  xlab("Gender")
 gg_fisher_gender
 
 #T-test
@@ -149,4 +148,3 @@ plot.pd_gender
 ggsave(filename = "2A_plot_pd.png"
        , plot.pd_gender
        , height=4, width=6)
-
