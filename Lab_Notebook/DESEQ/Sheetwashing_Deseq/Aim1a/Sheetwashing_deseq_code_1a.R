@@ -69,7 +69,9 @@ phylum_sheetwash_sigASVs <- tax_table(sheetwash_DESeq_pruned) %>% as.data.frame(
 
 barplot_phyla_high_low = ggplot(phylum_sheetwash_sigASVs) +
   geom_bar(aes(x=Phylum, y=log2FoldChange), stat="identity")+
-  geom_errorbar(aes(x=Phylum, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE))
+  geom_errorbar(aes(x=Phylum, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE)) +
+  theme(text = element_text(size=8),
+        axis.text.x = element_text(angle=90, hjust=1)) 
 
 ggsave(filename="barplot_phyla_high_low.png",barplot_phyla_high_low)
 
@@ -85,7 +87,8 @@ genus_sheetwash_sigASVs <- tax_table(sheetwash_DESeq_pruned) %>% as.data.frame()
 barplot_genus_high_low = ggplot(genus_sheetwash_sigASVs) +
   geom_bar(aes(x=Genus, y=log2FoldChange), stat="identity")+
   geom_errorbar(aes(x=Genus, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE)) +
-  theme(axis.text.x = element_text(angle=90, hjust=1, vjust=0.5))
+  theme(text = element_text(size=8),
+        axis.text.x = element_text(angle=90, hjust=1)) 
 
 ggsave(filename="barplot_genus_high_low.png",barplot_genus_high_low)
 
@@ -100,7 +103,9 @@ species_sheetwash_sigASVs  <- tax_table(sheetwash_DESeq_pruned) %>% as.data.fram
 
 barplot_species_high_low = ggplot(species_sheetwash_sigASVs) +
   geom_bar(aes(x=Species, y=log2FoldChange), stat="identity")+
-  geom_errorbar(aes(x=Species, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE))+ theme(axis.text.x = element_text(angle = 90))
+  geom_errorbar(aes(x=Species, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE))+
+  theme(text = element_text(size=8),
+      axis.text.x = element_text(angle=90, hjust=1)) 
 
 ggsave(filename="barplot_species_high_low.png", barplot_species_high_low)
 
@@ -158,7 +163,9 @@ phylum_sheetwash_sigASVs_med_low <- tax_table(sheetwash_DESeq_pruned_med_low) %>
 
 barplot_phyla_med_low = ggplot(phylum_sheetwash_sigASVs_med_low) +
   geom_bar(aes(x=Phylum, y=log2FoldChange), stat="identity")+
-  geom_errorbar(aes(x=Phylum, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE))
+  geom_errorbar(aes(x=Phylum, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE)) +
+  theme(text = element_text(size=8),
+        axis.text.x = element_text(angle=90, hjust=1)) 
 
 ggsave(filename="barplot_phyla_med_low.png",barplot_phyla_med_low)
 
@@ -174,7 +181,8 @@ genus_sheetwash_sigASVs_med_low <- tax_table(sheetwash_DESeq_pruned_med_low) %>%
 barplot_genus_med_low = ggplot(genus_sheetwash_sigASVs_med_low) +
   geom_bar(aes(x=Genus, y=log2FoldChange), stat="identity")+
   geom_errorbar(aes(x=Genus, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE)) +
-  theme(axis.text.x = element_text(angle=90, hjust=1, vjust=0.5))
+  theme(text = element_text(size=8),
+        axis.text.x = element_text(angle=90, hjust=1)) 
 
 ggsave(filename="barplot_genus_med_low.png",barplot_genus_med_low)
 
@@ -189,7 +197,9 @@ species_sheetwash_sigASVs_med_low  <- tax_table(sheetwash_DESeq_pruned_med_low) 
 
 barplot_species_med_low = ggplot(species_sheetwash_sigASVs_med_low) +
   geom_bar(aes(x=Species, y=log2FoldChange), stat="identity")+
-  geom_errorbar(aes(x=Species, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE))+ theme(axis.text.x = element_text(angle = 90))
+  geom_errorbar(aes(x=Species, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE)) + 
+  theme(text = element_text(size=8),
+        axis.text.x = element_text(angle=90, hjust=1)) 
 
 ggsave(filename="barplot_species_med_low.png", barplot_species_med_low)
 
@@ -248,8 +258,10 @@ phylum_sheetwash_sigASVs_high_med <- tax_table(sheetwash_DESeq_pruned_high_med) 
   mutate(Phylum = factor(Phylum, levels=unique(Phylum)))
 
 barplot_phyla_high_med = ggplot(phylum_sheetwash_sigASVs_high_med) +
-  geom_bar(aes(x=Phylum, y=log2FoldChange), stat="identity")+
-  geom_errorbar(aes(x=Phylum, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE))
+  geom_bar(aes(x=Phylum, y=log2FoldChange), stat="identity") +
+  geom_errorbar(aes(x=Phylum, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE)) +
+  theme(text = element_text(size=8),
+        axis.text.x = element_text(angle=90, hjust=1)) 
 
 ggsave(filename="barplot_phyla_high_med.png",barplot_phyla_high_med)
 
@@ -265,7 +277,8 @@ genus_sheetwash_sigASVs_high_med <- tax_table(sheetwash_DESeq_pruned_high_med) %
 barplot_genus_high_med = ggplot(genus_sheetwash_sigASVs_high_med) +
   geom_bar(aes(x=Genus, y=log2FoldChange), stat="identity")+
   geom_errorbar(aes(x=Genus, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE)) +
-  theme(axis.text.x = element_text(angle=90, hjust=1, vjust=0.5))
+  theme(text = element_text(size=8),
+        axis.text.x = element_text(angle=90, hjust=1)) 
 
 ggsave(filename="barplot_genus_high_med.png",barplot_genus_high_med)
 
@@ -280,6 +293,8 @@ species_sheetwash_sigASVs_high_med  <- tax_table(sheetwash_DESeq_pruned_high_med
 
 barplot_species_high_med = ggplot(species_sheetwash_sigASVs_high_med) +
   geom_bar(aes(x=Species, y=log2FoldChange), stat="identity")+
-  geom_errorbar(aes(x=Species, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE))+ theme(axis.text.x = element_text(angle = 90))
+  geom_errorbar(aes(x=Species, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE)) + 
+  theme(text = element_text(size=8),
+        axis.text.x = element_text(angle=90, hjust=1)) 
 
 ggsave(filename="barplot_species_high_med.png", barplot_species_high_med)
