@@ -44,7 +44,7 @@ volcano_plot =  res %>%
   geom_point(aes(x=log2FoldChange, y=-log10(padj), col=significant))
 
 #saving file
-ggsave(path = Lab_Notebook/DESEQ/Sheetwashing_deseq/Aim2a/Aim2a- using dorms_final_sheetwashfreq_deseq_female phyloseq object, filename="volcano_plot_high_low_female.png",volcano_plot)
+ggsave(filename="volcano_plot_high_low_female.png",volcano_plot)
 
 ### Getting a table of Results ###
 sigASVs <- as.data.frame(res) %>% 
@@ -93,7 +93,7 @@ barplot_genus_high_low = ggplot(genus_sheetwash_sigASVs) +
   theme(text = element_text(size=8),
         axis.text.x = element_text(angle=90, hjust=1)) 
 
-ggsave(filename="barplot_genus_high_low.png",barplot_genus_high_low)
+ggsave(filename="barplot_genus_high_low_female.png",barplot_genus_high_low)
 
 
 # Species level comparison
@@ -110,7 +110,7 @@ barplot_species_high_low = ggplot(species_sheetwash_sigASVs) +
   theme(text = element_text(size=8),
         axis.text.x = element_text(angle=90, hjust=1)) 
 
-ggsave(filename="barplot_species_high_low.png", barplot_species_high_low)
+ggsave(filename="barplot_species_high_low_female.png", barplot_species_high_low)
 
 
 
@@ -138,7 +138,7 @@ volcano_plot_med_low =  res_med_low %>%
   geom_point(aes(x=log2FoldChange, y=-log10(padj), col=significant))
 
 #saving file
-ggsave(filename="volcano_plot_med_low.png",volcano_plot_med_low)
+ggsave(filename="volcano_plot_med_low_female.png",volcano_plot_med_low)
 
 ### Getting a table of Results ###
 sigASVs_med_low <- as.data.frame(res) %>% 
@@ -154,7 +154,7 @@ view(sigASVs_vec_med_low)
 
 ### Creating Bar plots ###
 #Prune phyloseq file
-sheetwash_DESeq_pruned_med_low <- prune_taxa(sigASVs_vec_med_low,dorms_final)
+sheetwash_DESeq_pruned_med_low <- prune_taxa(sigASVs_vec_med_low,dorms_final_sheetwashfreq_deseq_female)
 
 # Phlyum level comparison
 phylum_sheetwash_sigASVs_med_low <- tax_table(sheetwash_DESeq_pruned_med_low) %>% as.data.frame() %>%
@@ -170,7 +170,7 @@ barplot_phyla_med_low = ggplot(phylum_sheetwash_sigASVs_med_low) +
   theme(text = element_text(size=8),
         axis.text.x = element_text(angle=90, hjust=1)) 
 
-ggsave(filename="barplot_phyla_med_low.png",barplot_phyla_med_low)
+ggsave(filename="barplot_phyla_med_low_female.png",barplot_phyla_med_low)
 
 
 # Genus level comparison
@@ -187,7 +187,7 @@ barplot_genus_med_low = ggplot(genus_sheetwash_sigASVs_med_low) +
   theme(text = element_text(size=8),
         axis.text.x = element_text(angle=90, hjust=1)) 
 
-ggsave(filename="barplot_genus_med_low.png",barplot_genus_med_low)
+ggsave(filename="barplot_genus_med_low_female.png",barplot_genus_med_low)
 
 
 # Species level comparison
@@ -204,7 +204,7 @@ barplot_species_med_low = ggplot(species_sheetwash_sigASVs_med_low) +
   theme(text = element_text(size=8),
         axis.text.x = element_text(angle=90, hjust=1)) 
 
-ggsave(filename="barplot_species_med_low.png", barplot_species_med_low)
+ggsave(filename="barplot_species_med_low_female.png", barplot_species_med_low)
 
 
 
@@ -234,7 +234,7 @@ volcano_plot_high_med =  res_high_med %>%
   geom_point(aes(x=log2FoldChange, y=-log10(padj), col=significant))
 
 #saving file
-ggsave(filename="volcano_plot_high_med.png",volcano_plot_high_med)
+ggsave(filename="volcano_plot_high_med_female.png",volcano_plot_high_med)
 
 ### Getting a table of Results ###
 sigASVs_high_med <- as.data.frame(res) %>% 
@@ -250,7 +250,7 @@ view(sigASVs_vec_high_med)
 
 ### Creating Bar plots ###
 #Prune phyloseq file
-sheetwash_DESeq_pruned_high_med <- prune_taxa(sigASVs_vec_high_med,dorms_final)
+sheetwash_DESeq_pruned_high_med <- prune_taxa(sigASVs_vec_high_med,dorms_final_sheetwashfreq_deseq_female)
 
 # Phlyum level comparison
 phylum_sheetwash_sigASVs_high_med <- tax_table(sheetwash_DESeq_pruned_high_med) %>% as.data.frame() %>%
@@ -266,7 +266,7 @@ barplot_phyla_high_med = ggplot(phylum_sheetwash_sigASVs_high_med) +
   theme(text = element_text(size=8),
         axis.text.x = element_text(angle=90, hjust=1)) 
 
-ggsave(filename="barplot_phyla_high_med.png",barplot_phyla_high_med)
+ggsave(filename="barplot_phyla_high_med_female.png",barplot_phyla_high_med)
 
 
 # Genus level comparison
@@ -283,7 +283,7 @@ barplot_genus_high_med = ggplot(genus_sheetwash_sigASVs_high_med) +
   theme(text = element_text(size=8),
         axis.text.x = element_text(angle=90, hjust=1)) 
 
-ggsave(filename="barplot_genus_high_med.png",barplot_genus_high_med)
+ggsave(filename="barplot_genus_high_med_female.png",barplot_genus_high_med)
 
 
 # Species level comparison
@@ -300,4 +300,4 @@ barplot_species_high_med = ggplot(species_sheetwash_sigASVs_high_med) +
   theme(text = element_text(size=8),
         axis.text.x = element_text(angle=90, hjust=1)) 
 
-ggsave(filename="barplot_species_high_med.png", barplot_species_high_med)
+ggsave(filename="barplot_species_high_med_female.png", barplot_species_high_med)
