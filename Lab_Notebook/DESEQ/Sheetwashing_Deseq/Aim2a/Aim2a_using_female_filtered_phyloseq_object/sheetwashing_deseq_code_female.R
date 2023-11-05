@@ -44,7 +44,7 @@ volcano_plot =  res %>%
   geom_point(aes(x=log2FoldChange, y=-log10(padj), col=significant))
 
 #saving file
-ggsave(filename="volcano_plot_high_low_female.png",volcano_plot)
+ggsave(path = Lab_Notebook/DESEQ/Sheetwashing_deseq/Aim2a/Aim2a- using dorms_final_sheetwashfreq_deseq_female phyloseq object, filename="volcano_plot_high_low_female.png",volcano_plot)
 
 ### Getting a table of Results ###
 sigASVs <- as.data.frame(res) %>% 
