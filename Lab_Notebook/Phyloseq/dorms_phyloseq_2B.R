@@ -1,20 +1,17 @@
 library(phyloseq)
-library(ape)
-library(tidyverse)
-library(vegan)
 
 #Load phyloseq objects
 load("dorms_rare_sheetwashfreq.RData")
 load("dorms_final_sheetwashfreq_deseq.RData")
 
-####Create phyloseq for 2B alpha diversity - Females#####
+####Create phyloseq for 2B alpha diversity and taxonomic bar plots- Females#####
 # Filter out males
 dorms_rare_sheetwashfreq_female <- subset_samples(dorms_rare, sex != "male")
 
 # Saving
 save(dorms_rare_sheetwashfreq_female, file="dorms_rare_sheetwashfreq_female.RData")
 
-####Create phyloseq for 2B alpha diversity - Males#####
+####Create phyloseq for 2B alpha diversity and taxonomic bar plots - Males#####
 # Filter out females
 dorms_rare_sheetwashfreq_male <- subset_samples(dorms_rare, sex != "female")
 
