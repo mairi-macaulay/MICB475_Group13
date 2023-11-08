@@ -7,8 +7,8 @@ library(picante)
 library(ggsignif)
 
 ##Load in RData
-load("../Phyloseq/dorms_rare_showerrecency.RData")
-load("../Phyloseq/dorms_final_showerrecency.RData")
+load("../../Phyloseq/dorms_rare_showerrecency.RData")
+load("../../Phyloseq/dorms_final_showerrecency.RData")
 
 #### Alpha diversity ######
 #view all metrics
@@ -21,9 +21,9 @@ samp_dat_wdiv <- data.frame(samp_dat, alphadiv)
 
 #####Shannon#####
 # save into object, define x-axis as last_shower_binned and relabel, add a boxplot
-gg_shannon_showerrecency <- plot_richness(dorms_rare, x = "last_shower_binned", measures = c("Shannon")) +
-  xlab("Shower Recency") +
-  geom_boxplot()
+gg_shannon_showerrecency <- ggplot(samp_dat_wdiv, aes(x=`last_shower_binned`, y=Shannon)) +
+  geom_boxplot() +
+  xlab("Shower Recency")
 gg_shannon_showerrecency
 
 #T-test
@@ -38,9 +38,9 @@ ggsave(filename = "showerrecency_plot_shannon.png"
 
 #####Observed##### 
 # save into object, define x-axis as last_shower_binned and relabel, add a boxplot
-gg_observed_showerrecency <- plot_richness(dorms_rare, x = "last_shower_binned", measures = c("Observed")) +
-  xlab("Shower Recency") +
-  geom_boxplot()
+gg_observed_showerrecency <- ggplot(samp_dat_wdiv, aes(x=`last_shower_binned`, y=Observed)) +
+  geom_boxplot() +
+  xlab("Shower Recency")
 gg_observed_showerrecency
 
 #T-test
@@ -55,9 +55,9 @@ ggsave(filename = "showerrecency_plot_observed.png"
 
 #####Chao1##### 
 # save into object, define x-axis as last_shower_binned and relabel, add a boxplot
-gg_chao1_showerrecency <- plot_richness(dorms_rare, x = "last_shower_binned", measures = c("Chao1")) +
-  xlab("Shower Recency") +
-  geom_boxplot()
+gg_chao1_showerrecency <- ggplot(samp_dat_wdiv, aes(x=`last_shower_binned`, y=Chao1)) +
+  geom_boxplot() +
+  xlab("Shower Recency")
 gg_chao1_showerrecency
 
 #T-test
@@ -72,9 +72,9 @@ ggsave(filename = "showerrecency_plot_chao1.png"
 
 #####ACE##### 
 # save into object, define x-axis as last_shower_binned and relabel, add a boxplot
-gg_ace_showerrecency <- plot_richness(dorms_rare, x = "last_shower_binned", measures = c("ACE")) +
-  xlab("Shower Recency") +
-  geom_boxplot()
+gg_ace_showerrecency <- ggplot(samp_dat_wdiv, aes(x=`last_shower_binned`, y=ACE)) +
+  geom_boxplot() +
+  xlab("Shower Recency")
 gg_ace_showerrecency
 
 #T-test
@@ -89,9 +89,9 @@ ggsave(filename = "showerrecency_plot_ace.png"
 
 #####Simpson##### 
 # save into object, define x-axis as last_shower_binned and relabel, add a boxplot
-gg_simpson_showerrecency <- plot_richness(dorms_rare, x = "last_shower_binned", measures = c("Simpson")) +
-  xlab("Shower Recency") +
-  geom_boxplot()
+gg_simpson_showerrecency <- ggplot(samp_dat_wdiv, aes(x=`last_shower_binned`, y=Simpson)) +
+  geom_boxplot() +
+  xlab("Shower Recency")
 gg_simpson_showerrecency
 
 #T-test
@@ -106,9 +106,9 @@ ggsave(filename = "showerrecency_plot_simpson.png"
 
 #####InvSimpson##### 
 # save into object, define x-axis as last_shower_binned and relabel, add a boxplot
-gg_invsimpson_showerrecency <- plot_richness(dorms_rare, x = "last_shower_binned", measures = c("InvSimpson")) +
-  xlab("Shower Recency") +
-  geom_boxplot()
+gg_invsimpson_showerrecency <- ggplot(samp_dat_wdiv, aes(x=`last_shower_binned`, y=InvSimpson)) +
+  geom_boxplot() +
+  xlab("Shower Recency")
 gg_invsimpson_showerrecency
 
 #T-test
@@ -123,9 +123,9 @@ ggsave(filename = "showerrecency_plot_invsimpson.png"
 
 #####Fisher##### 
 # save into object, define x-axis as last_shower_binned and relabel, add a boxplot
-gg_fisher_showerrecency <- plot_richness(dorms_rare, x = "last_shower_binned", measures = c("Fisher")) +
-  xlab("Shower Recency") +
-  geom_boxplot()
+gg_fisher_showerrecency <- ggplot(samp_dat_wdiv, aes(x=`last_shower_binned`, y=Fisher)) +
+  geom_boxplot() +
+  xlab("Shower Recency")
 gg_fisher_showerrecency
 
 #T-test
@@ -151,9 +151,6 @@ plot.pd_showerrecency <- ggplot(sample_data(dorms_rare), aes(last_shower_binned,
   ylab("Phylogenetic Diversity")
 # view plot
 plot.pd_showerrecency
-
-#T-test
-
 
 # save plot file 
 ggsave(filename = "showerrecency_plot_pd.png"
