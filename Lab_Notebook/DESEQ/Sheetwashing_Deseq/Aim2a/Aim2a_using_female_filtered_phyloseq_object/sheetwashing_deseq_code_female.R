@@ -14,7 +14,7 @@ set.seed(1)
 
 #### Loading data ####
 #Load dorms_final (filtered data)
-load("Lab_Notebook/Phyloseq/AIM_2A_phyloseq/dorms_final_sheetwashfreq_deseq_female.RData")
+load("Lab_Notebook/Phyloseq/AIM_2B_phyloseq/dorms_final_sheetwashfreq_deseq_female.RData")
 
 
 #### DESeq Object Creation ####
