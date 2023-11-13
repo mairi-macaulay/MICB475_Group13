@@ -39,7 +39,7 @@ volcano_plot =  res %>%
   geom_point(aes(x=log2FoldChange, y=-log10(padj), col=significant))
 
 #saving file
-ggsave(filename="volcano_plot.png",volcano_plot)
+#ggsave(filename="volcano_plot.png",volcano_plot)
 
 ### Getting a table of Results ###
 sigASVs <- res %>% 
