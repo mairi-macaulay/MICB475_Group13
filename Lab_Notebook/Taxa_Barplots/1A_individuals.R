@@ -51,12 +51,12 @@ for (level in sheetwash_levels) {
     filter(sheetwashfreq_binned == level)
   
   #Plotting at phylum level
-  plot <- ggplot(data = current_data, aes(x = Phylum, fill = Phylum)) +
+  plot <- ggplot(data = current_data, aes(x = ID, fill = Phylum)) +
     geom_bar() +
     theme(axis.text.x = element_text(angle = -90)) +
     labs(y = "Relative Abundance", x = "Sheet Wash Individuals") +
     theme_classic() +
-    theme(axis.text = element_text(size = 15, face = "bold"),
+    theme(axis.text = element_text(size = 5, face = "bold"),
           axis.title = element_text(size = 15, face = "bold"))
   
   #Store plot in list
