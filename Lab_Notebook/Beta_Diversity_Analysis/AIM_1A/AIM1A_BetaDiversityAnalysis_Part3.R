@@ -26,8 +26,6 @@ sample_data(dorms_rare) <- dorms_metadata_no_na
 ##Create new metadata with combined low and medium##
 samp_dat_wdiv$sheetwash_binned_combined_lowmed <- ifelse(samp_dat_wdiv$sheetwashfreq_binned == "high", "high", "low/medium")
 
-###LOW vs HIGH###
-
 ##Unweighted Unifrac##
 unifrac_dm <- distance(dorms_rare, method="unifrac")
 pcoa_unifrac <- ordinate(dorms_rare, method="PCoA", distance=unifrac_dm)
