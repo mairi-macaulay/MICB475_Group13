@@ -14,12 +14,16 @@ set.seed(1)
 ##Load files##
 load(file="Lab_Notebook/Phyloseq/dorms_rare_sheetwashfreq.RData")
 
+##Removing rows with "na" for sheetwashing frequency##
+dorms_metadata_no_na <- sample_data(dorms_rare)
+
 ##Add a column that combines low and medium##
 dorms_metadata_no_na$sheetwash_binned_combined_lowmed<- ifelse(dorms_metadata_no_na$sheetwashfreq_binned == "high", "high", "low/medium")
 sample_data(dorms_rare) <- dorms_metadata_no_na
 
 ##Adding combined sex and sheet washing frequency column##
-sample_data(dorms_rare)$sex_sheetwash_lowmedcomb <- paste(sample_data(dorms_rare)$sex, sample_data(dorms_rare)$sheetwash_binned_combined_lowmed)
+dorms_metadata_no_na$sex_sheetwash_lowmedcomb <- paste(sample_data(dorms_rare)$sex, sample_data(dorms_rare)$sheetwash_binned_combined_lowmed)
+sample_data(dorms_rare) <- dorms_metadata_no_na
 
 ##Generating diversity metrics##
 alphadiv <- estimate_richness(dorms_rare)
