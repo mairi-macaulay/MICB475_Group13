@@ -196,148 +196,147 @@ ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_2B/2B_3_M_highvslowm
 
 
 
-
 ###MALE LOW/MEDIUM vs FEMALE LOW/MEDIUM###
 
 ##Unweighted Unifrac##
-unifrac_dm <- distance(phylo_nohigh, method="unifrac")
-pcoa_unifrac <- ordinate(phylo_nohigh, method="PCoA", distance=unifrac_dm)
-gg_pcoa_unifrac <- plot_ordination(phylo_nohigh, pcoa_unifrac, color = "sheetwashfreq_binned") +
-  labs(col="Sheet Wash Frequency") + stat_ellipse()
+unifrac_dm <- distance(phylo_mlowmedvsflowmed, method="unifrac")
+pcoa_unifrac <- ordinate(phylo_mlowmedvsflowmed, method="PCoA", distance=unifrac_dm)
+gg_pcoa_unifrac <- plot_ordination(phylo_mlowmedvsflowmed, pcoa_unifrac, color = "sex_sheetwash_lowmedcomb") +
+  labs(col="Sheet Wash Frequency Gender Groups") + stat_ellipse()
 gg_pcoa_unifrac
 
 #Unweighted Unifrac PERMANOVA Test#
 set.seed(1) 
-unifrac_dm <- UniFrac(phylo_nohigh, weighted=FALSE)
-adonis2(unifrac_dm ~ sheetwashfreq_binned, data=samp_dat_wdiv_nohigh)
+unifrac_dm <- UniFrac(phylo_mlowmedvsflowmed, weighted=FALSE)
+adonis2(unifrac_dm ~ sex_sheetwash_lowmedcomb, data=samp_dat_wdiv_mlowmedvsflowmed)
 
 #save PCoA#
-ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_2LM_unweighted_pcoa.png"
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_2B/2B_3_lowmed_unweighted_pcoa.png"
        , gg_pcoa_unifrac
        , height=4, width=5)
 
 
 ##Weighted Unifrac##
-wu_dm <- distance(phylo_nohigh, method="wunifrac")
-pcoa_wunifrac <- ordinate(phylo_nohigh, method="PCoA", distance=wu_dm)
-gg_pcoa_wunifrac <- plot_ordination(phylo_nohigh, pcoa_wunifrac, color = "sheetwashfreq_binned") +
-  labs(col="Sheet Wash Frequency") + stat_ellipse()
+wu_dm <- distance(phylo_mlowmedvsflowmed, method="wunifrac")
+pcoa_wunifrac <- ordinate(phylo_mlowmedvsflowmed, method="PCoA", distance=wu_dm)
+gg_pcoa_wunifrac <- plot_ordination(phylo_mlowmedvsflowmed, pcoa_wunifrac, color = "sex_sheetwash_lowmedcomb") +
+  labs(col="Sheet Wash Frequency Gender Groups") + stat_ellipse()
 gg_pcoa_wunifrac
 
 #Weighted Unifrac PERMANOVA Test#
 set.seed(1) 
-wunifrac_dm <- UniFrac(phylo_nohigh, weighted=TRUE)
-adonis2(wunifrac_dm ~ sheetwashfreq_binned, data=samp_dat_wdiv_nohigh)
+wunifrac_dm <- UniFrac(phylo_mlowmedvsflowmed, weighted=TRUE)
+adonis2(wunifrac_dm ~ sex_sheetwash_lowmedcomb, data=samp_dat_wdiv_mlowmedvsflowmed)
 
 #save PCoA#
-ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_2LM_weighted_pcoa.png"
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_2B/2B_3_lowmed_weighted_pcoa.png"
        , gg_pcoa_wunifrac
        , height=4, width=5)
 
 
 ##Jaccard##
-j_dm <- distance(phylo_nohigh, method = "jaccard", binary = TRUE)
-pcoa_jaccard <- ordinate(phylo_nohigh, method="PCoA", distance=j_dm)
-gg_pcoa_jaccard <- plot_ordination(phylo_nohigh, pcoa_jaccard, color = "sheetwashfreq_binned") + labs(col = "Sheet Wash Frequency") + stat_ellipse()
+j_dm <- distance(phylo_mlowmedvsflowmed, method = "jaccard", binary = TRUE)
+pcoa_jaccard <- ordinate(phylo_mlowmedvsflowmed, method="PCoA", distance=j_dm)
+gg_pcoa_jaccard <- plot_ordination(phylo_mlowmedvsflowmed, pcoa_jaccard, color = "sex_sheetwash_lowmedcomb") + labs(col = "Sheet Wash Frequency Gender Groups") + stat_ellipse()
 gg_pcoa_jaccard
 
 #Jaccard Diversity PERMANOVA Test#
 set.seed(1) 
-dm_jaccard <- vegdist(t(otu_table(phylo_nohigh)), method="jaccard")
-adonis2(dm_jaccard ~ sheetwashfreq_binned, data=samp_dat_wdiv_nohigh)
+dm_jaccard <- vegdist(t(otu_table(phylo_mlowmedvsflowmed)), method="jaccard")
+adonis2(dm_jaccard ~ sex_sheetwash_lowmedcomb, data=samp_dat_wdiv_mlowmedvsflowmed)
 
 #save PCoA#
-ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_2LM_jaccard_pcoa.png"
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_2B/2B_3_lowmed_jaccard_pcoa.png"
        , gg_pcoa_jaccard
        , height=4, width=5)
 
 
 ##Bray Curtis##
-bc_dm <- distance(phylo_nohigh, method="bray")
-pcoa_bc <- ordinate(phylo_nohigh, method="PCoA", distance=bc_dm)
-gg_pcoa_bc <- plot_ordination(phylo_nohigh, pcoa_bc, color = "sheetwashfreq_binned") + labs(col = "Sheet Wash Frequency") + stat_ellipse()
+bc_dm <- distance(phylo_mlowmedvsflowmed, method="bray")
+pcoa_bc <- ordinate(phylo_mlowmedvsflowmed, method="PCoA", distance=bc_dm)
+gg_pcoa_bc <- plot_ordination(phylo_mlowmedvsflowmed, pcoa_bc, color = "sex_sheetwash_lowmedcomb") + labs(col = "Sheet Wash Frequency Gender Groups") + stat_ellipse()
 gg_pcoa_bc
 
 #Bray Curtis Diversity PERMANOVA Test#
 set.seed(1) 
-dm_bray <- vegdist(t(otu_table(phylo_nohigh)), method="bray")
-adonis2(dm_bray ~ sheetwashfreq_binned, data=samp_dat_wdiv_nohigh)
+dm_bray <- vegdist(t(otu_table(phylo_mlowmedvsflowmed)), method="bray")
+adonis2(dm_bray ~ sex_sheetwash_lowmedcomb, data=samp_dat_wdiv_mlowmedvsflowmed)
 
 #save PCoA#
-ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_2LM_bc_pcoa.png"
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_2B/2B_3_lowmed_bc_pcoa.png"
        , gg_pcoa_bc
        , height=4, width=5)
 
 
 
 
-###MALE HIGH vs MALE HIGH###
+###MALE HIGH vs FEMALE HIGH###
 
 ##Unweighted Unifrac##
-unifrac_dm <- distance(phylo_nohigh, method="unifrac")
-pcoa_unifrac <- ordinate(phylo_nohigh, method="PCoA", distance=unifrac_dm)
-gg_pcoa_unifrac <- plot_ordination(phylo_nohigh, pcoa_unifrac, color = "sheetwashfreq_binned") +
-  labs(col="Sheet Wash Frequency") + stat_ellipse()
+unifrac_dm <- distance(phylo_mhighvsfhigh, method="unifrac")
+pcoa_unifrac <- ordinate(phylo_mhighvsfhigh, method="PCoA", distance=unifrac_dm)
+gg_pcoa_unifrac <- plot_ordination(phylo_mhighvsfhigh, pcoa_unifrac, color = "sex_sheetwash_lowmedcomb") +
+  labs(col="Sheet Wash Frequency Gender Groups") + stat_ellipse()
 gg_pcoa_unifrac
 
 #Unweighted Unifrac PERMANOVA Test#
 set.seed(1) 
-unifrac_dm <- UniFrac(phylo_nohigh, weighted=FALSE)
-adonis2(unifrac_dm ~ sheetwashfreq_binned, data=samp_dat_wdiv_nohigh)
+unifrac_dm <- UniFrac(phylo_mhighvsfhigh, weighted=FALSE)
+adonis2(unifrac_dm ~ sex_sheetwash_lowmedcomb, data=samp_dat_wdiv_mhighvsfhigh)
 
 #save PCoA#
-ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_2LM_unweighted_pcoa.png"
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_2B/2B_3_high_unweighted_pcoa.png"
        , gg_pcoa_unifrac
        , height=4, width=5)
 
 
 ##Weighted Unifrac##
-wu_dm <- distance(phylo_nohigh, method="wunifrac")
-pcoa_wunifrac <- ordinate(phylo_nohigh, method="PCoA", distance=wu_dm)
-gg_pcoa_wunifrac <- plot_ordination(phylo_nohigh, pcoa_wunifrac, color = "sheetwashfreq_binned") +
-  labs(col="Sheet Wash Frequency") + stat_ellipse()
+wu_dm <- distance(phylo_mhighvsfhigh, method="wunifrac")
+pcoa_wunifrac <- ordinate(phylo_mhighvsfhigh, method="PCoA", distance=wu_dm)
+gg_pcoa_wunifrac <- plot_ordination(phylo_mhighvsfhigh, pcoa_wunifrac, color = "sex_sheetwash_lowmedcomb") +
+  labs(col="Sheet Wash Frequency Gender Groups") + stat_ellipse()
 gg_pcoa_wunifrac
 
 #Weighted Unifrac PERMANOVA Test#
 set.seed(1) 
-wunifrac_dm <- UniFrac(phylo_nohigh, weighted=TRUE)
-adonis2(wunifrac_dm ~ sheetwashfreq_binned, data=samp_dat_wdiv_nohigh)
+wunifrac_dm <- UniFrac(phylo_mhighvsfhigh, weighted=TRUE)
+adonis2(wunifrac_dm ~ sex_sheetwash_lowmedcomb, data=samp_dat_wdiv_mhighvsfhigh)
 
 #save PCoA#
-ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_2LM_weighted_pcoa.png"
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_2B/2B_3_high_weighted_pcoa.png"
        , gg_pcoa_wunifrac
        , height=4, width=5)
 
 
 ##Jaccard##
-j_dm <- distance(phylo_nohigh, method = "jaccard", binary = TRUE)
-pcoa_jaccard <- ordinate(phylo_nohigh, method="PCoA", distance=j_dm)
-gg_pcoa_jaccard <- plot_ordination(phylo_nohigh, pcoa_jaccard, color = "sheetwashfreq_binned") + labs(col = "Sheet Wash Frequency") + stat_ellipse()
+j_dm <- distance(phylo_mhighvsfhigh, method = "jaccard", binary = TRUE)
+pcoa_jaccard <- ordinate(phylo_mhighvsfhigh, method="PCoA", distance=j_dm)
+gg_pcoa_jaccard <- plot_ordination(phylo_mhighvsfhigh, pcoa_jaccard, color = "sex_sheetwash_lowmedcomb") + labs(col = "Sheet Wash Frequency Gender Groups") + stat_ellipse()
 gg_pcoa_jaccard
 
 #Jaccard Diversity PERMANOVA Test#
 set.seed(1) 
-dm_jaccard <- vegdist(t(otu_table(phylo_nohigh)), method="jaccard")
-adonis2(dm_jaccard ~ sheetwashfreq_binned, data=samp_dat_wdiv_nohigh)
+dm_jaccard <- vegdist(t(otu_table(phylo_mhighvsfhigh)), method="jaccard")
+adonis2(dm_jaccard ~ sex_sheetwash_lowmedcomb, data=samp_dat_wdiv_mhighvsfhigh)
 
 #save PCoA#
-ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_2LM_jaccard_pcoa.png"
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_2B/2B_3_high_jaccard_pcoa.png"
        , gg_pcoa_jaccard
        , height=4, width=5)
 
 
 ##Bray Curtis##
-bc_dm <- distance(phylo_nohigh, method="bray")
-pcoa_bc <- ordinate(phylo_nohigh, method="PCoA", distance=bc_dm)
-gg_pcoa_bc <- plot_ordination(phylo_nohigh, pcoa_bc, color = "sheetwashfreq_binned") + labs(col = "Sheet Wash Frequency") + stat_ellipse()
+bc_dm <- distance(phylo_mhighvsfhigh, method="bray")
+pcoa_bc <- ordinate(phylo_mhighvsfhigh, method="PCoA", distance=bc_dm)
+gg_pcoa_bc <- plot_ordination(phylo_mhighvsfhigh, pcoa_bc, color = "sex_sheetwash_lowmedcomb") + labs(col = "Sheet Wash Frequency Gender Groups") + stat_ellipse()
 gg_pcoa_bc
 
 #Bray Curtis Diversity PERMANOVA Test#
 set.seed(1) 
-dm_bray <- vegdist(t(otu_table(phylo_nohigh)), method="bray")
-adonis2(dm_bray ~ sheetwashfreq_binned, data=samp_dat_wdiv_nohigh)
+dm_bray <- vegdist(t(otu_table(phylo_mhighvsfhigh)), method="bray")
+adonis2(dm_bray ~ sex_sheetwash_lowmedcomb, data=samp_dat_wdiv_mhighvsfhigh)
 
 #save PCoA#
-ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_2LM_bc_pcoa.png"
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_2B/2B_3_high_bc_pcoa.png"
        , gg_pcoa_bc
        , height=4, width=5)
