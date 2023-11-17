@@ -1,4 +1,6 @@
-####AIM 1A Beta Diversity Analysis PART 2####
+####AIM 1A Beta Diversity Analysis####
+
+###PART 2###
 
 ##Load Necessary Packages##
 library(phyloseq)
