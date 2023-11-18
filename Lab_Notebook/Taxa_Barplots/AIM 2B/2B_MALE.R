@@ -5,19 +5,19 @@ library(ape)
 library(vegan)
 
 #load Rdata
-load("../../Phyloseq/AIM_2B_phyloseq/dorms_rare_sheetwashfreq_female.RData")
+load("../../Phyloseq/AIM_2B_phyloseq/dorms_rare_sheetwashfreq_male.RData")
 
 
 #Extracting OTU data
-otu_table = data.frame(t(otu_table(dorms_rare_sheetwashfreq_female)))
+otu_table = data.frame(t(otu_table(dorms_rare_sheetwashfreq_male)))
 otu_table$ID = rownames(otu_table)
 
 #Extracting metadata
-metadata = data.frame(sample_data(dorms_rare_sheetwashfreq_female))
+metadata = data.frame(sample_data(dorms_rare_sheetwashfreq_male))
 metadata$ID = rownames(metadata)
 
 #load the raw taxonomy file
-tax <- data.frame(tax_table(dorms_rare_sheetwashfreq_female))
+tax <- data.frame(tax_table(dorms_rare_sheetwashfreq_male))
 
 #Formatting the taxa dataframe and cleaning names
 tax_mat <- tax[,-1]
@@ -75,6 +75,6 @@ ggplot(data = data_rel, aes(sheetwashfreq_binned,rel_abs, fill = Phylum))+
   theme(axis.text.x = element_text(angle = -90))+
   labs(y = "Relative abundance", x = "Sheet Wash Frequency")+
   theme_classic()+
-  theme(axis.text = element_text(size = 15, face = "bold"),
+  theme(axis.text = element_text(size = 12, face = "bold"),
         axis.title = element_text(size = 15,face = "bold"))
 
