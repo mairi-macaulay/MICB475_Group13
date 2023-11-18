@@ -5,7 +5,7 @@ library(ape)
 library(vegan)
 
 #load Rdata
-load("../Phyloseq/dorms_final_sheetwashfreq.RData")
+load("../../Phyloseq/dorms_final_sheetwashfreq.RData")
 
 
 #Extracting OTU data

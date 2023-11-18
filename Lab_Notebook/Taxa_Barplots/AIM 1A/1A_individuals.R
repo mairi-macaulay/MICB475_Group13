@@ -5,7 +5,7 @@ library(ape)
 library(vegan)
 
 # Load Rdata
-load("../Phyloseq/dorms_final_sheetwashfreq.RData")
+load("../../Phyloseq/dorms_final_sheetwashfreq.RData")
 
 # Extracting OTU data
 otu_table <- data.frame(t(otu_table(dorms_final)))
