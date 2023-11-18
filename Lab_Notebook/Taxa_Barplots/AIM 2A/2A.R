@@ -5,7 +5,7 @@ library(ape)
 library(vegan)
 
 #load Rdata
-load("../Phyloseq/dorms_final_sheetwashfreq.RData")
+load("../../Phyloseq/dorms_final_sheetwashfreq.RData")
 
 
 #Extracting OTU data
@@ -41,7 +41,7 @@ grouped_taxa = inner_join(tax_mat, grouped, by = "ASV", multiple = "all")
 
 
 #collecting the list of unique severity names for the loop (high, medium, low)
-vars = unique(grouped_taxa$sheetwashfreq_binned)
+vars = unique(grouped_taxa$sex)
 
 #Creating an empty dataframe that the loop will fill. Re run this line before re running the loop.
 data_rel = data.frame()
@@ -50,10 +50,10 @@ data_rel = data.frame()
 for (i in vars){
   #vars = "normal BM.Soup.Broth"
   df = grouped_taxa %>%
-    filter(sheetwashfreq_binned == i)
+    filter(sex == i)
   
   df_sum = df %>%
-    group_by(sheetwashfreq_binned, Phylum) %>%
+    group_by(sex, Phylum) %>%
     summarize(rel_abs = sum(abundance))
   
   df_sum$rel_abs = as.factor(df_sum$rel_abs)
@@ -70,11 +70,11 @@ for (i in vars){
 }
 
 #plotting the results at the phylum level
-ggplot(data = data_rel, aes(sheetwashfreq_binned,rel_abs, fill = Phylum))+
+ggplot(data = data_rel, aes(sex,rel_abs, fill = Phylum))+
   geom_col(color = "black")+
   theme(axis.text.x = element_text(angle = -90))+
-  labs(y = "Relative abundance", x = "Sheet Wash Frequency")+
+  labs(y = "Relative abundance", x = "Gender")+
   theme_classic()+
-  theme(axis.text = element_text(size = 12, face = "bold"),
+  theme(axis.text = element_text(size = 15, face = "bold"),
         axis.title = element_text(size = 15,face = "bold"))
 
