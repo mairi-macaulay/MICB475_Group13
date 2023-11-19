@@ -73,8 +73,10 @@ for (i in vars){
 ggplot(data = data_rel, aes(sheetwashfreq_binned,rel_abs, fill = Phylum))+
   geom_col(color = "black")+
   theme(axis.text.x = element_text(angle = -90))+
+  ggtitle("Female") +
   labs(y = "Relative abundance", x = "Sheet Wash Frequency")+
   theme_classic()+
   theme(axis.text = element_text(size = 12, face = "bold"),
-        axis.title = element_text(size = 15,face = "bold"))
+        axis.title = element_text(size = 15,face = "bold"),
+        title = element_text(size = 12, face = "bold"))
 
