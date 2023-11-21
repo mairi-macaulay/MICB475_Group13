@@ -8,15 +8,15 @@ library(vegan)
 load("../../Phyloseq/AIM_2B_phyloseq/dorms_rare_sheetwashfreq_male.RData")
 
 # Extracting OTU data
-otu_table <- data.frame(t(otu_table(dorms_final)))
+otu_table <- data.frame(t(otu_table(dorms_rare_sheetwashfreq_male)))
 otu_table$ID <- rownames(otu_table)
 
 # Extracting metadata
-metadata <- data.frame(sample_data(dorms_final))
+metadata <- data.frame(sample_data(dorms_rare_sheetwashfreq_male))
 metadata$ID <- rownames(metadata)
 
 # Load the raw taxonomy file
-tax <- data.frame(tax_table(dorms_final))
+tax <- data.frame(tax_table(dorms_rare_sheetwashfreq_male))
 
 # Formatting the taxa dataframe and cleaning names
 tax_mat <- tax[,-1]
