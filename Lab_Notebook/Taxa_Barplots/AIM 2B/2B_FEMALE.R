@@ -33,8 +33,8 @@ tax_mat$ASV = rownames(tax_mat)
 #joining OTU and metadata
 otu_meta = inner_join(metadata,otu_table , by = "ID")
 
-#Transforming the OTU matrix to a single column called abundance. 53 represents the number of metadata columns we want to exclude.
-grouped = gather(otu_meta, key = "ASV", value = "abundance", -(1:53) )
+#Transforming the OTU matrix to a single column called abundance. 27 represents the number of metadata columns we want to exclude.
+grouped = gather(otu_meta, key = "ASV", value = "abundance", -(1:27) )
 
 #joining the taxa information to this transformed dataframe
 grouped_taxa = inner_join(tax_mat, grouped, by = "ASV", multiple = "all")
@@ -70,13 +70,14 @@ for (i in vars){
 }
 
 #plotting the results at the phylum level
+data_rel$sheetwashfreq_binned = factor(data_rel$sheetwashfreq_binned, levels = c("low","medium","high")) #create the order for low, medium, high in the plot
 ggplot(data = data_rel, aes(sheetwashfreq_binned,rel_abs, fill = Phylum))+
-  geom_col(color = "black")+
   theme(axis.text.x = element_text(angle = -90))+
-  ggtitle("Female") +
+  ggtitle("FEMALE") +
   labs(y = "Relative abundance", x = "Sheet Wash Frequency")+
-  theme_classic()+
-  theme(axis.text = element_text(size = 12, face = "bold"),
-        axis.title = element_text(size = 15,face = "bold"),
-        title = element_text(size = 12, face = "bold"))
+  geom_col()+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = -90),
+        axis.title = element_text(size = 12,face = "bold"),
+        title = element_text(size = 14))
 
