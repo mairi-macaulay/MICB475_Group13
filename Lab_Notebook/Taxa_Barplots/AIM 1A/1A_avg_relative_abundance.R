@@ -74,6 +74,5 @@ ggplot(data =data_rel, aes(sheetwashfreq_binned,rel_abs, fill = Phylum))+#Genera
   theme_bw()+
   labs(y="Relative Abundance", x = "Sheet Wash Frequency")+
   theme(axis.text.x = element_text(angle = -90),
-        axis.title = element_text(face = "bold"),
-        legend.position = "none")
+        axis.title = element_text(face = "bold"))
 
