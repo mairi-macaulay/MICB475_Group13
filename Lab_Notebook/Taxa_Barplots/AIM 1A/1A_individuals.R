@@ -29,41 +29,41 @@ tax_mat$Genus <- gsub("^...","",tax_mat$Genus)
 tax_mat$Species <- gsub("^...","",tax_mat$Species)
 tax_mat$ASV <- rownames(tax_mat)
 
+
 # Joining OTU and metadata and taxanomic information
 otu_meta <- inner_join(metadata, otu_table, by = "ID")
 
 #transforming the OTU matrix to a single column called abundance. 53 represents the number of metadata columns we wnat to exlcude
-grouped = gather(otu_meta, key = "ASV", value = "abundance", -(1:53))
+grouped = gather(otu_meta, key = "ASV", value = "abundance", -(1:27))
 
 #Joining the taxa information with otu_meta
 grouped_taxa = inner_join(tax_mat, grouped, by = "ASV", multiple = "all")
 
-#Generate graphs for 'low', 'medium', and 'high' sheet wash frequency
-sheetwash_levels <- c("low", "medium", "high")
 
-#list to store plots
-plots <- list()
+grouped_taxa$legend = paste(grouped_taxa$sheetwashfreq_binned) #Can add gender for when gender becomes a consideration
 
-#Generate plots for each sheet wash freq level
-for (level in sheetwash_levels) {
-  #filter data for current sheet wash fre level
-  current_data <- grouped_taxa %>%
-    filter(sheetwashfreq_binned == level)
+#Calculating the relative abundance for each indivudal
+ppl <- unique(grouped_taxa$ID) 
+data_rel = data.frame() #Create empty dataframe
+for (i in ppl){
+  df = grouped_taxa %>%
+    filter(ID == i)
   
-  #Plotting at phylum level
-  plot <- ggplot(data = current_data, aes(x = ID, fill = Phylum)) +
-    geom_bar() +
-    theme(axis.text.x = element_text(angle = -90)) +
-    labs(y = "Relative Abundance", x = "Sheet Wash Individuals") +
-    theme_classic() +
-    theme(axis.text = element_text(size = 5, face = "bold"),
-          axis.title = element_text(size = 15, face = "bold"))
+  df_sum = df %>%
+    group_by(ID,legend,sex, sheetwashfreq_binned, Phylum) %>%
+    summarize(abs = sum(abundance))
   
-  #Store plot in list
-  plots[[level]] <- plot
+  df_sum$abs = as.numeric(as.character(df_sum$abs))
+  count = sum(df_sum$abs)
+  df_sum$rel_abs = df_sum$abs/count*100
+  
+  data_rel = rbind(data_rel, df_sum)
+  
 }
 
-#show plots
-plots[['low']]
-plots[['medium']]
-plots[['high']]
+data_rel$sheetwashfreq_binned = factor(data_rel$sheetwashfreq_binned, levels = c("low","medium","high")) #create the order for low, medium, high in the plot
+ggplot(data =data_rel, aes(ID,rel_abs, fill = Phylum))+ #Generating the plot with X axis equal to individual
+  geom_col()+
+  theme(axis.text.x = element_text(angle = -90))+
+  facet_grid(cols = vars(sheetwashfreq_binned), scales = "free_x", space = "free_x")
+
