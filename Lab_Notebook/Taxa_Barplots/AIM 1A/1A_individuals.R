@@ -65,5 +65,8 @@ data_rel$sheetwashfreq_binned = factor(data_rel$sheetwashfreq_binned, levels = c
 ggplot(data =data_rel, aes(ID,rel_abs, fill = Phylum))+ #Generating the plot with X axis equal to individual
   geom_col()+
   theme(axis.text.x = element_text(angle = -90))+
+  labs(y="Relative Abundance", x = "Individuals (ID)")+
+  theme(axis.text.x = element_text(size = 4),
+        axis.title = element_text(size = 15,face = "bold")) +
   facet_grid(cols = vars(sheetwashfreq_binned), scales = "free_x", space = "free_x")
 
