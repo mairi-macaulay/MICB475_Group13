@@ -70,7 +70,7 @@ for (i in vars){
 }
 
 #plotting the results at the phylum level
-data_rel$sheetwashfreq_binned = factor(data)
+data_rel$sheetwashfreq_binned = factor(data_rel$sheetwashfreq_binned, levels = c("low","medium","high")) #create the order for low, medium, high in the plot
 ggplot(data = data_rel, aes(sheetwashfreq_binned,rel_abs, fill = Phylum))+
   theme(axis.text.x = element_text(angle = -90))+
   ggtitle("MALE") +
