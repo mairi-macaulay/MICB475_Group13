@@ -33,8 +33,8 @@ tax_mat$ASV = rownames(tax_mat)
 #joining OTU and metadata
 otu_meta = inner_join(metadata,otu_table , by = "ID")
 
-#Transforming the OTU matrix to a single column called abundance. 53 represents the number of metadata columns we want to exclude.
-grouped = gather(otu_meta, key = "ASV", value = "abundance", -(1:53) )
+#Transforming the OTU matrix to a single column called abundance. 27 represents the number of metadata columns we want to exclude.
+grouped = gather(otu_meta, key = "ASV", value = "abundance", -(1:27) )
 
 #joining the taxa information to this transformed dataframe
 grouped_taxa = inner_join(tax_mat, grouped, by = "ASV", multiple = "all")
@@ -71,10 +71,10 @@ for (i in vars){
 
 #plotting the results at the phylum level
 ggplot(data = data_rel, aes(sex,rel_abs, fill = Phylum))+
-  geom_col(color = "black")+
-  theme(axis.text.x = element_text(angle = -90))+
+  geom_col()+
+  theme_bw()+
   labs(y = "Relative abundance", x = "Gender")+
-  theme_classic()+
-  theme(axis.text = element_text(size = 15, face = "bold"),
-        axis.title = element_text(size = 15,face = "bold"))
+  theme(axis.text.x = element_text(angle = -90),
+        axis.title = element_text(face = "bold"))
+
 
