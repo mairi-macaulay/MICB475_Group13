@@ -4,8 +4,8 @@ library(ggplot2)
 library(ape)
 library(vegan)
 
-# Load Rdata
-load("../../Phyloseq/AIM_2B_phyloseq/dorms_rare_sheetwashfreq_female.RData")
+#load Rdata
+load("../../Phyloseq/AIM_2B_phyloseq/dorms_rare_sheetwashfreq_male.RData")
 
 # Extracting OTU data
 otu_table <- data.frame(t(otu_table(dorms_final)))
@@ -66,7 +66,7 @@ ggplot(data =data_rel, aes(ID,rel_abs, fill = Phylum))+ #Generating the plot wit
   geom_col()+
   theme(axis.text.x = element_text(angle = -90))+
   labs(y="Relative Abundance", x = "Individuals (ID)")+
-  ggtitle("FEMALE")+
+  ggtitle("MALE")+
   theme(axis.text.x = element_text(size = 4),
         axis.title = element_text(size = 15,face = "bold")) +
   facet_grid(cols = vars(sheetwashfreq_binned), scales = "free_x", space = "free_x")
