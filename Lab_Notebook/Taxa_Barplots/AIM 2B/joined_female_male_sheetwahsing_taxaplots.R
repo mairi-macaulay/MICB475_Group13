@@ -73,7 +73,7 @@ for (i in vars_male){
 }
 
 #Store male data in a seperate dataframe with gender information
-data_rel_male$Gender <- "Male"
+#data_rel_male$Gender <- "Male"
 
 
 #plotting the results at the phylum level
@@ -167,26 +167,20 @@ for (i in vars_female){
 }
 
 #Store male data in a seperate dataframe with gender information
-data_rel_female$Gender <- "Female"
+#data_rel_female$Gender <- "Female"
 
 
 
 #combine the dataframes
-combined_data_rel <- rbind(data_rel_female, data_rel_male)
+#combined_data_rel <- rbind(transform(data_rel_male, Gender = "Male"), transform(data_rel_female, Gender = "Female"))
 
 
-#plot the taxa bar graph
-ggplot(data = combined_data_rel, aes(x = sheetwashfreq_binned, y = rel_abs_male+rel_abs_female, fill = Phylum)) +
-  geom_bar(stat = "identity", position = "stack") +
-  labs(y = "Relative abundance", x = "Sheet Wash Frequency") +
-  scale_fill_discrete(name = "Phylum") +
-  facet_grid(. ~ Gender, scales = "free_x", space = "free_x") +  # Faceting based on Gender
-  theme(axis.text.x = element_text(angle = -90),
-        axis.title = element_text(size = 12, face = "bold"),
-        strip.text.x = element_text(size = 10, face = "bold"),
-        strip.background = element_blank(),
-        panel.spacing = unit(2, "lines"),
-        strip.placement = "outside")
-
+#plot_combined <- ggplot(data = combined_data, aes(x = Phylum, y = rel_abs, fill = Gender)) +
+ # geom_bar(stat = "identity", position = "dodge") +
+#  labs(y = "Relative abundance", x = "Phylum") +
+#  facet_wrap(~ sheetwashfreq_binned, scales = "free", nrow = 1) +
+  #scale_fill_manual(values = c("blue", "pink"), name = "Gender") +  # Customize fill colors for genders
+#  theme(axis.text.x = element_text(angle = -90, vjust = 0.5, hjust=1)) +
+ # theme(legend.position = "top")  # Position the legend at the top
 
 
