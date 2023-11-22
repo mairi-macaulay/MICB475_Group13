@@ -50,7 +50,7 @@ data_rel = data.frame()
 for (i in vars){
   #vars = "normal BM.Soup.Broth"
   df = grouped_taxa %>%
-    filter(sheetwashfreq_binned == i, Phylum == "Actinobacteriota")
+    filter(sheetwashfreq_binned == i, sheetwashfreq_binned != "medium", Phylum == "Actinobacteriota")
   
   df_sum = df %>%
     group_by(sheetwashfreq_binned, Genus) %>%
@@ -70,7 +70,7 @@ for (i in vars){
 }
 
 #plotting the results at the phylum level
-data_rel$sheetwashfreq_binned = factor(data_rel$sheetwashfreq_binned, levels = c("low","medium","high")) #create the order for low, medium, high in the plot
+data_rel$sheetwashfreq_binned = factor(data_rel$sheetwashfreq_binned, levels = c("low","high")) #create the order for low, medium, high in the plot
 ggplot(data = data_rel, aes(sheetwashfreq_binned,rel_abs, fill = Genus))+
   theme(axis.text.x = element_text(angle = -90))+
   ggtitle("MALE") +
