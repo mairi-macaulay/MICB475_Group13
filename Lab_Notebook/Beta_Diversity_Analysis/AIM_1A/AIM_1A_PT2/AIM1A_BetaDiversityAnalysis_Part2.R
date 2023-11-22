@@ -53,7 +53,7 @@ unifrac_dm <- UniFrac(phylo_nomedium, weighted=FALSE)
 adonis2(unifrac_dm ~ sheetwashfreq_binned, data=samp_dat_wdiv_nomed)
 
 #save PCoA#
-ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_2LH_unweighted_pcoa.png"
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/AIM_1A_PT2/1A_2LH_unweighted_pcoa.png"
        , gg_pcoa_unifrac
        , height=4, width=5)
 
@@ -71,7 +71,7 @@ wunifrac_dm <- UniFrac(phylo_nomedium, weighted=TRUE)
 adonis2(wunifrac_dm ~ sheetwashfreq_binned, data=samp_dat_wdiv_nomed)
 
 #save PCoA#
-ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_2LH_weighted_pcoa.png"
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/AIM_1A_PT2/1A_2LH_weighted_pcoa.png"
        , gg_pcoa_wunifrac
        , height=4, width=5)
 
@@ -88,7 +88,7 @@ dm_jaccard <- vegdist(t(otu_table(phylo_nomedium)), method="jaccard")
 adonis2(dm_jaccard ~ sheetwashfreq_binned, data=samp_dat_wdiv_nomed)
 
 #save PCoA#
-ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_2LH_jaccard_pcoa.png"
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/AIM_1A_PT2/1A_2LH_jaccard_pcoa.png"
        , gg_pcoa_jaccard
        , height=4, width=5)
 
@@ -105,7 +105,7 @@ dm_bray <- vegdist(t(otu_table(phylo_nomedium)), method="bray")
 adonis2(dm_bray ~ sheetwashfreq_binned, data=samp_dat_wdiv_nomed)
 
 #save PCoA#
-ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_2LH_bc_pcoa.png"
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/AIM_1A_PT2/1A_2LH_bc_pcoa.png"
        , gg_pcoa_bc
        , height=4, width=5)
 
@@ -125,7 +125,7 @@ unifrac_dm <- UniFrac(phylo_nolow, weighted=FALSE)
 adonis2(unifrac_dm ~ sheetwashfreq_binned, data=samp_dat_wdiv_nolow)
 
 #save PCoA#
-ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_2MH_unweighted_pcoa.png"
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/AIM_1A_PT2/1A_2MH_unweighted_pcoa.png"
        , gg_pcoa_unifrac
        , height=4, width=5)
 
@@ -143,7 +143,7 @@ wunifrac_dm <- UniFrac(phylo_nolow, weighted=TRUE)
 adonis2(wunifrac_dm ~ sheetwashfreq_binned, data=samp_dat_wdiv_nolow)
 
 #save PCoA#
-ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_2MH_weighted_pcoa.png"
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/AIM_1A_PT2/1A_2MH_weighted_pcoa.png"
        , gg_pcoa_wunifrac
        , height=4, width=5)
 
@@ -160,7 +160,7 @@ dm_jaccard <- vegdist(t(otu_table(phylo_nolow)), method="jaccard")
 adonis2(dm_jaccard ~ sheetwashfreq_binned, data=samp_dat_wdiv_nolow)
 
 #save PCoA#
-ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_2MH_jaccard_pcoa.png"
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/AIM_1A_PT2/1A_2MH_jaccard_pcoa.png"
        , gg_pcoa_jaccard
        , height=4, width=5)
 
@@ -177,7 +177,7 @@ dm_bray <- vegdist(t(otu_table(phylo_nolow)), method="bray")
 adonis2(dm_bray ~ sheetwashfreq_binned, data=samp_dat_wdiv_nolow)
 
 #save PCoA#
-ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_2MH_bc_pcoa.png"
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/AIM_1A_PT2/1A_2MH_bc_pcoa.png"
        , gg_pcoa_bc
        , height=4, width=5)
 
@@ -198,7 +198,7 @@ unifrac_dm <- UniFrac(phylo_nohigh, weighted=FALSE)
 adonis2(unifrac_dm ~ sheetwashfreq_binned, data=samp_dat_wdiv_nohigh)
 
 #save PCoA#
-ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_2LM_unweighted_pcoa.png"
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/AIM_1A_PT2/1A_2LM_unweighted_pcoa.png"
        , gg_pcoa_unifrac
        , height=4, width=5)
 
@@ -216,7 +216,7 @@ wunifrac_dm <- UniFrac(phylo_nohigh, weighted=TRUE)
 adonis2(wunifrac_dm ~ sheetwashfreq_binned, data=samp_dat_wdiv_nohigh)
 
 #save PCoA#
-ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_2LM_weighted_pcoa.png"
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/AIM_1A_PT2/1A_2LM_weighted_pcoa.png"
        , gg_pcoa_wunifrac
        , height=4, width=5)
 
@@ -233,7 +233,7 @@ dm_jaccard <- vegdist(t(otu_table(phylo_nohigh)), method="jaccard")
 adonis2(dm_jaccard ~ sheetwashfreq_binned, data=samp_dat_wdiv_nohigh)
 
 #save PCoA#
-ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_2LM_jaccard_pcoa.png"
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/AIM_1A_PT2/1A_2LM_jaccard_pcoa.png"
        , gg_pcoa_jaccard
        , height=4, width=5)
 
@@ -250,7 +250,7 @@ dm_bray <- vegdist(t(otu_table(phylo_nohigh)), method="bray")
 adonis2(dm_bray ~ sheetwashfreq_binned, data=samp_dat_wdiv_nohigh)
 
 #save PCoA#
-ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/1A_2LM_bc_pcoa.png"
+ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_1A/AIM_1A_PT2/1A_2LM_bc_pcoa.png"
        , gg_pcoa_bc
        , height=4, width=5)
 
