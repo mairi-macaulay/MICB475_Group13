@@ -50,10 +50,10 @@ data_rel = data.frame()
 for (i in vars){
   #vars = "normal BM.Soup.Broth"
   df = grouped_taxa %>%
-    filter(sheetwashfreq_binned == i)
+    filter(sheetwashfreq_binned == i, Phylum == "Firmicutes")
   
   df_sum = df %>%
-    group_by(sheetwashfreq_binned, Phylum) %>%
+    group_by(sheetwashfreq_binned, Genus) %>%
     summarize(rel_abs = sum(abundance))
   
   df_sum$rel_abs = as.factor(df_sum$rel_abs)
@@ -71,7 +71,7 @@ for (i in vars){
 
 #plotting the results at the phylum level
 data_rel$sheetwashfreq_binned = factor(data_rel$sheetwashfreq_binned, levels = c("low","medium","high")) #create the order for low, medium, high in the plot
-ggplot(data = data_rel, aes(sheetwashfreq_binned,rel_abs, fill = Phylum))+
+ggplot(data = data_rel, aes(sheetwashfreq_binned,rel_abs, fill = Genus))+
   theme(axis.text.x = element_text(angle = -90))+
   ggtitle("FEMALE") +
   labs(y = "Relative abundance", x = "Sheet Wash Frequency")+
