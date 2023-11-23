@@ -1,5 +1,8 @@
 ####ALPHA DIVERSITY (2B - Sheet Washing Frequency and Gender)####
 
+#set seed
+set.seed(1)
+
 library(phyloseq)
 library(ape)
 library(tidyverse)
@@ -7,14 +10,15 @@ library(picante)
 library(ggsignif)
 
 ##Load in RData
-load("../../Phyloseq/AIM_2B_phyloseq/dorms_rare_sheetwashfreq_female.RData")
-load("../../Phyloseq/AIM_2B_phyloseq/dorms_rare_sheetwashfreq_male.RData")
+load("../../../Phyloseq/AIM_2B_phyloseq/dorms_rare_sheetwashfreq_female.RData")
+load("../../../Phyloseq/AIM_2B_phyloseq/dorms_rare_sheetwashfreq_male.RData")
+
 
 #### Alpha diversity - FEMALE######
 #view all metrics for female
 plot_richness(dorms_rare_sheetwashfreq_female)
 
-#extract information and combine with alpha diversity metrics
+#extract information and combine with alpha diversity metrics into a dataframe
 alphadiv_female <- estimate_richness(dorms_rare_sheetwashfreq_female)
 samp_dat_female <- sample_data(dorms_rare_sheetwashfreq_female) #extract out metadata
 samp_dat_wdiv_female <- data.frame(samp_dat_female, alphadiv_female)
@@ -29,7 +33,7 @@ gg_shannon_sheetwashfreq_female <- ggplot(samp_dat_wdiv_female, aes(x=`sheetwash
 gg_shannon_sheetwashfreq_female
 
 #One-way ANOVA
-# Set up our linear model 
+# Set up linear model 
 lm_shannon_vs_sheetwashfreq_female <- lm(Shannon ~ `sheetwashfreq_binned`, dat=samp_dat_wdiv_female)
 # Calculate AOV
 anova_shannon_vs_sheetwashfreq_female <- aov(lm_shannon_vs_sheetwashfreq_female)

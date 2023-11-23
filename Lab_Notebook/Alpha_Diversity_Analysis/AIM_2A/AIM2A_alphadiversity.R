@@ -1,5 +1,8 @@
 ####ALPHA DIVERSITY (2A - GENDER)####
 
+#set seed
+set.seed(1)
+
 library(phyloseq)
 library(ape)
 library(tidyverse)
@@ -29,6 +32,10 @@ gg_shannon_gender
 t.test(samp_dat_wdiv$Shannon ~ samp_dat_wdiv$sex)
 #p-value = 0.5554
 
+#Wilcoxon-sums test
+wilcox.test(Shannon ~ sex, data=samp_dat_wdiv, exact = FALSE)
+#p-value = 0.5733
+
 # save plot file 
 ggsave(filename = "2A_plot_shannon.png"
        , gg_shannon_gender
@@ -44,6 +51,10 @@ gg_observed_gender
 #T-test
 t.test(samp_dat_wdiv$Observed ~ samp_dat_wdiv$sex)
 #p-value = 0.7671
+
+#Wilcoxon-sums test
+wilcox.test(Observed ~ sex, data=samp_dat_wdiv, exact = FALSE)
+#p-value = 0.976
 
 # save plot file 
 ggsave(filename = "2A_plot_observed.png"
@@ -61,6 +72,10 @@ gg_chao1_gender
 t.test(samp_dat_wdiv$Chao1 ~ samp_dat_wdiv$sex)
 #p-value = 0.7531
 
+#Wilcoxon-sums test
+wilcox.test(Chao1 ~ sex, data=samp_dat_wdiv, exact = FALSE)
+#p-value = 0.9581
+
 # save plot file 
 ggsave(filename = "2A_plot_chao1.png"
        , gg_chao1_gender
@@ -76,6 +91,10 @@ gg_ace_gender
 #T-test
 t.test(samp_dat_wdiv$ACE ~ samp_dat_wdiv$sex)
 #p-value = 0.7161
+
+#Wilcoxon-sums test
+wilcox.test(ACE ~ sex, data=samp_dat_wdiv, exact = FALSE)
+#p-value = 0.982
 
 # save plot file 
 ggsave(filename = "2A_plot_ace.png"
@@ -93,6 +112,10 @@ gg_simpson_gender
 t.test(samp_dat_wdiv$Simpson ~ samp_dat_wdiv$sex)
 #p-value = 0.1682
 
+#Wilcoxon-sums test
+wilcox.test(Simpson ~ sex, data=samp_dat_wdiv, exact = FALSE)
+#p-value = 0.2568
+
 # save plot file 
 ggsave(filename = "2A_plot_simpson.png"
        , gg_simpson_gender
@@ -109,6 +132,10 @@ gg_invsimpson_gender
 t.test(samp_dat_wdiv$InvSimpson ~ samp_dat_wdiv$sex)
 #p-value = 0.636
 
+#Wilcoxon-sums test
+wilcox.test(InvSimpson ~ sex, data=samp_dat_wdiv, exact = FALSE)
+#p-value = 0.2568
+
 # save plot file 
 ggsave(filename = "2A_plot_invsimpson.png"
        , gg_invsimpson_gender
@@ -124,6 +151,10 @@ gg_fisher_gender
 #T-test
 t.test(samp_dat_wdiv$Fisher ~ samp_dat_wdiv$sex)
 #p-value = 0.6716
+
+#Wilcoxon-sums test
+wilcox.test(Fisher ~ sex, data=samp_dat_wdiv, exact = FALSE)
+#p-value = 0.976
 
 # save plot file 
 ggsave(filename = "2A_plot_fisher.png"
@@ -143,6 +174,14 @@ plot.pd_gender <- ggplot(sample_data(dorms_rare), aes(sex, PD)) +
   ylab("Phylogenetic Diversity")
 # view plot
 plot.pd_gender
+
+#T-test
+t.test(phylo_dist_gender$PD ~ samp_dat_wdiv$sex)
+#p-value = 0.8889
+
+#Wilcoxon-sums test
+wilcox.test(phylo_dist_gender$PD ~ samp_dat_wdiv$sex, exact = FALSE)
+#p-value = 0.9342
 
 # save plot file 
 ggsave(filename = "2A_plot_pd.png"
