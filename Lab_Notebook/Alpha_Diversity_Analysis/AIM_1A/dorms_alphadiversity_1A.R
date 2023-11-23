@@ -1,5 +1,8 @@
 ####ALPHA DIVERSITY (1A - Sheet Washing Frequency)####
 
+#set seed
+set.seed(1)
+
 library(phyloseq)
 library(ape)
 library(tidyverse)
@@ -8,7 +11,6 @@ library(ggsignif)
 
 ##Load in RData
 load("../../Phyloseq/dorms_rare_sheetwashfreq.RData")
-load("../../Phyloseq/dorms_final_sheetwashfreq.RData")
 
 #### Alpha diversity ######
 #view all metrics
