@@ -93,7 +93,7 @@ DESEQ_sheetwash_gender_low <- DESeq(sheetwash_deseq_gender_low)
 
 #### Male high vs Female High ###
 res <- results(DESEQ_sheetwash_gender_high, tidy=TRUE, contrast= c("sex_sheetwashfreq","male high","female high"))
-View(res)
+#View(res)
 
 ### Creating the Volcano plot: effect size VS significance ###
 ggplot(res) +
@@ -104,19 +104,17 @@ volcano_plot =  res %>%
   ggplot() +
   geom_point(aes(x=log2FoldChange, y=-log10(padj), col=significant))
 
-#saving file
-#ggsave(filename="volcano_plot_high_low.png",volcano_plot)
 
 ### Getting a table of Results ###
 sigASVs <- as.data.frame(res) %>% 
   filter(padj<0.01 & abs(log2FoldChange)>2) %>%
   dplyr::rename(ASV=row)
-View(sigASVs)
+#View(sigASVs)
 #Significant ASVs
 sigASVs_vec <- sigASVs %>%
   pull(ASV)
 #There are 45 significant ASV's
-view(sigASVs_vec)
+#view(sigASVs_vec)
 
 ### Creating Bar plots- Regular Way ###
 #Prune phyloseq file
@@ -130,7 +128,7 @@ phylum_sheetwash_sigASVs <- tax_table(sheetwash_DESeq_pruned) %>% as.data.frame(
   mutate(Phylum = make.unique(Phylum)) %>%
   mutate(Phylum = factor(Phylum, levels=unique(Phylum)))
 
-barplot_phyla_high_low = ggplot(phylum_sheetwash_sigASVs) +
+barplot_phyla_gender_high = ggplot(phylum_sheetwash_sigASVs) +
   geom_bar(aes(x=Phylum, y=log2FoldChange), stat="identity")+
   geom_errorbar(aes(x=Phylum, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE)) +
   theme(text = element_text(size=8),
@@ -144,7 +142,7 @@ genus_sheetwash_sigASVs <- tax_table(sheetwash_DESeq_pruned) %>% as.data.frame()
   mutate(Genus = make.unique(Genus)) %>%
   mutate(Genus = factor(Genus, levels=unique(Genus)))
 
-barplot_genus_high_low = ggplot(genus_sheetwash_sigASVs) +
+barplot_genus_gender_high = ggplot(genus_sheetwash_sigASVs) +
   geom_bar(aes(x=Genus, y=log2FoldChange), stat="identity")+
   geom_errorbar(aes(x=Genus, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE)) +
   theme(text = element_text(size=8),
@@ -158,7 +156,7 @@ species_sheetwash_sigASVs  <- tax_table(sheetwash_DESeq_pruned) %>% as.data.fram
   mutate(Species = make.unique(Species)) %>%
   mutate(Species = factor(Species, levels=unique(Species)))
 
-barplot_species_high_low = ggplot(species_sheetwash_sigASVs) +
+barplot_species_gender_high = ggplot(species_sheetwash_sigASVs) +
   geom_bar(aes(x=Species, y=log2FoldChange), stat="identity")+
   geom_errorbar(aes(x=Species, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE))+
   theme(text = element_text(size=8),
