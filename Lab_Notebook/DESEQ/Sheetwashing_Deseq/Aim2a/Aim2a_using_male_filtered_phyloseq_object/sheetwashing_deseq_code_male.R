@@ -1,5 +1,3 @@
-# if you didn't install the DESeq2 package, run the following
-BiocManager::install("DESeq2")
 
 #!/usr/bin/env Rscript
 library(tidyverse)
@@ -159,7 +157,7 @@ sheetwash_DESeq_pruned_med_low <- prune_taxa(sigASVs_vec_med_low,dorms_final_she
 # Phlyum level comparison
 phylum_sheetwash_sigASVs_med_low <- tax_table(sheetwash_DESeq_pruned_med_low) %>% as.data.frame() %>%
   rownames_to_column(var="ASV") %>%
-  right_join(sigASVs) %>%
+  right_join(sigASVs_med_low) %>%
   arrange(log2FoldChange) %>%
   mutate(Phylum = make.unique(Phylum)) %>%
   mutate(Phylum = factor(Phylum, levels=unique(Phylum)))
@@ -176,7 +174,7 @@ barplot_phyla_med_low = ggplot(phylum_sheetwash_sigASVs_med_low) +
 # Genus level comparison
 genus_sheetwash_sigASVs_med_low <- tax_table(sheetwash_DESeq_pruned_med_low) %>% as.data.frame() %>%
   rownames_to_column(var="ASV") %>%
-  right_join(sigASVs) %>%
+  right_join(sigASVs_med_low) %>%
   arrange(log2FoldChange) %>%
   mutate(Genus = make.unique(Genus)) %>%
   mutate(Genus = factor(Genus, levels=unique(Genus)))
@@ -255,7 +253,7 @@ sheetwash_DESeq_pruned_high_med <- prune_taxa(sigASVs_vec_high_med,dorms_final_s
 # Phlyum level comparison
 phylum_sheetwash_sigASVs_high_med <- tax_table(sheetwash_DESeq_pruned_high_med) %>% as.data.frame() %>%
   rownames_to_column(var="ASV") %>%
-  right_join(sigASVs) %>%
+  right_join(sigASVs_high_med) %>%
   arrange(log2FoldChange) %>%
   mutate(Phylum = make.unique(Phylum)) %>%
   mutate(Phylum = factor(Phylum, levels=unique(Phylum)))
@@ -272,7 +270,7 @@ barplot_phyla_high_med = ggplot(phylum_sheetwash_sigASVs_high_med) +
 # Genus level comparison
 genus_sheetwash_sigASVs_high_med <- tax_table(sheetwash_DESeq_pruned_high_med) %>% as.data.frame() %>%
   rownames_to_column(var="ASV") %>%
-  right_join(sigASVs) %>%
+  right_join(sigASVs_high_med) %>%
   arrange(log2FoldChange) %>%
   mutate(Genus = make.unique(Genus)) %>%
   mutate(Genus = factor(Genus, levels=unique(Genus)))
