@@ -37,8 +37,8 @@ metadata_of_male_low <- sample_data(dorms_low_male)
 
 # Venn Diagram
 # Setting detection and prevalence thresholds
-female_low_ASVs <- core_members(dorms_low_female, detection=0.001, prevalence = 0.75)
-male_low_ASVs <- core_members(dorms_low_male, detection=0.001, prevalence = 0.75)
+female_low_ASVs <- core_members(dorms_low_female, detection=0.001, prevalence = 0.5)
+male_low_ASVs <- core_members(dorms_low_male, detection=0.001, prevalence = 0.5)
 
 dorms_list_low_gender <- list(Female_Low_Frequency = female_low_ASVs, Male_Low_Frequency = male_low_ASVs)
 
