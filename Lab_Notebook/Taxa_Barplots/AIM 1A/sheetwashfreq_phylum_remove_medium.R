@@ -75,6 +75,7 @@ data_rel_sum_filtered = data_rel_sum %>%
 #This plot represents the average relative abundance for each phylum across the different sheetwash frequency levels.
 data_rel_sum_filtered$legend = factor(data_rel_sum_filtered$legend, levels = c("low","high")) #create the order for low, high in the plot
 ggplot(data =data_rel_sum_filtered, aes(legend,mean_rel_abs, fill = Phylum))+#Generating the plot with X axis equal to sheetwash_freq_binned
+  labs(y="Relative Abundance", x = "Sheet Washing Freqeuncy") +
   geom_col()+
   theme_bw()+
   theme(axis.text.x = element_text(angle = 0))

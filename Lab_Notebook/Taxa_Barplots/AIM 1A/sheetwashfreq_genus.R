@@ -68,7 +68,7 @@ for (i in levels){
   
 }
 
-#Filter for only Proteobacteria - repeat this same step for the other phylum but replace Proteobacteria with Firmicutues, Actinobacteriota, Fusobacteriota, and Bacteroidota
+#Filter for only Proteobacteria - repeat this same step for the other phylum but replace "Proteobacteria" with Firmicutes, Actinobacteriota, Fusobacteriota, and Bacteroidota
 data_rel_proteobacteria = data_rel_genus %>%
   filter(Phylum == "Proteobacteria") %>% #Keep only bacteria that are in the Proteobacteria phylum. Change this line for different phyla.
   group_by(legend,Phylum, Order, Class, Family,Genus) %>%
@@ -77,7 +77,7 @@ data_rel_proteobacteria = data_rel_genus %>%
 
 data_rel_proteobacteria$legend = factor(data_rel_proteobacteria$legend, levels = c("low","high")) #create the order for low, medium, high in the plot
 ggplot(data =data_rel_proteobacteria, aes(legend,mean_rel_abs, fill = Family))+#Generating the plot with X axis equal to sheetwash_freq_binned
-  labs(x = "Relative Abundance", y = "Sheet Washing Frequency")+
+  labs(x = "Sheet Washing Frequency", y = "Relative Abundance")+
   geom_col()+
   theme_bw()+
   theme(axis.text.x = element_text(angle = 0))
