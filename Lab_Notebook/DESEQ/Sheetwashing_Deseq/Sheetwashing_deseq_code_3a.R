@@ -13,60 +13,9 @@ load("Lab_Notebook/DESEQ/Sheetwashing_deseq/dorms_final_sheetwashfreq_deseq.RDat
 ##Adding combined sex and sheet washing frequency column##
 sample_data(dorms_final)$sex_sheetwashfreq <- paste(sample_data(dorms_final)$sex, sample_data(dorms_final)$sheetwashfreq_binned)
 
-##Create new phyloseq for each condition##
-#female high vs male high#
-p_malehigh_vs_femalehigh <- subset_samples(dorms_final, sex_sheetwashfreq %in% c("male high", "female high"))
-#female low vs male low#
-p_malelow_vs_femalelow <- subset_samples(dorms_final, sex_sheetwashfreq %in% c("male low", "female low"))
-
-View(p_malehigh_vs_femalehigh)
-
-##DESeq Object Creation##
-#adding +1 to all counts in the OTU table to correct for zero's that DESeq cant handle
-phyloseq_object_plus1_gender_high <- transform_sample_counts(p_malehigh_vs_femalehigh, function(x) x+1)
-phyloseq_object_plus1_gender_low <- transform_sample_counts(p_malelow_vs_femalelow, function(x) x+1)
-#turning phloseq object to deseq object
-sheetwash_deseq_gender_high <- phyloseq_to_deseq2(phyloseq_object_plus1_gender_high, ~`sex_sheetwashfreq`)
-sheetwash_deseq_gender_low <- phyloseq_to_deseq2(phyloseq_object_plus1_gender_low, ~`sex_sheetwashfreq`)
-#running DESeq
-DESEQ_sheetwash_gender_high <- DESeq(sheetwash_deseq_gender_high)
-DESEQ_sheetwash_gender_low <- DESeq(sheetwash_deseq_gender_low)
 
 
-
-#### Male high vs Female High ###
-###viewing DESeq results- comparison group 1 
-#high group is the comparison group and low group is reference
-res <- results(DESEQ_sheetwash_gender_high, tidy=TRUE, contrast= c("sex_sheetwashfreq","male high","female high"))
-View(res)
-
-### Creating the Volcano plot: effect size VS significance ###
-ggplot(res) +
-  geom_point(aes(x=log2FoldChange, y=-log10(padj)))
-
-volcano_plot =  res %>%
-  mutate(significant = padj<0.01 & abs(log2FoldChange)>2) %>%
-  ggplot() +
-  geom_point(aes(x=log2FoldChange, y=-log10(padj), col=significant))
-
-#saving file
-#ggsave(filename="volcano_plot_high_low.png",volcano_plot)
-
-### Getting a table of Results ###
-sigASVs <- as.data.frame(res) %>% 
-  filter(padj<0.01 & abs(log2FoldChange)>2) %>%
-  dplyr::rename(ASV=row)
-View(sigASVs)
-#Significant ASVs
-sigASVs_vec <- sigASVs %>%
-  pull(ASV)
-#There are 45 significant ASV's
-view(sigASVs_vec)
-
-
-
-
-####trying to figure out which ASV's belong to female high and which to male high
+####trying to figure out which ASV's belong to female high and which to male high#####
 p_malehigh <- subset_samples(dorms_final, sex_sheetwashfreq %in% c("male high"))
 p_femalehigh <- subset_samples(dorms_final, sex_sheetwashfreq %in% c("female high"))
 phyloseq_object_plus1_male_high <- transform_sample_counts(p_malehigh, function(x) x+1)
@@ -116,6 +65,58 @@ barplot_phyla_female_high = ggplot(phylum_sheetwash_sigASVs_female_high) +
 
 
 
+
+
+
+
+####Creating bar graphs the regular way!##########
+##Create new phyloseq for each condition##
+#female high vs male high#
+p_malehigh_vs_femalehigh <- subset_samples(dorms_final, sex_sheetwashfreq %in% c("male high", "female high"))
+#female low vs male low#
+p_malelow_vs_femalelow <- subset_samples(dorms_final, sex_sheetwashfreq %in% c("male low", "female low"))
+
+View(p_malehigh_vs_femalehigh)
+
+##DESeq Object Creation##
+#adding +1 to all counts in the OTU table to correct for zero's that DESeq cant handle
+phyloseq_object_plus1_gender_high <- transform_sample_counts(p_malehigh_vs_femalehigh, function(x) x+1)
+phyloseq_object_plus1_gender_low <- transform_sample_counts(p_malelow_vs_femalelow, function(x) x+1)
+#turning phloseq object to deseq object
+sheetwash_deseq_gender_high <- phyloseq_to_deseq2(phyloseq_object_plus1_gender_high, ~`sex_sheetwashfreq`)
+sheetwash_deseq_gender_low <- phyloseq_to_deseq2(phyloseq_object_plus1_gender_low, ~`sex_sheetwashfreq`)
+#running DESeq
+DESEQ_sheetwash_gender_high <- DESeq(sheetwash_deseq_gender_high)
+DESEQ_sheetwash_gender_low <- DESeq(sheetwash_deseq_gender_low)
+
+
+
+#### Male high vs Female High ###
+res <- results(DESEQ_sheetwash_gender_high, tidy=TRUE, contrast= c("sex_sheetwashfreq","male high","female high"))
+View(res)
+
+### Creating the Volcano plot: effect size VS significance ###
+ggplot(res) +
+  geom_point(aes(x=log2FoldChange, y=-log10(padj)))
+
+volcano_plot =  res %>%
+  mutate(significant = padj<0.01 & abs(log2FoldChange)>2) %>%
+  ggplot() +
+  geom_point(aes(x=log2FoldChange, y=-log10(padj), col=significant))
+
+#saving file
+#ggsave(filename="volcano_plot_high_low.png",volcano_plot)
+
+### Getting a table of Results ###
+sigASVs <- as.data.frame(res) %>% 
+  filter(padj<0.01 & abs(log2FoldChange)>2) %>%
+  dplyr::rename(ASV=row)
+View(sigASVs)
+#Significant ASVs
+sigASVs_vec <- sigASVs %>%
+  pull(ASV)
+#There are 45 significant ASV's
+view(sigASVs_vec)
 
 ### Creating Bar plots- Regular Way ###
 #Prune phyloseq file
@@ -169,13 +170,7 @@ barplot_species_high_low = ggplot(species_sheetwash_sigASVs) +
 
 
 
-
-
-
-
-#### Male low vs Female low ###
-###viewing DESeq results- comparison group 1 
-#high group is the comparison group and low group is reference
+### Male low vs Female low ##
 res_gender_low <- results(DESEQ_sheetwash_gender_low, tidy=TRUE, contrast= c("sex_sheetwashfreq","male low","female low"))
 
 ### Creating the Volcano plot: effect size VS significance ###
