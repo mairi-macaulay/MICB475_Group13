@@ -64,7 +64,60 @@ sigASVs_vec <- sigASVs %>%
 view(sigASVs_vec)
 
 
-### Creating Bar plots ###
+
+
+####trying to figure out which ASV's belong to female high and which to male high
+p_malehigh <- subset_samples(dorms_final, sex_sheetwashfreq %in% c("male high"))
+p_femalehigh <- subset_samples(dorms_final, sex_sheetwashfreq %in% c("female high"))
+phyloseq_object_plus1_male_high <- transform_sample_counts(p_malehigh, function(x) x+1)
+phyloseq_object_plus1_female_high <- transform_sample_counts(p_femalehigh, function(x) x+1)
+sheetwash_deseq_male_high <- phyloseq_to_deseq2(phyloseq_object_plus1_male_high, ~1)
+sheetwash_deseq_female_high <- phyloseq_to_deseq2(phyloseq_object_plus1_female_high, ~1)
+DESEQ_sheetwash_male_high <- DESeq(sheetwash_deseq_male_high)
+DESEQ_sheetwash_female_high <- DESeq(sheetwash_deseq_female_high)
+
+#Sig ASV's
+res_male_high <- results(DESEQ_sheetwash_male_high, tidy=TRUE)
+sigASVs_male_high <- as.data.frame(res_male_high) %>% 
+  filter(padj<0.01 & abs(log2FoldChange)>2) %>% dplyr::rename(ASV=row)
+sigASVs_vec_male_high <- sigASVs_male_high %>% pull(ASV)
+res_female_high <- results(DESEQ_sheetwash_female_high, tidy=TRUE)
+sigASVs_female_high <- as.data.frame(res_female_high) %>% 
+  filter(padj<0.01 & abs(log2FoldChange)>2) %>% dplyr::rename(ASV=row)
+sigASVs_vec_female_high <- sigASVs_female_high %>% pull(ASV)
+#here are plots
+sheetwash_DESeq_pruned_male_high <- prune_taxa(sigASVs_vec_male_high,dorms_final)
+sheetwash_DESeq_pruned_female_high <- prune_taxa(sigASVs_vec_female_high,dorms_final)
+
+phylum_sheetwash_sigASVs_male_high <- tax_table(sheetwash_DESeq_pruned_male_high) %>% as.data.frame() %>%
+  rownames_to_column(var="ASV") %>%
+  right_join(sigASVs) %>%
+  arrange(log2FoldChange) %>%
+  mutate(Phylum = make.unique(Phylum)) %>%
+  mutate(Phylum = factor(Phylum, levels=unique(Phylum)))
+barplot_phyla_male_high = ggplot(phylum_sheetwash_sigASVs_male_high) +
+  geom_bar(aes(x=Phylum, y=log2FoldChange), stat="identity")+
+  geom_errorbar(aes(x=Phylum, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE)) +
+  theme(text = element_text(size=8),
+        axis.text.x = element_text(angle=90, hjust=1)) 
+
+phylum_sheetwash_sigASVs_female_high <- tax_table(sheetwash_DESeq_pruned_female_high) %>% as.data.frame() %>%
+  rownames_to_column(var="ASV") %>%
+  right_join(sigASVs) %>%
+  arrange(log2FoldChange) %>%
+  mutate(Phylum = make.unique(Phylum)) %>%
+  mutate(Phylum = factor(Phylum, levels=unique(Phylum)))
+barplot_phyla_female_high = ggplot(phylum_sheetwash_sigASVs_female_high) +
+  geom_bar(aes(x=Phylum, y=log2FoldChange), stat="identity")+
+  geom_errorbar(aes(x=Phylum, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE)) +
+  theme(text = element_text(size=8),
+        axis.text.x = element_text(angle=90, hjust=1)) 
+
+
+
+
+
+### Creating Bar plots- Regular Way ###
 #Prune phyloseq file
 sheetwash_DESeq_pruned <- prune_taxa(sigASVs_vec,dorms_final)
 
@@ -82,9 +135,6 @@ barplot_phyla_high_low = ggplot(phylum_sheetwash_sigASVs) +
   theme(text = element_text(size=8),
         axis.text.x = element_text(angle=90, hjust=1)) 
 
-#ggsave(filename="barplot_phyla_high_low.png",barplot_phyla_high_low)
-
-
 # Genus level comparison
 genus_sheetwash_sigASVs <- tax_table(sheetwash_DESeq_pruned) %>% as.data.frame() %>%
   rownames_to_column(var="ASV") %>%
@@ -99,9 +149,6 @@ barplot_genus_high_low = ggplot(genus_sheetwash_sigASVs) +
   theme(text = element_text(size=8),
         axis.text.x = element_text(angle=90, hjust=1)) 
 
-#ggsave(filename="barplot_genus_high_low.png",barplot_genus_high_low)
-
-
 # Species level comparison
 species_sheetwash_sigASVs  <- tax_table(sheetwash_DESeq_pruned) %>% as.data.frame() %>%
   rownames_to_column(var="ASV") %>%
@@ -115,8 +162,6 @@ barplot_species_high_low = ggplot(species_sheetwash_sigASVs) +
   geom_errorbar(aes(x=Species, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE))+
   theme(text = element_text(size=8),
         axis.text.x = element_text(angle=90, hjust=1)) 
-
-#ggsave(filename="barplot_species_high_low.png", barplot_species_high_low)
 
 
 
@@ -133,7 +178,6 @@ barplot_species_high_low = ggplot(species_sheetwash_sigASVs) +
 #high group is the comparison group and low group is reference
 res_gender_low <- results(DESEQ_sheetwash_gender_low, tidy=TRUE, contrast= c("sex_sheetwashfreq","male low","female low"))
 
-
 ### Creating the Volcano plot: effect size VS significance ###
 ggplot(res_gender_low) +
   geom_point(aes(x=log2FoldChange, y=-log10(padj)))
@@ -143,7 +187,6 @@ volcano_plot_gender_low =  res %>%
   ggplot() +
   geom_point(aes(x=log2FoldChange, y=-log10(padj), col=significant))
 
-
 ### Getting a table of Results ###
 sigASVs_gender_low <- as.data.frame(res_gender_low) %>% 
   filter(padj<0.01 & abs(log2FoldChange)>2) %>%
@@ -151,8 +194,6 @@ sigASVs_gender_low <- as.data.frame(res_gender_low) %>%
 #Significant ASVs
 sigASVs_vecs_gender_low <- sigASVs_gender_low %>%
   pull(ASV)
-#There are 45 significant ASV's
-
 
 ### Creating Bar plots ###
 #Prune phyloseq file
@@ -172,7 +213,6 @@ barplot_phyla_gender_low = ggplot(phylum_sheetwash_sigASVs_gender_low) +
   theme(text = element_text(size=8),
         axis.text.x = element_text(angle=90, hjust=1)) 
 
-
 # Genus level comparison
 genus_sheetwash_sigASVs_gender_low <- tax_table(sheetwash_DESeq_pruned_gender_low) %>% as.data.frame() %>%
   rownames_to_column(var="ASV") %>%
@@ -186,7 +226,6 @@ barplot_genus_gender_low = ggplot(genus_sheetwash_sigASVs_gender_low) +
   geom_errorbar(aes(x=Genus, ymin=log2FoldChange-lfcSE, ymax=log2FoldChange+lfcSE)) +
   theme(text = element_text(size=8),
         axis.text.x = element_text(angle=90, hjust=1)) 
-
 
 # Species level comparison
 species_sheetwash_sigASVs_gender_low  <- tax_table(sheetwash_DESeq_pruned_gender_low) %>% as.data.frame() %>%
