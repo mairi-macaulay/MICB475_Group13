@@ -59,7 +59,7 @@ levels <- unique(grouped_taxa$legend)
 #Create a new empty dataframe to put firmicute data in.
 data_rel_genus = data.frame()
 
-#Run a loop to generate the relative abundance of each genus for low, and high groups.
+#Run a loop to generate the relative abundance of each genus for low, medium, and high groups.
 for (i in levels){
   
   df = grouped_taxa %>%
@@ -77,15 +77,15 @@ for (i in levels){
   
 }
 
-#Filter for only Firmicutes, repeat this step for Actinobacteriota, Bacteroidota, Fusobacteriota, Proteobacteria by replacing "Firmicultes" in the code with the relative genus
-data_rel_proteobacteria = data_rel_genus %>%
-  filter(Phylum == "Firmicutes", sheetwashfreq_binned != "medium") %>% #Keep only bacteria that are in the Proteobacteria phylum. Change this line for different phyla.
+#Filter for only Actinobacteriota, repeat this step for Firmicutes, Bacteroidota, Fusobacteriota, Proteobacteria by replacing "Firmicultes" in the code with the relative genus
+data_rel_Actinobacteriota = data_rel_genus %>%
+  filter(Phylum == "Actinobacteriota", sheetwashfreq_binned != "medium") %>% #Keep only bacteria that are in the Proteobacteria phylum and remove medium sheetwashing freq. Change this line for different phyla.
   group_by(legend,Phylum, Order, Class, Family,Genus,sex,sheetwashfreq_binned) %>%
   summarise(mean_rel_abs = sum(rel_abs))%>% #Add relative abundances together for multiple species that have the same genus
   filter(mean_rel_abs>= 1) #Remove Genus that have a relative abundance less than 1%
 
-data_rel_proteobacteria$sheetwashfreq_binned = factor(data_rel_proteobacteria$sheetwashfreq_binned, levels = c("low","high")) #create the order for low, medium, high in the plot
-ggplot(data =data_rel_proteobacteria, aes(sex,mean_rel_abs, fill = Genus))+#Generating the plot with X axis equal to sheetwash_freq_binned
+data_rel_Actinobacteriota$sheetwashfreq_binned = factor(data_rel_Actinobacteriota$sheetwashfreq_binned, levels = c("low","high")) #create the order for low, medium, high in the plot
+ggplot(data =data_rel_Actinobacteriota, aes(sex,mean_rel_abs, fill = Genus))+#Generating the plot with X axis equal to sheetwash_freq_binned
   geom_col()+
   theme_bw()+
   theme(axis.text.x = element_text(angle = -90),
