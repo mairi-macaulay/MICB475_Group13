@@ -41,7 +41,7 @@ tax_mat$ASV <- rownames(tax_mat)
 # Joining OTU and metadata and taxanomic information
 otu_meta <- inner_join(metadata, otu_table, by = "ID")
 
-#transforming the OTU matrix to a single column called abundance. 53 represents the number of metadata columns we wnat to exlcude
+#transforming the OTU matrix to a single column called abundance. 27 represents the number of metadata columns we wnat to exlcude
 grouped = gather(otu_meta, key = "ASV", value = "abundance", -(1:27))
 
 #Joining the taxa information with otu_meta
