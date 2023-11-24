@@ -59,7 +59,7 @@ data_rel = data.frame()
 for (i in levels){
   
   df = grouped_taxa %>%
-    filter(legend == i)
+    filter(legend == i, sheetwashfreq_binned != "medium")
   
   df_sum = df %>%
     group_by(ID,legend,sex, sheetwashfreq_binned, Phylum) %>%
