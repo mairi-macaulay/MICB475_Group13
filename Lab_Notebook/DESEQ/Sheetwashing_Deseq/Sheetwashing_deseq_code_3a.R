@@ -72,16 +72,16 @@ barplot_phyla_female_high = ggplot(phylum_sheetwash_sigASVs_female_high) +
 ####Creating bar graphs the regular way!##########
 ##Create new phyloseq for each condition##
 #female high vs male high#
-p_malehigh_vs_femalehigh <- subset_samples(dorms_final, sex_sheetwashfreq %in% c("male high", "female high"))
+p_femalehigh_vs_malehigh <- subset_samples(dorms_final, sex_sheetwashfreq %in% c("female high", "male high"))
 #female low vs male low#
-p_malelow_vs_femalelow <- subset_samples(dorms_final, sex_sheetwashfreq %in% c("male low", "female low"))
+p_femalelow_vs_malelow <- subset_samples(dorms_final, sex_sheetwashfreq %in% c("female low", "male low"))
 
-View(p_malehigh_vs_femalehigh)
+
 
 ##DESeq Object Creation##
 #adding +1 to all counts in the OTU table to correct for zero's that DESeq cant handle
-phyloseq_object_plus1_gender_high <- transform_sample_counts(p_malehigh_vs_femalehigh, function(x) x+1)
-phyloseq_object_plus1_gender_low <- transform_sample_counts(p_malelow_vs_femalelow, function(x) x+1)
+phyloseq_object_plus1_gender_high <- transform_sample_counts(p_femalehigh_vs_malehigh, function(x) x+1)
+phyloseq_object_plus1_gender_low <- transform_sample_counts(p_femalelow_vs_malelow, function(x) x+1)
 #turning phloseq object to deseq object
 sheetwash_deseq_gender_high <- phyloseq_to_deseq2(phyloseq_object_plus1_gender_high, ~`sex_sheetwashfreq`)
 sheetwash_deseq_gender_low <- phyloseq_to_deseq2(phyloseq_object_plus1_gender_low, ~`sex_sheetwashfreq`)
@@ -91,8 +91,8 @@ DESEQ_sheetwash_gender_low <- DESeq(sheetwash_deseq_gender_low)
 
 
 
-#### Male high vs Female High ###
-res <- results(DESEQ_sheetwash_gender_high, tidy=TRUE, contrast= c("sex_sheetwashfreq","male high","female high"))
+#### Female high vs Male High ###
+res <- results(DESEQ_sheetwash_gender_high, tidy=TRUE, contrast= c("sex_sheetwashfreq","female high","male high"))
 #View(res)
 
 ### Creating the Volcano plot: effect size VS significance ###
@@ -114,7 +114,7 @@ sigASVs <- as.data.frame(res) %>%
 sigASVs_vec <- sigASVs %>%
   pull(ASV)
 #There are 45 significant ASV's
-#view(sigASVs_vec)
+view(sigASVs_vec)
 
 ### Creating Bar plots- Regular Way ###
 #Prune phyloseq file
@@ -168,8 +168,8 @@ barplot_species_gender_high = ggplot(species_sheetwash_sigASVs) +
 
 
 
-### Male low vs Female low ##
-res_gender_low <- results(DESEQ_sheetwash_gender_low, tidy=TRUE, contrast= c("sex_sheetwashfreq","male low","female low"))
+### Female low vs Male low ##
+res_gender_low <- results(DESEQ_sheetwash_gender_low, tidy=TRUE, contrast= c("sex_sheetwashfreq","female low","male low"))
 
 ### Creating the Volcano plot: effect size VS significance ###
 ggplot(res_gender_low) +
@@ -195,7 +195,7 @@ sheetwash_DESeq_pruned_gender_low <- prune_taxa(sigASVs_vecs_gender_low,dorms_fi
 # Phlyum level comparison
 phylum_sheetwash_sigASVs_gender_low <- tax_table(sheetwash_DESeq_pruned_gender_low) %>% as.data.frame() %>%
   rownames_to_column(var="ASV") %>%
-  right_join(sigASVs) %>%
+  right_join(sigASVs_gender_low) %>%
   arrange(log2FoldChange) %>%
   mutate(Phylum = make.unique(Phylum)) %>%
   mutate(Phylum = factor(Phylum, levels=unique(Phylum)))
@@ -209,7 +209,7 @@ barplot_phyla_gender_low = ggplot(phylum_sheetwash_sigASVs_gender_low) +
 # Genus level comparison
 genus_sheetwash_sigASVs_gender_low <- tax_table(sheetwash_DESeq_pruned_gender_low) %>% as.data.frame() %>%
   rownames_to_column(var="ASV") %>%
-  right_join(sigASVs) %>%
+  right_join(sigASVs_gender_low) %>%
   arrange(log2FoldChange) %>%
   mutate(Genus = make.unique(Genus)) %>%
   mutate(Genus = factor(Genus, levels=unique(Genus)))
@@ -223,7 +223,7 @@ barplot_genus_gender_low = ggplot(genus_sheetwash_sigASVs_gender_low) +
 # Species level comparison
 species_sheetwash_sigASVs_gender_low  <- tax_table(sheetwash_DESeq_pruned_gender_low) %>% as.data.frame() %>%
   rownames_to_column(var="ASV") %>%
-  right_join(sigASVs) %>%
+  right_join(sigASVs_gender_low) %>%
   arrange(log2FoldChange) %>%
   mutate(Species = make.unique(Species)) %>%
   mutate(Species = factor(Species, levels=unique(Species)))
