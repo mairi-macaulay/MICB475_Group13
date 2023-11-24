@@ -59,7 +59,7 @@ data_rel = data.frame()
 for (i in levels){
   
   df = grouped_taxa %>%
-    filter(legend == i, sheetwashfreq_binned != "medium")
+    filter(legend == i)
   
   df_sum = df %>%
     group_by(ID,legend,sex, sheetwashfreq_binned, Phylum) %>%
@@ -83,7 +83,7 @@ data_rel_sum_filtered = data_rel_sum %>%
   filter(mean_rel_abs> 1)
 
 #This plot represents the average relative abundance for each phylum across the different sheetwash frequency levels.
-data_rel_sum_filtered$sheetwashfreq_binned = factor(data_rel_sum_filtered$sheetwashfreq_binned, levels = c("low","high")) #create the order for low, medium, high in the plot
+data_rel_sum_filtered$sheetwashfreq_binned = factor(data_rel_sum_filtered$sheetwashfreq_binned, levels = c("low","medium", "high")) #create the order for low, medium, high in the plot
 ggplot(data =data_rel_sum_filtered, aes(sex,mean_rel_abs, fill = Phylum))+#Generating the plot with X axis equal to sheetwash_freq_binned
   geom_col()+
   theme_bw()+
