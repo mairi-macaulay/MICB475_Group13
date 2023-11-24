@@ -43,38 +43,41 @@ grouped_taxa = inner_join(tax_mat, grouped, by = "ASV", multiple = "all")
 
 
 grouped_taxa$legend = paste(grouped_taxa$sheetwashfreq_binned) #Can add gender for when gender becomes a consideration
+#Generating relative abundance at the genus level
 
-#Generating the relative abundance for all individuals within low/high sheetwashing freq.
+#Define the low, medium, and high levels
 levels <- unique(grouped_taxa$sheetwashfreq_binned)
-data_rel = data.frame()
+#Create a new empty dataframe to put firmicute data in.
+data_rel_genus = data.frame()
+
+#Run a loop to generate the relative abundance of each genus for low, medium, and high groups.
 for (i in levels){
   
   df = grouped_taxa %>%
-    filter(sheetwashfreq_binned == i, sheetwashfreq_binned != "medium")
+    filter(sheetwashfreq_binned != "medium")
   
   df_sum = df %>%
-    group_by(ID,legend,sex, sheetwashfreq_binned, Phylum) %>%
+    group_by(ID,legend,sex, sheetwashfreq_binned,Phylum,Order,Family,Class, Genus) %>%
     summarize(abs = sum(abundance))
   
   df_sum$abs = as.numeric(as.character(df_sum$abs))
   count = sum(df_sum$abs)
   df_sum$rel_abs = df_sum$abs/count*100
   
-  data_rel = rbind(data_rel, df_sum)
+  data_rel_genus = rbind(data_rel_genus, df_sum)
   
 }
 
-data_rel_sum = data_rel %>%
-  group_by(legend,Phylum) %>%
-  summarise(mean_rel_abs = sum(rel_abs))
+#Filter for only Proteobacteria - repeat this same step for the other phylum but replace Proteobacteria with Firmicutues, Actinobacteriota, Fusobacteriota, and Bacteroidota
+data_rel_proteobacteria = data_rel_genus %>%
+  filter(Phylum == "Proteobacteria") %>% #Keep only bacteria that are in the Proteobacteria phylum. Change this line for different phyla.
+  group_by(legend,Phylum, Order, Class, Family,Genus) %>%
+  summarise(mean_rel_abs = sum(rel_abs))%>% #Add relative abundances together for multiple species that have the same genus
+  filter(mean_rel_abs>= 1) #Remove Genus that have a relative abundance less than 1%
 
-#Filtering for phyla that represent relative abundance greater than 1% of the group.
-data_rel_sum_filtered = data_rel_sum %>%
-  filter(mean_rel_abs> 1)
-
-#This plot represents the average relative abundance for each phylum across the different sheetwash frequency levels.
-data_rel_sum_filtered$legend = factor(data_rel_sum_filtered$legend, levels = c("low","high")) #create the order for low, high in the plot
-ggplot(data =data_rel_sum_filtered, aes(legend,mean_rel_abs, fill = Phylum))+#Generating the plot with X axis equal to sheetwash_freq_binned
+data_rel_proteobacteria$legend = factor(data_rel_proteobacteria$legend, levels = c("low","high")) #create the order for low, medium, high in the plot
+ggplot(data =data_rel_proteobacteria, aes(legend,mean_rel_abs, fill = Family))+#Generating the plot with X axis equal to sheetwash_freq_binned
+  labs(x = "Relative Abundance", y = "Sheet Washing Frequency")+
   geom_col()+
   theme_bw()+
   theme(axis.text.x = element_text(angle = 0))
