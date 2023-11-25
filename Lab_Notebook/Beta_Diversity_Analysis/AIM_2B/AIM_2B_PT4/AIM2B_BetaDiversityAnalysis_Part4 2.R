@@ -101,16 +101,3 @@ adonis2(dm_bray ~ sex_sheetwashfreq, data=samp_dat_wdiv_nomed)
 ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_2B/AIM_2B_PT4/2B_4_bc_pcoa.png"
        , gg_pcoa_bc
        , height=4, width=8)
-
-
-##Bray Curtis WITH NO ELLIPSE##
-bc_dm <- distance(phylo_nomed, method="bray")
-pcoa_bc <- ordinate(phylo_nomed, method="PCoA", distance=bc_dm)
-gg_pcoa_bc_noE <- plot_ordination(phylo_nomed, pcoa_bc, color = "sex_sheetwashfreq") + labs(col = "Sheet Wash Frequency Gender Groups") 
-gg_pcoa_bc_noE
-
-#save PCoA#
-ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_2B/AIM_2B_PT4/2B_4_bc_pcoa_noE.png"
-       , gg_pcoa_bc_noE
-       , height=4, width=8)
-
