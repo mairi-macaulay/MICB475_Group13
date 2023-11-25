@@ -1,10 +1,3 @@
-
-########################################################
-# TAXABAR PLOTS SPLITTING SHEETWASH FREQ. BY SEX (GENUS)
-########################################################
-
-
-#Loading libraries
 library(phyloseq)
 library(tidyverse)
 library(ggplot2)
@@ -48,22 +41,20 @@ grouped = gather(otu_meta, key = "ASV", value = "abundance", -(1:27))
 #Joining the taxa information with otu_meta
 grouped_taxa = inner_join(tax_mat, grouped, by = "ASV", multiple = "all")
 
-#Generating a column that combined two variables together
-grouped_taxa$legend = paste(grouped_taxa$sheetwashfreq_binned,grouped_taxa$sex) #Can add gender for when gender becomes a consideration
 
-
+grouped_taxa$legend = paste(grouped_taxa$sheetwashfreq_binned) #Can add gender for when gender becomes a consideration
 #Generating relative abundance at the genus level
 
 #Define the low, medium, and high levels
-levels <- unique(grouped_taxa$legend)
+levels <- unique(grouped_taxa$sheetwashfreq_binned)
 #Create a new empty dataframe to put firmicute data in.
 data_rel_genus = data.frame()
 
-#Run a loop to generate the relative abundance of each genus for low, and high groups.
+#Run a loop to generate the relative abundance of each genus for low, medium, and high groups.
 for (i in levels){
   
   df = grouped_taxa %>%
-    filter(legend == i)
+    filter(sheetwashfreq_binned != "medium")
   
   df_sum = df %>%
     group_by(ID,legend,sex, sheetwashfreq_binned,Phylum,Order,Family,Class, Genus) %>%
@@ -77,23 +68,16 @@ for (i in levels){
   
 }
 
-#Filter for only Firmicutes, repeat this step for Actinobacteriota, Bacteroidota, Fusobacteriota, Proteobacteria by replacing "Firmicultes" in the code with the relative genus
+#Filter for only Proteobacteria - repeat this same step for the other phylum but replace "Proteobacteria" with Firmicutes, Actinobacteriota, Fusobacteriota, and Bacteroidota
 data_rel_proteobacteria = data_rel_genus %>%
-  filter(Phylum == "Firmicutes", sheetwashfreq_binned != "medium") %>% #Keep only bacteria that are in the Proteobacteria phylum. Change this line for different phyla.
-  group_by(legend,Phylum, Order, Class, Family,Genus,sex,sheetwashfreq_binned) %>%
+  filter(Phylum == "Proteobacteria") %>% #Keep only bacteria that are in the Proteobacteria phylum. Change this line for different phyla.
+  group_by(legend,Phylum, Order, Class, Family,Genus) %>%
   summarise(mean_rel_abs = sum(rel_abs))%>% #Add relative abundances together for multiple species that have the same genus
   filter(mean_rel_abs>= 1) #Remove Genus that have a relative abundance less than 1%
 
-data_rel_proteobacteria$sheetwashfreq_binned = factor(data_rel_proteobacteria$sheetwashfreq_binned, levels = c("low","high")) #create the order for low, medium, high in the plot
-ggplot(data =data_rel_proteobacteria, aes(sex,mean_rel_abs, fill = Genus))+#Generating the plot with X axis equal to sheetwash_freq_binned
+data_rel_proteobacteria$legend = factor(data_rel_proteobacteria$legend, levels = c("low","high")) #create the order for low, medium, high in the plot
+ggplot(data =data_rel_proteobacteria, aes(legend,mean_rel_abs, fill = Family))+#Generating the plot with X axis equal to sheetwash_freq_binned
+  labs(x = "Sheet Washing Frequency", y = "Relative Abundance")+
   geom_col()+
   theme_bw()+
-  theme(axis.text.x = element_text(angle = -90),
-        axis.text = element_text(size = 15, face = "bold"),
-        strip.text = element_text(size = 10, face = "bold"),
-        axis.title.y = element_text(size = 15, face = "bold")
-        ,legend.text = element_text(size = 10, face = "bold"),
-        legend.title = element_text(size = 15, face = "bold"))+
-  facet_grid(cols = vars(sheetwashfreq_binned), scales = "free_x", space = "free_x")+
-  labs(x = "", y = "Relative abundance (%)")
-
+  theme(axis.text.x = element_text(angle = 0))

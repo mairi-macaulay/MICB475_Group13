@@ -1,6 +1,7 @@
-####################################################
-# TAXABAR PLOTS SPLITTING SHEETWASH FREQ. BY SEX
-###################################################
+
+########################################################
+# TAXABAR PLOTS SPLITTING SHEETWASH FREQ. BY SEX (GENUS)
+########################################################
 
 
 #Loading libraries
@@ -50,41 +51,41 @@ grouped_taxa = inner_join(tax_mat, grouped, by = "ASV", multiple = "all")
 #Generating a column that combined two variables together
 grouped_taxa$legend = paste(grouped_taxa$sheetwashfreq_binned,grouped_taxa$sex) #Can add gender for when gender becomes a consideration
 
-#Determining which groups to loop though based on the line before ^
-levels <- unique(grouped_taxa$legend)
 
-#Generating an empty dataframe
-data_rel = data.frame()
-#Generating the relative abundance at the phylum level for sheetwashing freq split by sex
+#Generating relative abundance at the genus level
+
+#Define the low, medium, and high levels
+levels <- unique(grouped_taxa$legend)
+#Create a new empty dataframe to put firmicute data in.
+data_rel_genus = data.frame()
+
+#Run a loop to generate the relative abundance of each genus for low, medium, and high groups.
 for (i in levels){
   
   df = grouped_taxa %>%
-    filter(legend == i, sheetwashfreq_binned != "medium")
+    filter(legend == i)
   
   df_sum = df %>%
-    group_by(ID,legend,sex, sheetwashfreq_binned, Phylum) %>%
+    group_by(ID,legend,sex, sheetwashfreq_binned,Phylum,Order,Family,Class, Genus) %>%
     summarize(abs = sum(abundance))
   
   df_sum$abs = as.numeric(as.character(df_sum$abs))
   count = sum(df_sum$abs)
   df_sum$rel_abs = df_sum$abs/count*100
   
-  data_rel = rbind(data_rel, df_sum)
+  data_rel_genus = rbind(data_rel_genus, df_sum)
   
 }
 
-#There are multiple readings from the same individual at different timepoints. This bit combines the timepoints together. I'm realizing we should have thought about this before. Will probably come back into discussion.
-data_rel_sum = data_rel %>%
-  group_by(sex,sheetwashfreq_binned,Phylum) %>%
-  summarise(mean_rel_abs = sum(rel_abs))
+#Filter for only Actinobacteriota, repeat this step for Firmicutes, Bacteroidota, Fusobacteriota, Proteobacteria by replacing "Firmicultes" in the code with the relative genus
+data_rel_Actinobacteriota = data_rel_genus %>%
+  filter(Phylum == "Actinobacteriota", sheetwashfreq_binned != "medium") %>% #Keep only bacteria that are in the Proteobacteria phylum and remove medium sheetwashing freq. Change this line for different phyla.
+  group_by(legend,Phylum, Order, Class, Family,Genus,sex,sheetwashfreq_binned) %>%
+  summarise(mean_rel_abs = sum(rel_abs))%>% #Add relative abundances together for multiple species that have the same genus
+  filter(mean_rel_abs>= 1) #Remove Genus that have a relative abundance less than 1%
 
-#Filtering for phyla that represent relative abundance greater than 1% of the group.
-data_rel_sum_filtered = data_rel_sum %>%
-  filter(mean_rel_abs> 1)
-
-#This plot represents the average relative abundance for each phylum across the different sheetwash frequency levels.
-data_rel_sum_filtered$sheetwashfreq_binned = factor(data_rel_sum_filtered$sheetwashfreq_binned, levels = c("low","medium", "high")) #create the order for low, medium, high in the plot
-ggplot(data =data_rel_sum_filtered, aes(sex,mean_rel_abs, fill = Phylum))+#Generating the plot with X axis equal to sheetwash_freq_binned
+data_rel_Actinobacteriota$sheetwashfreq_binned = factor(data_rel_Actinobacteriota$sheetwashfreq_binned, levels = c("low","high")) #create the order for low, medium, high in the plot
+ggplot(data =data_rel_Actinobacteriota, aes(sex,mean_rel_abs, fill = Genus))+#Generating the plot with X axis equal to sheetwash_freq_binned
   geom_col()+
   theme_bw()+
   theme(axis.text.x = element_text(angle = -90),
@@ -95,5 +96,4 @@ ggplot(data =data_rel_sum_filtered, aes(sex,mean_rel_abs, fill = Phylum))+#Gener
         legend.title = element_text(size = 15, face = "bold"))+
   facet_grid(cols = vars(sheetwashfreq_binned), scales = "free_x", space = "free_x")+
   labs(x = "", y = "Relative abundance (%)")
-
 
