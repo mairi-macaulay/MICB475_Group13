@@ -41,13 +41,13 @@ ggplot(res) +
   geom_point(aes(x=log2FoldChange, y=-log10(padj)))
 
 volcano_plot =  res %>%
-  mutate(significant = padj<0.01 & abs(log2FoldChange)>2) %>%
+  mutate(significant = padj<0.01 & abs(log2FoldChange)>2 & baseMean > 1) %>%
   ggplot() +
   geom_point(aes(x=log2FoldChange, y=-log10(padj), col=significant))
 
 ### Getting a table of Results ###
 sigASVs_gender_high <- as.data.frame(res) %>% 
-  filter(padj<0.01 & abs(log2FoldChange)>2) %>%
+  filter(padj<0.01 & abs(log2FoldChange)>2 & baseMean > 1) %>%
   dplyr::rename(ASV=row)
 #View(sigASVs)
 #Significant ASVs
@@ -81,14 +81,14 @@ res_gender_low <- results(DESEQ_sheetwash_gender_low, tidy=TRUE, contrast= c("se
 ggplot(res_gender_low) +
   geom_point(aes(x=log2FoldChange, y=-log10(padj)))
 
-volcano_plot_gender_low =  res %>%
-  mutate(significant = padj<0.01 & abs(log2FoldChange)>2) %>%
+volcano_plot_gender_low = res_gender_low %>%
+  mutate(significant = padj<0.01 & abs(log2FoldChange)>2 & baseMean > 1) %>%
   ggplot() +
   geom_point(aes(x=log2FoldChange, y=-log10(padj), col=significant))
 
 ### Getting a table of Results ###
 sigASVs_gender_low <- as.data.frame(res_gender_low) %>% 
-  filter(padj<0.01 & abs(log2FoldChange)>2) %>%
+  filter(padj<0.01 & abs(log2FoldChange)>2 & baseMean > 1) %>%
   dplyr::rename(ASV=row)
 #Significant ASVs
 sigASVs_vecs_gender_low <- sigASVs_gender_low %>%
