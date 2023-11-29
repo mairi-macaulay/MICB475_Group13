@@ -18,13 +18,15 @@ samp_dat_wdiv <- data.frame(sample_data(dorms_rare), estimate_richness(dorms_rar
 
 ##Remove medium sheet washing frequency
 samp_dat_wdiv_filt <- samp_dat_wdiv[samp_dat_wdiv$sheetwashfreq_binned != "medium", ]
-
+samp_dat_wdiv_filt$legend <- paste(samp_dat_wdiv_filt$sex,samp_dat_wdiv_filt$sheetwashfreq_binned)
 #####Shannon#####
 # plot the sheetwashfreq and gender against Shannon
-plot_shannon_gender_sheetwashfreq <- ggplot(samp_dat_wdiv_filt) + geom_boxplot(aes(x=sheetwashfreq_binned, y=Shannon)) +
+plot_shannon_gender_sheetwashfreq <- ggplot(samp_dat_wdiv_filt) + geom_boxplot(aes(x=sheetwashfreq_binned, y=Shannon, fill = legend)) +
   facet_grid(~factor(`sex`, levels=c("female","male"))) +
   xlab("Sheet Wash Frequency") +
-  scale_x_discrete(limits = c("low", "high"))
+  scale_x_discrete(limits = c("low", "high")) + theme_bw()
+  #labs(fill = "Sheet Wash Frequency Gender Groups")
+  #scale_color_manual(values = c("#FF0000"))
 plot_shannon_gender_sheetwashfreq
 
 # run the 2-way ANOVA
@@ -35,7 +37,7 @@ TukeyHSD(aov(shannon_sheetwashfreq_gender))
 #Results: no significance found
 
 #save plot
-ggsave(filename = "2B_part2_plot_shannon.png"
+ggsave(filename = "2B_part2_plot_shannon_color.png"
        , plot_shannon_gender_sheetwashfreq
        , height=4, width=6)
 
@@ -47,6 +49,14 @@ plot_observed_gender_sheetwashfreq <- ggplot(samp_dat_wdiv_filt) + geom_boxplot(
   scale_x_discrete(limits = c("low", "high"))
 plot_observed_gender_sheetwashfreq
 
+#Colour
+plot_observed_gender_sheetwashfreq_color <- ggplot(samp_dat_wdiv_filt) + geom_boxplot(aes(x=sheetwashfreq_binned, y=Observed, fill = legend)) +
+  facet_grid(~factor(`sex`, levels=c("female","male"))) +
+  xlab("Sheet Wash Frequency") +
+  scale_x_discrete(limits = c("low", "high")) + theme_bw()
+#scale_color_manual(values = c("#FF0000"))
+plot_observed_gender_sheetwashfreq_color
+
 # run the 2-way ANOVA
 observed_sheetwashfreq_gender <- lm(Observed ~ `sex`*`sheetwashfreq_binned`, data=samp_dat_wdiv_filt)
 summary(aov(observed_sheetwashfreq_gender))
@@ -55,7 +65,7 @@ TukeyHSD(aov(observed_sheetwashfreq_gender))
 #Results: no significance found
 
 #save plot
-ggsave(filename = "2B_part2_plot_observed.png"
+ggsave(filename = "2B_part2_plot_observed_color.png"
        , plot_observed_gender_sheetwashfreq
        , height=4, width=6)
 
