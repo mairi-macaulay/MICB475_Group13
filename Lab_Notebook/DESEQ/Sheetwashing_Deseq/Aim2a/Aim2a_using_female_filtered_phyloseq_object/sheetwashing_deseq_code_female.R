@@ -30,14 +30,14 @@ DESEQ_sheetwash <- DESeq(sheetwash_deseq)
 ###viewing DESeq results- comparison group 1 
 #high group is the comparison group and low group is reference
 res <- results(DESEQ_sheetwash, tidy=TRUE, contrast= c("sheetwashfreq_binned","high","low"))
-View(res)
+
 
 ### Creating the Volcano plot: effect size VS significance ###
 ggplot(res) +
   geom_point(aes(x=log2FoldChange, y=-log10(padj)))
 
 volcano_plot =  res %>%
-  mutate(significant = padj<0.01 & abs(log2FoldChange)>2) %>%
+  mutate(significant = padj<0.01 & abs(log2FoldChange)>2 & baseMean > 1) %>%
   ggplot() +
   geom_point(aes(x=log2FoldChange, y=-log10(padj), col=significant))
 
@@ -46,14 +46,13 @@ volcano_plot =  res %>%
 
 ### Getting a table of Results ###
 sigASVs <- as.data.frame(res) %>% 
-  filter(padj<0.01 & abs(log2FoldChange)>2) %>%
+  filter(padj<0.01 & abs(log2FoldChange)>2 & baseMean > 1) %>%
   dplyr::rename(ASV=row)
-View(sigASVs)
+
 #Significant ASVs
 sigASVs_vec <- sigASVs %>%
   pull(ASV)
-#There are 45 significant ASV's
-view(sigASVs_vec)
+
 
 
 ### Creating Bar plots ###
@@ -131,7 +130,7 @@ ggplot(res_med_low) +
   geom_point(aes(x=log2FoldChange, y=-log10(padj)))
 
 volcano_plot_med_low =  res_med_low %>%
-  mutate(significant = padj<0.01 & abs(log2FoldChange)>2) %>%
+  mutate(significant = padj<0.01 & abs(log2FoldChange)>2 & baseMean > 1) %>%
   ggplot() +
   geom_point(aes(x=log2FoldChange, y=-log10(padj), col=significant))
 
@@ -139,15 +138,12 @@ volcano_plot_med_low =  res_med_low %>%
 #ggsave(filename="volcano_plot_med_low_female.png",volcano_plot_med_low)
 
 ### Getting a table of Results ###
-sigASVs_med_low <- as.data.frame(res) %>% 
-  filter(padj<0.01 & abs(log2FoldChange)>2) %>%
+sigASVs_med_low <- as.data.frame(res_med_low) %>% 
+  filter(padj<0.01 & abs(log2FoldChange)>2 & baseMean > 1) %>%
   dplyr::rename(ASV=row)
-View(sigASVs_med_low)
 #Significant ASVs
 sigASVs_vec_med_low <- sigASVs_med_low %>%
   pull(ASV)
-#There are 45 significant ASV's
-view(sigASVs_vec_med_low)
 
 
 ### Creating Bar plots ###
@@ -220,14 +216,13 @@ barplot_species_med_low = ggplot(species_sheetwash_sigASVs_med_low) +
 ###viewing DESeq results- comparison group 3
 #high group is the comparison group and low group is reference
 res_high_med <- results(DESEQ_sheetwash, tidy=TRUE, contrast= c("sheetwashfreq_binned","high","medium"))
-View(res_high_med)
 
 ### Creating the Volcano plot: effect size VS significance ###
 ggplot(res_high_med) +
   geom_point(aes(x=log2FoldChange, y=-log10(padj)))
 
 volcano_plot_high_med =  res_high_med %>%
-  mutate(significant = padj<0.01 & abs(log2FoldChange)>2) %>%
+  mutate(significant = padj<0.01 & abs(log2FoldChange)>2 & baseMean > 1) %>%
   ggplot() +
   geom_point(aes(x=log2FoldChange, y=-log10(padj), col=significant))
 
@@ -235,15 +230,13 @@ volcano_plot_high_med =  res_high_med %>%
 #ggsave(filename="volcano_plot_high_med_female.png",volcano_plot_high_med)
 
 ### Getting a table of Results ###
-sigASVs_high_med <- as.data.frame(res) %>% 
-  filter(padj<0.01 & abs(log2FoldChange)>2) %>%
+sigASVs_high_med <- as.data.frame(res_high_med) %>% 
+  filter(padj<0.01 & abs(log2FoldChange)>2 & baseMean > 1) %>%
   dplyr::rename(ASV=row)
-View(sigASVs_high_med)
 #Significant ASVs
 sigASVs_vec_high_med <- sigASVs_high_med %>%
   pull(ASV)
-#There are 45 significant ASV's
-view(sigASVs_vec_high_med)
+
 
 
 ### Creating Bar plots ###
