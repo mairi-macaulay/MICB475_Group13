@@ -158,7 +158,7 @@ low_df_merged <- low_df_merged[order(low_df_merged$log2FoldChange_avg),]
 femalelow_vs_malelow_barplot <- ggplot(low_df_merged) +
   geom_bar(aes(y=reorder(Genus, sort(as.numeric(log2FoldChange_avg))), x=log2FoldChange_avg, fill = Shared), stat="identity") +
   geom_errorbar(aes(y=Genus, xmin=log2FoldChange_avg-lfcSE_avg, xmax=log2FoldChange_avg+lfcSE_avg)) +
-  theme(text = element_text(size=20),
+  theme(text = element_text(size=50),
         axis.text.x = element_text(angle=90, hjust=1))+ ylab('Genus') +
   scale_fill_manual(values = c("orange","blue"))
 
@@ -177,11 +177,9 @@ high_df_merged <- high_df_merged[order(high_df_merged$log2FoldChange_avg),]
 femalehigh_vs_malehigh_barplot <- ggplot(high_df_merged) +
   geom_bar(aes(y= reorder(Genus, sort(as.numeric(log2FoldChange_avg))), x=log2FoldChange_avg, fill = Shared), stat="identity" )+
   geom_errorbar(aes(y=Genus, xmin=log2FoldChange_avg-lfcSE_avg, xmax=log2FoldChange_avg+lfcSE_avg)) +
-  theme(text = element_text(size=40),
+  theme(text = element_text(size=50),
         axis.text.x = element_text(angle=90, hjust=1))+ ylab('Genus') +
   scale_fill_manual(values = c("orange","blue"))
 
 ggsave(filename="femalehigh_vs_malehigh_barplot.png",femalehigh_vs_malehigh_barplot, scale = 1, width = 591, height = 444, units = c('mm'))
-
-
 
