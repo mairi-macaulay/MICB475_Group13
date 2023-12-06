@@ -30,6 +30,8 @@ phylo_nomed <- subset_samples(dorms_rare, sex_sheetwashfreq %in% c("female high"
 ##Create new metadata for only low/high#
 samp_dat_wdiv_nomed <- subset(samp_dat_wdiv, sex_sheetwashfreq %in% c("female high", "female low", "male high", "male low"))
 
+
+
 ##Unweighted Unifrac##
 unifrac_dm <- distance(phylo_nomed, method="unifrac")
 pcoa_unifrac <- ordinate(phylo_nomed, method="PCoA", distance=unifrac_dm)
@@ -130,6 +132,7 @@ ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_2B/AIM_2B_PT4/2B_4_w
        , height=4, width=8)
 
 
+
 ##Jaccard WITH NO ELLIPSE##
 j_dm <- distance(phylo_nomed, method = "jaccard", binary = TRUE)
 pcoa_jaccard <- ordinate(phylo_nomed, method="PCoA", distance=j_dm)
@@ -140,6 +143,7 @@ gg_pcoa_jaccard
 ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_2B/AIM_2B_PT4/2B_4_jaccard_pcoa_noE.png"
        , gg_pcoa_jaccard
        , height=4, width=8)
+
 
 
 ##Bray Curtis WITH NO ELLIPSE BOLD##
@@ -156,11 +160,12 @@ ggsave(filename = "Lab_Notebook/Beta_Diversity_Analysis/AIM_2B/AIM_2B_PT4/2B_4_b
        , height=4, width=8)
 
 
+
 ##Bray Curtis WITH NO ELLIPSE##
 bc_dm <- distance(phylo_nomed, method="bray")
 pcoa_bc <- ordinate(phylo_nomed, method="PCoA", distance=bc_dm)
 gg_pcoa_bc_noE <- plot_ordination(phylo_nomed, pcoa_bc, color = "sex_sheetwashfreq") + 
-  labs(col = "Sheet Wash Frequency Sex Groups")
+  labs(col = "Sex-Specific Sheet Washing Frequency Groups")
 gg_pcoa_bc_noE
 
 #save PCoA#
