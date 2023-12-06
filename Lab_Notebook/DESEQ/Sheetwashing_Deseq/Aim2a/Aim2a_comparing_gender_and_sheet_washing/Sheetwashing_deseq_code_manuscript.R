@@ -45,6 +45,9 @@ volcano_plot =  res %>%
   ggplot() +
   geom_point(aes(x=log2FoldChange, y=-log10(padj), col=significant))
 
+ggsave(filename="femalehigh_vs_malehigh_volcano_plot.png",volcano_plot)
+
+
 ### Getting a table of Results ###
 sigASVs_gender_high <- as.data.frame(res) %>% 
   filter(padj<0.01 & abs(log2FoldChange)>2 & baseMean > 1) %>%
@@ -86,6 +89,8 @@ volcano_plot_gender_low = res_gender_low %>%
   ggplot() +
   geom_point(aes(x=log2FoldChange, y=-log10(padj), col=significant))
 
+ggsave(filename="femalelow_vs_malelow_volcano_plot.png",volcano_plot_gender_low)
+
 ### Getting a table of Results ###
 sigASVs_gender_low <- as.data.frame(res_gender_low) %>% 
   filter(padj<0.01 & abs(log2FoldChange)>2 & baseMean > 1) %>%
@@ -122,7 +127,7 @@ shared_genus = matrix()
 low_genus = matrix()
 high_genus = matrix()
 for(genus in all_genus_list){
-  #genus = "Kocuria"
+  
   if(genus %in% low_list & genus %in% high_list){
     print(paste(genus,"is shared!"))
     shared_genus = append(shared_genus, genus)
@@ -153,9 +158,11 @@ low_df_merged <- low_df_merged[order(low_df_merged$log2FoldChange_avg),]
 femalelow_vs_malelow_barplot <- ggplot(low_df_merged) +
   geom_bar(aes(y=reorder(Genus, sort(as.numeric(log2FoldChange_avg))), x=log2FoldChange_avg, fill = Shared), stat="identity") +
   geom_errorbar(aes(y=Genus, xmin=log2FoldChange_avg-lfcSE_avg, xmax=log2FoldChange_avg+lfcSE_avg)) +
-  theme(text = element_text(size=10),
+  theme(text = element_text(size=20),
         axis.text.x = element_text(angle=90, hjust=1))+ ylab('Genus') +
-  scale_fill_manual(values = c("orange","purple"))
+  scale_fill_manual(values = c("orange","blue"))
+
+ggsave(filename="femalelow_vs_malelow_barplot.png",femalelow_vs_malelow_barplot, scale = 1, width = 591, height = 444, units = c('mm'))
 
 
 ###High group
@@ -170,11 +177,11 @@ high_df_merged <- high_df_merged[order(high_df_merged$log2FoldChange_avg),]
 femalehigh_vs_malehigh_barplot <- ggplot(high_df_merged) +
   geom_bar(aes(y= reorder(Genus, sort(as.numeric(log2FoldChange_avg))), x=log2FoldChange_avg, fill = Shared), stat="identity" )+
   geom_errorbar(aes(y=Genus, xmin=log2FoldChange_avg-lfcSE_avg, xmax=log2FoldChange_avg+lfcSE_avg)) +
-  theme(text = element_text(size=10),
+  theme(text = element_text(size=40),
         axis.text.x = element_text(angle=90, hjust=1))+ ylab('Genus') +
   scale_fill_manual(values = c("orange","blue"))
 
-
+ggsave(filename="femalehigh_vs_malehigh_barplot.png",femalehigh_vs_malehigh_barplot, scale = 1, width = 591, height = 444, units = c('mm'))
 
 
 
