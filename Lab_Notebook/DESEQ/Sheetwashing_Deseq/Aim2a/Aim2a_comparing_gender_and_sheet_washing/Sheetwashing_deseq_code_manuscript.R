@@ -76,6 +76,9 @@ high_df = sheetwash_sigASVs_gender_high
 
 high_list = high_df$Genus
 
+#exporting table
+write.csv(sheetwash_sigASVs_gender_high, file = "sheetwash_sigASVs_gender_high.csv")
+
 ## Female Low vs. Male Low ##
 res_gender_low <- results(DESEQ_sheetwash_gender_low, tidy=TRUE, contrast= c("sex_sheetwashfreq","female low","male low"))
 
@@ -117,6 +120,9 @@ low_df = sheetwash_sigASVs_gender_low
 
 #list of genus from low
 low_list = low_df$Genus
+
+#exporting table
+write.csv(sheetwash_sigASVs_gender_low, file = "sheetwash_sigASVs_gender_low.csv")
 
 #Gathering all unique genus names from both lists
 all_genus_list = na.omit(unique(append(low_list,high_list)))
