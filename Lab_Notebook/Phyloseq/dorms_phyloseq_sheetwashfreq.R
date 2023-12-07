@@ -56,13 +56,10 @@ dorms <- phyloseq(OTU, SAMP, TAX, phylotree)
 ####Filter for sheet washing frequency analysis####
 # Remove non-bacterial sequences, if any
 dorms_filt <- subset_taxa(dorms,  Domain == "d__Bacteria" & Class!="c__Chloroplast" & Family !="f__Mitochondria")
-# Remove ASVs that have less than 5 counts total (DO FOR DESEQ)
-#dorms_filt_nolow <- filter_taxa(dorms_filt, function(x) sum(x)>5, prune = TRUE)
 # Remove samples with less than 100 reads
 dorms_filt_samps <- prune_samples(sample_sums(dorms_filt)>100, dorms_filt)
 # Remove samples where sheet washing frequency is na
 dorms_final <- subset_samples(dorms_filt_samps, !is.na(sheetwashfreq_binned))
-
 
 # Rarefy samples
 rarecurve(t(as.data.frame(otu_table(dorms_final))), cex=0.1)
