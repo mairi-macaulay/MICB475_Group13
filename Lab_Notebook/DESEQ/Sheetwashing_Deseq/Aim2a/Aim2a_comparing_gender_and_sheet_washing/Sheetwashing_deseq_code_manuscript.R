@@ -3,8 +3,6 @@ library(phyloseq)
 library(ape) # importing trees
 library(tidyverse)
 library(vegan)
-library(scales)
-library(stringr)
 ##setting a seed##
 set.seed(1) 
 
