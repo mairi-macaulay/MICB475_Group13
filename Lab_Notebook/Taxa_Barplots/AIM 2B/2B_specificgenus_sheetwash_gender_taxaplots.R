@@ -1,10 +1,4 @@
-
-########################################################
-# TAXABAR PLOTS SPLITTING SHEETWASH FREQ. BY SEX (GENUS)
-########################################################
-
-
-#Loading libraries
+# Loading libraries
 library(phyloseq)
 library(tidyverse)
 library(ggplot2)
