@@ -33,14 +33,14 @@ tax_mat$ASV <- rownames(tax_mat)
 # Joining OTU and metadata and taxanomic information
 otu_meta <- inner_join(metadata, otu_table, by = "ID")
 
-#transforming the OTU matrix to a single column called abundance. 27 represents the number of metadata columns we wnat to exlcude
+# Transforming the OTU matrix to a single column called abundance. 27 represents the number of metadata columns we wnat to exlcude.
 grouped = gather(otu_meta, key = "ASV", value = "abundance", -(1:27))
 
-#Joining the taxa information with otu_meta
+# Joining the taxa information with otu_meta
 grouped_taxa = inner_join(tax_mat, grouped, by = "ASV", multiple = "all")
 
 
-grouped_taxa$legend = paste(grouped_taxa$sheetwashfreq_binned) #Can add gender for when gender becomes a consideration
+grouped_taxa$legend = paste(grouped_taxa$sheetwashfreq_binned) 
 
 #Calculating the relative abundance for each indivudal
 ppl <- unique(grouped_taxa$ID) 
@@ -61,6 +61,7 @@ for (i in ppl){
   
 }
 
+# Create taxa bar plots using ggplot2
 data_rel$sheetwashfreq_binned = factor(data_rel$sheetwashfreq_binned, levels = c("low","medium","high")) #create the order for low, medium, high in the plot
 ggplot(data =data_rel, aes(ID,rel_abs, fill = Phylum))+ #Generating the plot with X axis equal to individual
   geom_col()+
