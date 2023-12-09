@@ -1,8 +1,3 @@
-####################################################
-# TAXABAR PLOTS SPLITTING SHEETWASH FREQ. BY SEX
-###################################################
-
-
 #Loading libraries
 library(phyloseq)
 library(tidyverse)
