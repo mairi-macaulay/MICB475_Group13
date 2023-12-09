@@ -39,7 +39,7 @@ grouped = gather(otu_meta, key = "ASV", value = "abundance", -(1:27))
 # Joining the taxa information with otu_meta
 grouped_taxa = inner_join(tax_mat, grouped, by = "ASV", multiple = "all")
 
-
+# Generate a new column containing taxa and sheet washing frequency data
 grouped_taxa$legend = paste(grouped_taxa$sheetwashfreq_binned) 
 
 #Calculating the relative abundance for each indivudal
