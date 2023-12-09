@@ -1,3 +1,4 @@
+# Load libraries
 library(phyloseq)
 library(tidyverse)
 library(ggplot2)
@@ -5,23 +6,23 @@ library(ape)
 library(vegan)
 
 
-# Load Rdata
+# Load Rdata (phyloseq object)
 load("../../Phyloseq/dorms_final_sheetwashfreq.RData")
 
 
 
-# Extracting OTU data
+# Extracting OTU data from the phyloseq object
 otu_table <- data.frame(t(otu_table(dorms_final)))
 otu_table$ID <- rownames(otu_table)
 
-# Extracting metadata
+# Extracting metadata from the phyloseq object
 metadata <- data.frame(sample_data(dorms_final))
 metadata$ID <- rownames(metadata)
 
 # Load the raw taxonomy file
 tax <- data.frame(tax_table(dorms_final))
 
-# Formatting the taxa dataframe and cleaning names
+# Format the taxa dataframe and clean names
 tax_mat <- tax[,-1]
 tax_mat <- data.frame(tax_mat)
 tax_mat$Phylum <- gsub("^...","",tax_mat$Phylum)
@@ -32,22 +33,22 @@ tax_mat$Genus <- gsub("^...","",tax_mat$Genus)
 tax_mat$Species <- gsub("^...","",tax_mat$Species)
 tax_mat$ASV <- rownames(tax_mat)
 
-# Joining OTU and metadata and taxanomic information
+# Join OTU and metadata and taxanomic information
 otu_meta <- inner_join(metadata, otu_table, by = "ID")
 
-#transforming the OTU matrix to a single column called abundance. 27 represents the number of metadata columns we wnat to exlcude
+# Transform the OTU matrix to a single column called abundance. 27 represents the number of metadata columns we wnat to exlcude
 grouped = gather(otu_meta, key = "ASV", value = "abundance", -(1:27))
 
 #Joining the taxa information with otu_meta
 grouped_taxa = inner_join(tax_mat, grouped, by = "ASV", multiple = "all")
 
-
-grouped_taxa$legend = paste(grouped_taxa$sheetwashfreq_binned) #Can add gender for when gender becomes a consideration
-
-
+# Generate a new column containing sheet washing and taxa information
+grouped_taxa$legend = paste(grouped_taxa$sheetwashfreq_binned) 
 
 
-#Generating the relative abundance for all individuals within low/medium/high sheetwashing freq.
+
+
+#Generate the relative abundance for all individuals within low/medium/high sheetwashing freq.
 levels <- unique(grouped_taxa$sheetwashfreq_binned)
 data_rel = data.frame()
 for (i in levels){
@@ -67,9 +68,9 @@ for (i in levels){
   
 }
 
-#This plot represents the average relative abundance for each phylum across the different sheetwash frequency levels.
-data_rel$sheetwashfreq_binned = factor(data_rel$sheetwashfreq_binned, levels = c("low","medium","high")) #create the order for low, medium, high in the plot
-ggplot(data =data_rel, aes(sheetwashfreq_binned,rel_abs, fill = Phylum))+#Generating the plot with X axis equal to sheetwash_freq_binned
+# Generate taxa bar plots at the phylum level using ggplot2 with an x axis containing sheet washing frequency data. 
+data_rel$sheetwashfreq_binned = factor(data_rel$sheetwashfreq_binned, levels = c("low","medium","high")) # Create the order for low, medium, high in the plot
+ggplot(data =data_rel, aes(sheetwashfreq_binned,rel_abs, fill = Phylum))+
   geom_col()+
   theme_bw()+
   labs(y="Relative Abundance", x = "Sheet Wash Frequency")+
