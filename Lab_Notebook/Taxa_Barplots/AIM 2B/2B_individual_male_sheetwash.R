@@ -39,7 +39,7 @@ grouped = gather(otu_meta, key = "ASV", value = "abundance", -(1:27))
 #Joining the taxa information with otu_meta
 grouped_taxa = inner_join(tax_mat, grouped, by = "ASV", multiple = "all")
 
-
+# Assign a new column with the sheet washing frequency and taxa information
 grouped_taxa$legend = paste(grouped_taxa$sheetwashfreq_binned) #Can add gender for when gender becomes a consideration
 
 #Calculating the relative abundance for each indivudal
@@ -61,6 +61,7 @@ for (i in ppl){
   
 }
 
+# Generate taxa bar plots with ggplot2
 data_rel$sheetwashfreq_binned = factor(data_rel$sheetwashfreq_binned, levels = c("low","medium","high")) #create the order for low, medium, high in the plot
 ggplot(data =data_rel, aes(ID,rel_abs, fill = Phylum))+ #Generating the plot with X axis equal to individual
   geom_col()+
