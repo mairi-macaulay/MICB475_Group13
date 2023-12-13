@@ -41,13 +41,13 @@ grouped = gather(otu_meta, key = "ASV", value = "abundance", -(1:27) )
 grouped_taxa = inner_join(tax_mat, grouped, by = "ASV", multiple = "all")
 
 
-# Collect the list of unique severity names for the loop (high, medium, low)
+# Collect the list of unique sexes for the loop (male, female)
 vars = unique(grouped_taxa$sex)
 
 # Creating an empty dataframe that the loop will fill. Re run this line before re running the loop.
 data_rel = data.frame()
 
-# Loop though each severity index to create a relative abundance measure.
+# Loop though each sex to create a relative abundance measure.
 for (i in vars){
   df = grouped_taxa %>%
     filter(sex == i)
@@ -69,7 +69,7 @@ for (i in vars){
   data_rel = na.omit(data_rel)
 }
 
-# Using ggplot2, generate taxa bar plots at the phylum level
+# Using ggplot2, generate taxa bar plots at the phylum level with sex on the x axis.
 ggplot(data = data_rel, aes(sex,rel_abs, fill = Phylum))+
   geom_col()+
   theme_bw()+
