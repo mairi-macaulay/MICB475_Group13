@@ -1,25 +1,26 @@
+# Load libraries
 library(phyloseq) 
 library(tidyverse)
 library(ggplot2)
 library(ape)
 library(vegan)
 
-#load Rdata
+# Load Rdata
 load("../../Phyloseq/dorms_final_showerrecency.RData")
 
 
-#Extracting OTU data
+# Extract OTU data
 otu_table = data.frame(t(otu_table(dorms_final)))
 otu_table$ID = rownames(otu_table)
 
-#Extracting metadata
+# Extract metadata
 metadata = data.frame(sample_data(dorms_final))
 metadata$ID = rownames(metadata)
 
-#load the raw taxonomy file
+# Load the raw taxonomy file
 tax <- data.frame(tax_table(dorms_final))
 
-#Formatting the taxa dataframe and cleaning names
+# Format the taxa dataframe and clean names
 tax_mat <- tax[,-1]
 tax_mat = data.frame(tax_mat)
 tax_mat$Phylum = gsub("^...","",tax_mat$Phylum)
@@ -30,25 +31,24 @@ tax_mat$Genus = gsub("^...","",tax_mat$Genus)
 tax_mat$Species = gsub("^...","",tax_mat$Species)
 tax_mat$ASV = rownames(tax_mat)
 
-#joining OTU and metadata
+# Join OTU and metadata
 otu_meta = inner_join(metadata,otu_table , by = "ID")
 
-#Transforming the OTU matrix to a single column called abundance. 27 represents the number of metadata columns we want to exclude.
+# Transform the OTU matrix to a single column called abundance. 27 represents the number of metadata columns we want to exclude.
 grouped = gather(otu_meta, key = "ASV", value = "abundance", -(1:27) )
 
-#joining the taxa information to this transformed dataframe
+# Join the taxa information to this transformed dataframe
 grouped_taxa = inner_join(tax_mat, grouped, by = "ASV", multiple = "all")
 
 
-#collecting the list of unique severity names for the loop (high, medium, low)
+# Collecting the list of unique names for the loop (recent or not_recent)
 vars = unique(grouped_taxa$last_shower_binned)
 
-#Creating an empty dataframe that the loop will fill. Re run this line before re running the loop.
+#Create an empty dataframe that the loop will fill. Re run this line before re running the loop.
 data_rel = data.frame()
 
-#looping though each severity index to create a relative abundance measure.
+# Loop though recent and not_recent shower recency to create a relative abundance measure for each.
 for (i in vars){
-  #vars = "normal BM.Soup.Broth"
   df = grouped_taxa %>%
     filter(last_shower_binned == i)
   
@@ -69,10 +69,10 @@ for (i in vars){
   data_rel = na.omit(data_rel)
 }
 
-#custom labels for x axis
+# Customize the labels for the x axis
 custom <- c("not recent", "recent")
 
-#plotting the results at the phylum level
+# Plot the results at the phylum level using ggplot2.
 ggplot(data = data_rel, aes(last_shower_binned,rel_abs, fill = Phylum))+
   geom_col()+
   theme_bw()+
