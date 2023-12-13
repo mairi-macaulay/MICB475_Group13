@@ -49,7 +49,6 @@ data_rel = data.frame()
 
 # Loop though each severity index to create a relative abundance measure.
 for (i in vars){
-  #vars = "normal BM.Soup.Broth"
   df = grouped_taxa %>%
     filter(sex == i)
   
