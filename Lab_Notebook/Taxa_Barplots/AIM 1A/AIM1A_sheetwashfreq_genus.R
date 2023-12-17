@@ -1,4 +1,4 @@
-### Taxa bar plots sheet washign freq genus ###
+### Taxa bar plots sheet washign frequency at genus level ###
 
 # Load libraries
 library(phyloseq)
