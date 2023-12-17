@@ -1,3 +1,6 @@
+### Taxa Bar plots of for male individuals seperated by sheet washing frequency ###
+
+# Load libraries
 library(phyloseq)
 library(tidyverse)
 library(ggplot2)
