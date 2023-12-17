@@ -1,3 +1,5 @@
+### Taxa bar plots at the genus level seperated by sex and sheet washing frequency ###
+
 # Loading libraries
 library(phyloseq)
 library(tidyverse)
