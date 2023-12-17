@@ -8,7 +8,7 @@ load("Lab_Notebook/Phyloseq/dorms_unfiltered.RData")
 
 # Remove non-bacterial sequences, if any
 dorms_filt <- subset_taxa(dorms,  Domain == "d__Bacteria" & Class!="c__Chloroplast" & Family !="f__Mitochondria")
-# Remove ASVs that have less than 5 counts total (DO FOR DESEQ)
+# Remove ASVs that have less than 5 counts total
 dorms_filt_nolow <- filter_taxa(dorms_filt, function(x) sum(x)>5, prune = TRUE)
 # Remove samples with less than 100 reads
 dorms_filt_nolow_samps <- prune_samples(sample_sums(dorms_filt_nolow)>100, dorms_filt_nolow)

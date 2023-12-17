@@ -1,5 +1,3 @@
-# if you didn't install the DESeq2 package, run the following
-BiocManager::install("DESeq2")
 
 #!/usr/bin/env Rscript
 library(tidyverse)
@@ -26,7 +24,6 @@ DESEQ_sheetwash <- DESeq(sheetwash_deseq)
 #viewing DESeq results
 #high group is the comparison group and low group is reference
 res <- results(DESEQ_sheetwash, tidy=TRUE, contrast= c("sex","female","male"))
-View(res)
 
 
 ### Creating the Volcano plot: effect size VS significance ###
@@ -34,7 +31,7 @@ ggplot(res) +
   geom_point(aes(x=log2FoldChange, y=-log10(padj)))
 
 volcano_plot =  res %>%
-  mutate(significant = padj<0.01 & abs(log2FoldChange)>2) %>%
+  mutate(significant = padj<0.01 & abs(log2FoldChange)>2 & baseMean > 1) %>%
   ggplot() +
   geom_point(aes(x=log2FoldChange, y=-log10(padj), col=significant))
 
@@ -43,14 +40,13 @@ volcano_plot =  res %>%
 
 ### Getting a table of Results ###
 sigASVs <- res %>% 
-  filter(padj<0.01 & abs(log2FoldChange)>2) %>%
+  filter(padj<0.01 & abs(log2FoldChange)>2 & baseMean > 1) %>%
   dplyr::rename(ASV=row)
 View(sigASVs)
 #Significant ASVs
 sigASVs_vec <- sigASVs %>%
   pull(ASV)
-#There are 33 significant ASV's
-view(sigASVs_vec)
+
 
 ### Creating Bar plots ###
 #Prune phyloseq file

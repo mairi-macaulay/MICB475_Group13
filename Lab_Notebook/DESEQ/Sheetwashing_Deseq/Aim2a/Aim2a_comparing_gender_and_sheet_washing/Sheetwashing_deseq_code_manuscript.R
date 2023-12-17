@@ -3,7 +3,6 @@ library(phyloseq)
 library(ape) # importing trees
 library(tidyverse)
 library(vegan)
-
 ##setting a seed##
 set.seed(1) 
 
@@ -41,13 +40,16 @@ ggplot(res) +
   geom_point(aes(x=log2FoldChange, y=-log10(padj)))
 
 volcano_plot =  res %>%
-  mutate(significant = padj<0.01 & abs(log2FoldChange)>2) %>%
+  mutate(significant = padj<0.01 & abs(log2FoldChange)>2 & baseMean > 1) %>%
   ggplot() +
   geom_point(aes(x=log2FoldChange, y=-log10(padj), col=significant))
 
+ggsave(filename="femalehigh_vs_malehigh_volcano_plot.png",volcano_plot)
+
+
 ### Getting a table of Results ###
 sigASVs_gender_high <- as.data.frame(res) %>% 
-  filter(padj<0.01 & abs(log2FoldChange)>2) %>%
+  filter(padj<0.01 & abs(log2FoldChange)>2 & baseMean > 1) %>%
   dplyr::rename(ASV=row)
 #View(sigASVs)
 #Significant ASVs
@@ -74,6 +76,9 @@ high_df = sheetwash_sigASVs_gender_high
 
 high_list = high_df$Genus
 
+#exporting table
+write.csv(sheetwash_sigASVs_gender_high, file = "sheetwash_sigASVs_gender_high.csv")
+
 ## Female Low vs. Male Low ##
 res_gender_low <- results(DESEQ_sheetwash_gender_low, tidy=TRUE, contrast= c("sex_sheetwashfreq","female low","male low"))
 
@@ -81,14 +86,16 @@ res_gender_low <- results(DESEQ_sheetwash_gender_low, tidy=TRUE, contrast= c("se
 ggplot(res_gender_low) +
   geom_point(aes(x=log2FoldChange, y=-log10(padj)))
 
-volcano_plot_gender_low =  res %>%
-  mutate(significant = padj<0.01 & abs(log2FoldChange)>2) %>%
+volcano_plot_gender_low = res_gender_low %>%
+  mutate(significant = padj<0.01 & abs(log2FoldChange)>2 & baseMean > 1) %>%
   ggplot() +
   geom_point(aes(x=log2FoldChange, y=-log10(padj), col=significant))
 
+ggsave(filename="femalelow_vs_malelow_volcano_plot.png",volcano_plot_gender_low)
+
 ### Getting a table of Results ###
 sigASVs_gender_low <- as.data.frame(res_gender_low) %>% 
-  filter(padj<0.01 & abs(log2FoldChange)>2) %>%
+  filter(padj<0.01 & abs(log2FoldChange)>2 & baseMean > 1) %>%
   dplyr::rename(ASV=row)
 #Significant ASVs
 sigASVs_vecs_gender_low <- sigASVs_gender_low %>%
@@ -114,6 +121,9 @@ low_df = sheetwash_sigASVs_gender_low
 #list of genus from low
 low_list = low_df$Genus
 
+#exporting table
+write.csv(sheetwash_sigASVs_gender_low, file = "sheetwash_sigASVs_gender_low.csv")
+
 #Gathering all unique genus names from both lists
 all_genus_list = na.omit(unique(append(low_list,high_list)))
 
@@ -122,7 +132,7 @@ shared_genus = matrix()
 low_genus = matrix()
 high_genus = matrix()
 for(genus in all_genus_list){
-  #genus = "Kocuria"
+  
   if(genus %in% low_list & genus %in% high_list){
     print(paste(genus,"is shared!"))
     shared_genus = append(shared_genus, genus)
@@ -153,9 +163,11 @@ low_df_merged <- low_df_merged[order(low_df_merged$log2FoldChange_avg),]
 femalelow_vs_malelow_barplot <- ggplot(low_df_merged) +
   geom_bar(aes(y=reorder(Genus, sort(as.numeric(log2FoldChange_avg))), x=log2FoldChange_avg, fill = Shared), stat="identity") +
   geom_errorbar(aes(y=Genus, xmin=log2FoldChange_avg-lfcSE_avg, xmax=log2FoldChange_avg+lfcSE_avg)) +
-  theme(text = element_text(size=8),
-        axis.text.x = element_text(angle=90, hjust=1))+ ylab('Genus') +
-  scale_fill_manual(values = c("red","purple"))
+  theme(text = element_text(size=40),
+        axis.text.x = element_text(angle=90, hjust=1))+ ylab('Genus') + xlab('Log2FoldChange') +
+  scale_fill_manual(values = c("orange","blue"))  + theme_bw()
+
+ggsave(filename="femalelow_vs_malelow_barplot.png",femalelow_vs_malelow_barplot)
 
 
 ###High group
@@ -167,14 +179,13 @@ high_df_merged = high_df %>%
   summarize(log2FoldChange_avg = mean(log2FoldChange),lfcSE_avg = mean(lfcSE))
 
 high_df_merged <- high_df_merged[order(high_df_merged$log2FoldChange_avg),]
+
 femalehigh_vs_malehigh_barplot <- ggplot(high_df_merged) +
-  geom_bar(aes(y= reorder(Genus, sort(as.numeric(log2FoldChange_avg))), x=log2FoldChange_avg, fill = Shared), stat="identity" )+
+  geom_bar(aes(y= reorder(Genus, sort(as.numeric(log2FoldChange_avg))), x=log2FoldChange_avg, fill = Shared), stat="identity" ) +
   geom_errorbar(aes(y=Genus, xmin=log2FoldChange_avg-lfcSE_avg, xmax=log2FoldChange_avg+lfcSE_avg)) +
-  theme(text = element_text(size=8),
-        axis.text.x = element_text(angle=90, hjust=1))+ ylab('Genus') +
-  scale_fill_manual(values = c("orange","blue"))
+  theme(text = element_text(size=50),
+        axis.text.x = element_text(angle=90, hjust=1))+ ylab('Genus') + xlab('Log2FoldChange') + 
+  scale_fill_manual(values = c("orange","green")) + theme_bw()
 
-
-
-
+ggsave(filename="femalehigh_vs_malehigh_barplot.png",femalehigh_vs_malehigh_barplot, scale = 1, width = 200, units = c("mm"))
 
