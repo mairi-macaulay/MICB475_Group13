@@ -1,3 +1,5 @@
+### Taxa bar plots of each individual seperated by sex ###
+
 # Loading libraries
 library(phyloseq)
 library(tidyverse)
