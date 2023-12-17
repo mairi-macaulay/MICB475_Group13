@@ -1,3 +1,5 @@
+### Taxa bar plots for individuals AIM 1A ###
+
 # Load libraries
 library(phyloseq)
 library(tidyverse)
