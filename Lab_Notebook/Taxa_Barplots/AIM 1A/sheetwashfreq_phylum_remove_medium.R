@@ -1,3 +1,5 @@
+### Aim 1A - removing medium from taxa bar plots for sheet washing frequency ###
+
 # Load libraries
 library(phyloseq)
 library(tidyverse)
